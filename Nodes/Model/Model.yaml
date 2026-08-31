@@ -1,0 +1,20 @@
+Name: Model
+Id: g=b242b4ae67800071cccd260cff26fff2
+Type: ModelCategoryFolder
+Children:
+- Name: IncomingAlarms
+  Id: g=67f6203a1989f7b6d1805087019e61b9
+  Type: BaseDataVariableType
+  DataType: String
+- Name: IncomingMessages
+  Id: g=ac785e55c496de918fd23046bf42fadd
+  Type: BaseDataVariableType
+  DataType: String
+- Name: IncomingStatuses
+  Id: g=0c35e176e2dc3c1b95379ce3dbb7e0c2
+  Type: BaseDataVariableType
+  DataType: String
+- File: Types/Types.yaml
+- File: Ovens/Ovens.yaml
+- File: RecipeTarget/RecipeTarget.yaml
+- File: RemoteAlarms/RemoteAlarms.yaml

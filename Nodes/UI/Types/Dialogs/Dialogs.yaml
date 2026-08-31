@@ -1,0 +1,1447 @@
+Name: Dialogs
+Type: FolderType
+Children:
+- Name: OvenStatus
+  Id: g=80ee8efd9051b2a54a6e5a461f4b74d5
+  Supertype: Dialog
+  ReferenceType: HasComponent
+  Children:
+  - Class: Reference
+    Target: ns=3;i=519
+    Direction: Forward
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1280.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 720.0
+  - Name: HorizontalAlignment
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: Background
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: CornerRadius
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#afafaf65"
+    - Name: BorderColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+  - Name: Content
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: CornerRadius
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 8.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 128.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 128.0
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 128.0
+    - Name: BottomMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 128.0
+    - Name: Trend
+      Type: Trend
+      Children:
+      - Name: Pens
+        Type: BaseObjectType
+        Children:
+        - Name: Phase
+          Type: TrendPen
+          DataType: BaseDataType
+          Children:
+          - Name: Thickness
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: Enabled
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: Thresholds
+            Type: BaseObjectType
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{OvenStatusAlias}/CurrentPhase"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+          - Name: Color
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#ff0000"
+          - Name: ns=3;YAxis
+            Type: ValueAxis
+            Children:
+            - Name: MinValue
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: -100.0
+            - Name: MaxValue
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 100.0
+            - Name: AutoScale
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Interactive
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Position
+              Type: BaseDataVariableType
+              DataType: HorizontalPositionEnum
+        - Name: Temperature
+          Type: TrendPen
+          DataType: BaseDataType
+          Children:
+          - Name: Thickness
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: Enabled
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Thresholds
+            Type: BaseObjectType
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{OvenStatusAlias}/CurrentTemperature"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+          - Name: Color
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#00ff00"
+          - Name: ns=3;YAxis
+            Type: ValueAxis
+            Children:
+            - Name: MinValue
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: -100.0
+            - Name: MaxValue
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 100.0
+            - Name: AutoScale
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Interactive
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Position
+              Type: BaseDataVariableType
+              DataType: HorizontalPositionEnum
+        - Name: InputFan
+          Type: TrendPen
+          DataType: BaseDataType
+          Children:
+          - Name: Thickness
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: Enabled
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: Thresholds
+            Type: BaseObjectType
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{OvenStatusAlias}/CurrentStatus/InputFan"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+          - Name: Color
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#ffa500"
+          - Name: ns=3;YAxis
+            Type: ValueAxis
+            Children:
+            - Name: MinValue
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: -100.0
+            - Name: MaxValue
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 100.0
+            - Name: AutoScale
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Interactive
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Position
+              Type: BaseDataVariableType
+              DataType: HorizontalPositionEnum
+              Value: 1
+        - Name: OutputFan
+          Type: TrendPen
+          DataType: BaseDataType
+          Children:
+          - Name: Thickness
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: Enabled
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: Thresholds
+            Type: BaseObjectType
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{OvenStatusAlias}/CurrentStatus/OutputFan"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+          - Name: Color
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#0000ff"
+          - Name: ns=3;YAxis
+            Type: ValueAxis
+            Children:
+            - Name: MinValue
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: -100.0
+            - Name: MaxValue
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 100.0
+            - Name: AutoScale
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Interactive
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Position
+              Type: BaseDataVariableType
+              DataType: HorizontalPositionEnum
+              Value: 1
+        - Name: Heating
+          Type: TrendPen
+          DataType: BaseDataType
+          Children:
+          - Name: Thickness
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: Enabled
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Thresholds
+            Type: BaseObjectType
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{OvenStatusAlias}/CurrentStatus/Heating"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+          - Name: ns=3;YAxis
+            Type: ValueAxis
+            Children:
+            - Name: MinValue
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: -100.0
+            - Name: MaxValue
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 100.0
+            - Name: AutoScale
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Interactive
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Position
+              Type: BaseDataVariableType
+              DataType: HorizontalPositionEnum
+      - Class: Reference
+        Target: ns=3;i=1129
+        Direction: Forward
+      - Name: XAxis
+        Type: DateTimeAxis
+        Children:
+        - Name: Follow
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Window
+          Type: BaseDataVariableType
+          DataType: Duration
+          Value: "0:00:01:00.0000000"
+        - Name: Interactive
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Time
+          Type: BaseDataVariableType
+          DataType: DateTime
+      - Name: YAxis
+        Type: ValueAxis
+        Children:
+        - Name: Position
+          Type: BaseDataVariableType
+          DataType: HorizontalPositionEnum
+        - Name: MinValue
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -100.0
+        - Name: MaxValue
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: 100.0
+        - Name: AutoScale
+          Type: BaseDataVariableType
+          DataType: Boolean
+        - Name: Interactive
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+      - Name: LegendVisible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Class: Reference
+        Target: ns=3;i=1201
+        Direction: Forward
+      - Name: TimeRanges
+        Type: BaseObjectType
+      - Class: Reference
+        Target: ns=3;i=1209
+        Direction: Forward
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 400.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 400.0
+      - Name: ReferenceTimeZone
+        Type: BaseDataVariableType
+        DataType: ReferenceTimeZone
+        ModellingRule: Optional
+        Value: 1
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 128.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 32.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 96.0
+      - Name: BottomMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 92.0
+      - Name: Model
+        Type: NodePointer
+        DataType: NodeId
+        Children:
+        - Name: ItemKind
+          Type: PropertyType
+          DataType: NodeId
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{OvenStatusAlias}@NodeId"
+      - Name: RefreshTime
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: Optional
+        Value: 150
+    - Name: HorizontalLayout
+      Type: RowLayout
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 1
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: Checkbox1
+        Type: CheckBox
+        Children:
+        - Name: Checked
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../Trend/Pens/Phase/Enabled"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":7,"TextId":"Phase"}
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 2
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 92.0
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 92.0
+      - Name: HorizontalGap
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: Checkbox2
+        Type: CheckBox
+        Children:
+        - Name: Checked
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../Trend/Pens/Temperature/Enabled"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":7,"TextId":"Temperature"}
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 2
+      - Name: Checkbox3
+        Type: CheckBox
+        Children:
+        - Name: Checked
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../Trend/Pens/InputFan/Enabled"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":7,"TextId":"InputFan"}
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 2
+      - Name: Checkbox4
+        Type: CheckBox
+        Children:
+        - Name: Checked
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../Trend/Pens/OutputFan/Enabled"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":7,"TextId":"OutputFan"}
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 2
+      - Name: Checkbox5
+        Type: CheckBox
+        Children:
+        - Name: Checked
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../Trend/Pens/Heating/Enabled"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":7,"TextId":"Heating"}
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 2
+      - Name: ContentAlignment
+        Type: BaseVariableType
+        DataType: ContentHorizontalAlignment
+        ModellingRule: Optional
+        Value: 1
+    - Name: Button1
+      Type: Button
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"LocaleId":"en-US","Text":"x"}
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 1
+      - Name: Style
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: "Transparent"
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 32.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 32.0
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 18.0
+      - Name: MouseClickEventHandler1
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ns=2;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../..@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ns=2;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Close"
+        - Name: EventArguments
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+  - Name: OvenStatusAlias
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Types/OptixOven"
+  - Name: ns=4;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    ModellingRule: None
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "ff9f5fb9695eea76b4a8c0579bd4dc7c",
+       "objectGuid": "936d74e15aeaac96c6c71b60a8e44615",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
+- Name: SendMessageToOven
+  Id: g=7d95042d094197d17299d5a7a7774559
+  Supertype: Dialog
+  Children:
+  - Class: Reference
+    Target: ns=3;i=519
+    Direction: Forward
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 96.0
+  - Name: Rectangle1
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#375572"
+  - Name: TextBox1
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 8.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 8.0
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 8.0
+    - Name: ValueChangeBehaviour
+      Type: BaseDataVariableType
+      DataType: ValueChangeBehaviour
+      ModellingRule: Optional
+      Value: 1
+  - Name: Button1
+    Type: Button
+    Children:
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 152.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 136.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../SendMessageToOvenLogic@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SendMessageToOven"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: targetOvenId
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{TargetOvenId}@Value"
+            - Name: message
+              Type: BaseDataVariableType
+              DataType: String
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../TextBox1/Text"
+        - Name: MethodContainer2
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../..@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+    - Name: ImagePath
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      ModellingRule: Optional
+      Value: "ns=7;%PROJECTDIR%/res/icons/chat.svg"
+    - Name: Style
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Accent"
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 48.0
+  - Name: TargetOvenId
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
+  - Name: SendMessageToOvenLogic
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: SendMessageToOven
+      Children:
+      - Name: ns=0;InputArguments
+        Type: BaseVariableType
+        DataType: Argument
+        ReferenceType: HasProperty
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"targetOvenId","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"message","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Name: Button2
+    Type: Button
+    Children:
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 8.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 136.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../..@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+    - Name: ImagePath
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      ModellingRule: Optional
+      Value: "ns=7;%PROJECTDIR%/res/icons/close.svg"
+    - Name: Style
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Accent"
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 48.0
+  - Name: ns=4;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    ModellingRule: None
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "ff9f5fb9695eea76b4a8c0579bd4dc7c",
+       "objectGuid": "10f04cb88f2fd02ac1646bea5399ee05",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
+- Name: NotificationDialog
+  Id: g=7606d3facdce8fa654ef0ee6eb3efab9
+  Supertype: Dialog
+  ReferenceType: HasComponent
+  Children:
+  - Class: Reference
+    Target: ns=3;i=519
+    Direction: Forward
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: NotificationCard1
+    Type: NotificationCard
+    Children:
+    - Name: Delete
+      Type: Button
+      Children:
+      - Name: MouseClickEventHandler1
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ns=2;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../..@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ns=2;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Close"
+        - Name: EventArguments
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+    - Name: Title
+      Type: Label
+    - Name: MessageScrollView
+      Type: ScrollView
+      Children:
+      - Name: Message
+        Type: Label
+        Children:
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+      - Name: ContentWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ContentHeight
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ViewWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ViewHeight
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ContentX
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: ContentY
+        Type: BaseDataVariableType
+        DataType: Size
+      - Class: Reference
+        Target: ns=3;i=1394
+        Direction: Forward
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: BottomMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
+    - Name: Button1
+      Type: Button
+      Children:
+      - Name: MouseClickEventHandler1
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ns=2;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/Commands/UICommands"
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: ns=2;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "OpenDialog"
+            - Name: InputArguments
+              Type: BaseObjectType
+              Children:
+              - Name: Dialog
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Description: {"NamespaceIndex":3,"TextId":"OpenDialogDialogDescription"}
+                Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/Types/Dialogs/SendMessageToOven"
+              - Name: AliasNode
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Description: {"NamespaceIndex":3,"TextId":"OpenDialogAliasNodeDescription"}
+                ValueRank: ScalarOrOneDimension
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{IncomingTargetOvenId}@NodeId"
+              - Name: ParentItem
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Description: {"NamespaceIndex":3,"TextId":"OpenDialogParentItemDescription"}
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../..@NodeId"
+            - Name: OutputArguments
+              Type: BaseObjectType
+              Children:
+              - Name: DialogNodeId
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Description: {"NamespaceIndex":3,"TextId":"OpenDialogDialogNodeIdDescription"}
+          - Name: MethodContainer2
+            Type: BaseObjectType
+            Children:
+            - Name: ns=2;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../..@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ns=2;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Close"
+        - Name: EventArguments
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+    - Name: Reply
+      Type: Label
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+  - Name: IncomingTargetOvenId
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
+  - Name: ns=4;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    ModellingRule: None
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "ff9f5fb9695eea76b4a8c0579bd4dc7c",
+       "objectGuid": "39183c1994616b98f5e7b8db5e879764",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }

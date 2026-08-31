@@ -1,0 +1,128 @@
+Name: Converters
+Type: ConvertersCategoryFolder
+Children:
+- Class: DataType
+  Name: Theme
+  Id: g=061292f8a8ef88d0e086c852c09f1e56
+  Supertype: Enumeration
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"NamespaceIndex":7,"TextId":"Light"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"NamespaceIndex":7,"TextId":"Dark"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: AlarmSeverityIconPaths
+  Id: g=445130a488774e572e9d1082ac149e9f
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=2;Pairs
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt16
+        ModellingRule: None
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: None
+        Value: "ns=7;%PROJECTDIR%/res/icons/alarms/Alarms_Icons_Urgent_Priority.svg"
+    - Name: Pair1
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt16
+        ModellingRule: None
+        Value: 1
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: None
+        Value: "ns=7;%PROJECTDIR%/res/icons/alarms/Alarms_Icons_High_Priority.svg"
+    - Name: Pair2
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt16
+        ModellingRule: None
+        Value: 2
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: None
+        Value: "ns=7;%PROJECTDIR%/res/icons/alarms/Alarms_Icons_Medium_Priority.svg"
+    - Name: Pair3
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt16
+        ModellingRule: None
+        Value: 3
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: None
+        Value: "ns=7;%PROJECTDIR%/res/icons/alarms/Alarms_Icons_Low_Priority.svg"
+- Name: ButtonPressState
+  Id: g=63c78160b442573247404d1fd58ad93f
+  Supertype: ConditionalConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Condition
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ReferenceType: HasSource
+    Children:
+    - Name: ExpressionEvaluator1
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        ModellingRule: Optional
+        Value: "{0}==1"
+      - Name: ns=2;Source0
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+  - Name: TrueValue
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasParameter
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/StyleSheets/Light/ButtonStyles/Accent@BrowseName"
+  - Name: FalseValue
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasParameter
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/StyleSheets/Light/ButtonStyles/Empty@BrowseName"

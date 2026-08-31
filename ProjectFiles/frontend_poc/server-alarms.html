@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Alarms &amp; Events · Server PoC</title>
+<link rel="stylesheet" href="server.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="dot"></span> Oven Demo · Supervisor</div>
+    <div class="group">Operations</div>
+    <a class="nav-item" href="server-fleet-overview.html"><span class="ic">▦</span> Fleet Overview</a>
+    <a class="nav-item" href="server-oven-detail.html"><span class="ic">◉</span> Ovens</a>
+    <a class="nav-item active" href="server-alarms.html"><span class="ic">▲</span> Alarms <span class="badge">3</span></a>
+    <div class="group">Process</div>
+    <a class="nav-item" href="server-recipes.html"><span class="ic">≡</span> Recipes</a>
+    <div class="group">IT / OT</div>
+    <a class="nav-item" href="server-connectivity.html"><span class="ic">⇆</span> Connectivity</a>
+    <div class="group">Admin</div>
+    <a class="nav-item" href="index.html"><span class="ic">←</span> All PoCs</a>
+  </aside>
+
+  <header class="topbar">
+    <span class="title">Alarms &amp; Events</span>
+    <span class="crumb">Operations · Live + history</span>
+    <div class="spacer"></div>
+    <span class="chip err"><span class="dot-status err"></span>3 active</span>
+    <span class="chip warn">2 unack</span>
+    <button class="btn">Acknowledge all</button>
+  </header>
+
+  <main class="main">
+
+    <!-- FILTERS -->
+    <div class="card card-pad mb-12">
+      <div class="row wrap gap-8">
+        <input class="input w-280" placeholder="Search message…" />
+        <select class="input w-160" title="Filter by oven">
+          <option>All ovens</option><option>Milano</option><option>Roma</option><option>Napoli</option>
+        </select>
+        <select class="input w-160" title="Filter by severity">
+          <option>All severities</option><option>High</option><option>Medium</option><option>Low</option>
+        </select>
+        <select class="input w-160" title="Time range">
+          <option>Last 1h</option><option>Last 24h</option><option>Last 7d</option><option>Custom…</option>
+        </select>
+        <span class="chip">12 results</span>
+        <div class="spacer"></div>
+        <button class="btn">Export CSV</button>
+      </div>
+    </div>
+
+    <!-- ACTIVE -->
+    <h3 class="section-h">Active alarms</h3>
+    <div class="card">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th></th><th>Sev</th><th>Source</th><th>Message</th>
+            <th>Triggered</th><th>Duration</th><th>Ack</th><th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="dot-status err"></span></td>
+            <td><span class="chip err">High</span></td>
+            <td>MQTT/MQTTClient</td>
+            <td>MQTT Client Disconnected</td>
+            <td class="mono">14:08:21</td>
+            <td class="mono">04:12</td>
+            <td><span class="chip warn">Unack</span></td>
+            <td><button class="btn">Ack</button></td>
+          </tr>
+          <tr>
+            <td><span class="dot-status warn"></span></td>
+            <td><span class="chip warn">Med</span></td>
+            <td>Ovens/Napoli</td>
+            <td>Temperature deviation &gt; 8°C</td>
+            <td class="mono">14:02:55</td>
+            <td class="mono">09:38</td>
+            <td><span class="chip warn">Unack</span></td>
+            <td><button class="btn">Ack</button></td>
+          </tr>
+          <tr>
+            <td><span class="dot-status warn"></span></td>
+            <td><span class="chip warn">Med</span></td>
+            <td>Ovens/Torino</td>
+            <td>Cycle overrun (+90s)</td>
+            <td class="mono">13:51:10</td>
+            <td class="mono">21:23</td>
+            <td><span class="chip ok">Ack · bob</span></td>
+            <td><button class="btn">Reset</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- HISTORY -->
+    <h3 class="section-h">History · last 24h</h3>
+    <div class="card">
+      <table class="tbl">
+        <thead>
+          <tr><th>Sev</th><th>Source</th><th>Message</th><th>Triggered</th><th>Cleared</th><th>Acknowledged by</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="chip">Info</span></td><td>Ovens/Milano</td><td>Recipe applied: Margherita_v3</td><td class="mono">13:40:02</td><td class="mono">13:40:02</td><td>auto</td></tr>
+          <tr><td><span class="chip warn">Med</span></td><td>Ovens/Genova</td><td>Power spike 14.2 kW</td><td class="mono">12:18:30</td><td class="mono">12:19:01</td><td>alice</td></tr>
+          <tr><td><span class="chip err">High</span></td><td>OPC-UA/Server</td><td>Certificate expires in 7 days</td><td class="mono">09:00:00</td><td class="mono">—</td><td>—</td></tr>
+          <tr><td><span class="chip">Info</span></td><td>Users/admin</td><td>Logged in from 10.20.30.4</td><td class="mono">08:42:11</td><td class="mono">—</td><td>—</td></tr>
+          <tr><td><span class="chip warn">Med</span></td><td>Ovens/Roma</td><td>Lost connectivity (recovered)</td><td class="mono">07:55:17</td><td class="mono">07:56:02</td><td>auto</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+</div>
+
+<div class="theme-toggle">
+  <button onclick="setTheme('light')" aria-pressed="false">☀</button>
+  <button onclick="setTheme('auto')" aria-pressed="true">Auto</button>
+  <button onclick="setTheme('dark')" aria-pressed="false">☾</button>
+</div>
+<script>
+function setTheme(t){document.documentElement.removeAttribute('data-theme');if(t!=='auto')document.documentElement.setAttribute('data-theme',t);document.querySelectorAll('.theme-toggle button').forEach(b=>b.setAttribute('aria-pressed','false'));event.target.setAttribute('aria-pressed','true');localStorage.setItem('theme',t);}
+(function(){var t=localStorage.getItem('theme');if(t&&t!=='auto')document.documentElement.setAttribute('data-theme',t);})();
+</script>
+</body>
+</html>

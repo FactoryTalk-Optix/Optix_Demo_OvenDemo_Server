@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Connectivity · Server PoC</title>
+<link rel="stylesheet" href="server.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="dot"></span> Oven Demo · Supervisor</div>
+    <div class="group">Operations</div>
+    <a class="nav-item" href="server-fleet-overview.html"><span class="ic">▦</span> Fleet Overview</a>
+    <a class="nav-item" href="server-oven-detail.html"><span class="ic">◉</span> Ovens</a>
+    <a class="nav-item" href="server-alarms.html"><span class="ic">▲</span> Alarms <span class="badge">3</span></a>
+    <div class="group">Process</div>
+    <a class="nav-item" href="server-recipes.html"><span class="ic">≡</span> Recipes</a>
+    <div class="group">IT / OT</div>
+    <a class="nav-item active" href="server-connectivity.html"><span class="ic">⇆</span> Connectivity</a>
+    <div class="group">Admin</div>
+    <a class="nav-item" href="index.html"><span class="ic">←</span> All PoCs</a>
+  </aside>
+
+  <header class="topbar">
+    <span class="title">Connectivity</span>
+    <span class="crumb">IT / OT · MQTT &amp; OPC-UA</span>
+    <div class="spacer"></div>
+    <span class="chip ok"><span class="dot-status ok"></span>Broker running</span>
+    <span class="chip ok"><span class="dot-status ok"></span>OPC-UA online</span>
+  </header>
+
+  <main class="main">
+
+    <!-- KPI -->
+    <div class="kpi-row">
+      <div class="kpi"><div class="lbl">MQTT clients</div><div class="val">14</div><div class="delta">12 publishers · 2 subscribers</div></div>
+      <div class="kpi"><div class="lbl">Msgs / sec</div><div class="val">132</div><div class="delta up">peak 240/s · 24h</div></div>
+      <div class="kpi"><div class="lbl">OPC-UA sessions</div><div class="val">3</div><div class="delta">2 client ops · 1 admin</div></div>
+      <div class="kpi"><div class="lbl">Cert expiry</div><div class="val warn">7 d</div><div class="delta down">renew before 2026-05-13</div></div>
+    </div>
+
+    <h3 class="section-h">MQTT</h3>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-h"><span class="t">Broker</span><span class="s">localhost:8883 · TLS</span></div>
+        <table class="tbl">
+          <tbody>
+            <tr><td>Status</td><td><span class="chip ok">Running</span></td></tr>
+            <tr><td>Listener port</td><td class="mono">8883</td></tr>
+            <tr><td>Max connections</td><td class="num">25</td></tr>
+            <tr><td>Max QoS</td><td class="num">2</td></tr>
+            <tr><td>Anonymous auth</td><td><span class="chip warn">enabled</span></td></tr>
+            <tr><td>Retain available</td><td><span class="chip ok">true</span></td></tr>
+            <tr><td>Persistence</td><td><span class="chip">disabled</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><span class="t">Subscriptions</span><span class="s">MQTTClient → Model</span></div>
+        <table class="tbl">
+          <thead><tr><th>Topic</th><th>QoS</th><th>Mapped to</th><th class="num">Msgs/min</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">optix/iot/status</td><td>1</td><td class="mono">Model/IncomingStatuses</td><td class="num">720</td></tr>
+            <tr><td class="mono">optix/iot/alarm</td><td>1</td><td class="mono">Model/IncomingAlarms</td><td class="num">4</td></tr>
+            <tr><td class="mono">optix/iot/ovenmessages</td><td>1</td><td class="mono">Model/IncomingMessages</td><td class="num">12</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3 class="section-h">OPC-UA Server</h3>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-h"><span class="t">Endpoint</span><span class="s">opc.tcp://localhost:59100</span></div>
+        <table class="tbl">
+          <tbody>
+            <tr><td>Endpoint</td><td class="mono">opc.tcp://localhost:59100</td></tr>
+            <tr><td>Min security mode</td><td>SignAndEncrypt</td></tr>
+            <tr><td>Min security policy</td><td>Basic256Sha256</td></tr>
+            <tr><td>Certificate</td><td><span class="chip warn">Expires in 7 d</span></td></tr>
+            <tr><td>Published nodes</td><td class="num">2 (Model, Model/Ovens)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><span class="t">Active sessions</span><span class="s">3 connected</span></div>
+        <table class="tbl">
+          <thead><tr><th>Client</th><th>User</th><th>From</th><th>Since</th></tr></thead>
+          <tbody>
+            <tr><td>OptixClient_Milano</td><td>anonymous</td><td class="mono">10.20.30.11</td><td class="mono">2h 14m</td></tr>
+            <tr><td>OptixClient_Roma</td><td>anonymous</td><td class="mono">10.20.30.12</td><td class="mono">2h 03m</td></tr>
+            <tr><td>UAExpert</td><td>admin</td><td class="mono">10.20.30.4</td><td class="mono">12m</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3 class="section-h">Loggers · stores</h3>
+    <div class="card">
+      <table class="tbl">
+        <thead><tr><th>Logger</th><th>Variables</th><th>Sampling</th><th>Store</th><th class="num">Rows / day</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>OvensStatisticsLogger</td><td class="num">8 (Power, Gas, Phase, Temp × 2)</td><td>Trigger</td><td>EmbeddedDatabase</td><td class="num">~57.6 k</td><td><span class="chip ok">OK</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+</div>
+
+<div class="theme-toggle">
+  <button onclick="setTheme('light')" aria-pressed="false">☀</button>
+  <button onclick="setTheme('auto')" aria-pressed="true">Auto</button>
+  <button onclick="setTheme('dark')" aria-pressed="false">☾</button>
+</div>
+<script>
+function setTheme(t){document.documentElement.removeAttribute('data-theme');if(t!=='auto')document.documentElement.setAttribute('data-theme',t);document.querySelectorAll('.theme-toggle button').forEach(b=>b.setAttribute('aria-pressed','false'));event.target.setAttribute('aria-pressed','true');localStorage.setItem('theme',t);}
+(function(){var t=localStorage.getItem('theme');if(t&&t!=='auto')document.documentElement.setAttribute('data-theme',t);})();
+</script>
+</body>
+</html>

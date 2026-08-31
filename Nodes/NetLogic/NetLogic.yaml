@@ -1,0 +1,5 @@
+Name: NetLogic
+Type: NetLogicCategoryFolder
+Children:
+- File: DesignTime/DesignTime.yaml
+- File: RunTime/RunTime.yaml

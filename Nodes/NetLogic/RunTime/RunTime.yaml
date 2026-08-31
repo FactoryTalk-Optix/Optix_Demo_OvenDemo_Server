@@ -1,0 +1,155 @@
+Name: RunTime
+Type: FolderType
+Children:
+- Name: OvensBehaviorLogic
+  Type: NetLogic
+- Name: OvensOeeLogic
+  Type: NetLogic
+- Name: RecipesBroadcastLogic
+  Type: NetLogic
+- Name: AlarmsBroadcastLogic
+  Type: NetLogic
+- Name: WebServer
+  Type: NetLogic
+- Name: OvensBroadcastLogic
+  Type: NetLogic
+- Name: AlarmSubscriberLogic
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: AlarmCount
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: LastAlarm
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/ConditionType/AcknowledgeableConditionType/AlarmConditionType"
+  - Name: ns=4;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+       "objectGuid": "df11bd104ff09de7f31867e99d8d1bc3",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
+  - Name: AlarmCountSeverity1
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AlarmCountSeverity2
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AlarmCountSeverity3
+    Type: BaseDataVariableType
+    DataType: Int32
+- Name: alarmSimulationLogic
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: alarmSimulationArray
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ValueRank: OneDimension
+    ArrayDimensions: [24]
+  - Name: enableSimulation
+    Id: g=ac541dee9f3443374e6ba0bede1b40aa
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: ns=4;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "1013c0cd4c0ff202c80cb0526c104c9f",
+       "objectGuid": "7c2322523c324a725ba7c49191cf8c6a",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
+- Name: ClockLogic
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: Time
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: Year
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Month
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Day
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Hour
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Minute
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Second
+      Type: BaseDataVariableType
+      DataType: Int32
+  - Name: UTCTime
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: Year
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Month
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Day
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Hour
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Minute
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Second
+      Type: BaseDataVariableType
+      DataType: Int32
+  - Name: ns=4;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+       "objectGuid": "9996e8e9dc11a5c3e3631c6fb9425d2d",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
+  - Name: TimeMinus10secs
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: UTCTimeMinus10secs
+    Type: BaseDataVariableType
+    DataType: DateTime

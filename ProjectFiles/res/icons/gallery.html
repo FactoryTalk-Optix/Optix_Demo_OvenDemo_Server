@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Icon Gallery · Server PoC</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f6f8;
+    color: #1d1f23;
+  }
+  h1 { margin-top: 0; }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+  .icon-box {
+    background: white;
+    border: 1px solid #e6e8ec;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    font-size: 13px;
+  }
+  .icon-box img {
+    width: 32px;
+    height: 32px;
+  }
+  .icon-name {
+    font-weight: 500;
+    font-family: monospace;
+    font-size: 12px;
+    color: #235d9f;
+  }
+  .icon-usage {
+    color: #5b6270;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Icon Gallery · 16×16 SVG · Brand #235d9f</h1>
+<p style="color: #5b6270; margin-bottom: 24px;">
+  All icons are in the <code>icons/</code> folder.
+  Use directly in HTML: <code>&lt;img src="icons/fleet.svg" width="16" /&gt;</code>
+  or in CSS background-image.
+</p>
+
+<div class="gallery">
+  <div class="icon-box">
+    <img src="fleet.svg" />
+    <div class="icon-name">fleet.svg</div>
+    <div class="icon-usage">Fleet Overview nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="ovens.svg" />
+    <div class="icon-name">ovens.svg</div>
+    <div class="icon-usage">Ovens nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="alarms.svg" />
+    <div class="icon-name">alarms.svg</div>
+    <div class="icon-usage">Alarms nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="recipes.svg" />
+    <div class="icon-name">recipes.svg</div>
+    <div class="icon-usage">Recipes nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="oee.svg" />
+    <div class="icon-name">oee.svg</div>
+    <div class="icon-usage">OEE nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="loggers.svg" />
+    <div class="icon-name">loggers.svg</div>
+    <div class="icon-usage">Loggers nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="connectivity.svg" />
+    <div class="icon-name">connectivity.svg</div>
+    <div class="icon-usage">Connectivity nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="opc-ua.svg" />
+    <div class="icon-name">opc-ua.svg</div>
+    <div class="icon-usage">OPC-UA Server nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="mqtt.svg" />
+    <div class="icon-name">mqtt.svg</div>
+    <div class="icon-usage">MQTT nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="users.svg" />
+    <div class="icon-name">users.svg</div>
+    <div class="icon-usage">Users admin nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="security.svg" />
+    <div class="icon-name">security.svg</div>
+    <div class="icon-usage">Security admin nav</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="arrow-left.svg" />
+    <div class="icon-name">arrow-left.svg</div>
+    <div class="icon-usage">Navigate back</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="arrow-right.svg" />
+    <div class="icon-name">arrow-right.svg</div>
+    <div class="icon-usage">Navigate forward</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="chevron-right.svg" />
+    <div class="icon-name">chevron-right.svg</div>
+    <div class="icon-usage">Drill-down, expand</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="check-circle.svg" />
+    <div class="icon-name">check-circle.svg</div>
+    <div class="icon-usage">Acknowledge, confirm</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="close.svg" />
+    <div class="icon-name">close.svg</div>
+    <div class="icon-usage">Dismiss, cancel</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="filter.svg" />
+    <div class="icon-name">filter.svg</div>
+    <div class="icon-usage">Filter button</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="sliders.svg" />
+    <div class="icon-name">sliders.svg</div>
+    <div class="icon-usage">Advanced filters</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="settings.svg" />
+    <div class="icon-name">settings.svg</div>
+    <div class="icon-usage">Settings, configure</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="clock.svg" />
+    <div class="icon-name">clock.svg</div>
+    <div class="icon-usage">Time, schedule</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="download.svg" />
+    <div class="icon-name">download.svg</div>
+    <div class="icon-usage">Export, save data</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="download-alt.svg" />
+    <div class="icon-name">download-alt.svg</div>
+    <div class="icon-usage">Download (arrow down)</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="upload.svg" />
+    <div class="icon-name">upload.svg</div>
+    <div class="icon-usage">Import, upload file</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="upload-alt.svg" />
+    <div class="icon-name">upload-alt.svg</div>
+    <div class="icon-usage">Upload (arrow up)</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="search.svg" />
+    <div class="icon-name">search.svg</div>
+    <div class="icon-usage">Search, find</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="archive.svg" />
+    <div class="icon-name">archive.svg</div>
+    <div class="icon-usage">Archive, store</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="aperture.svg" />
+    <div class="icon-name">aperture.svg</div>
+    <div class="icon-usage">Visibility, aperture</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="eye.svg" />
+    <div class="icon-name">eye.svg</div>
+    <div class="icon-usage">Watch, monitor</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="send.svg" />
+    <div class="icon-name">send.svg</div>
+    <div class="icon-usage">Send command, broadcast</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="plus-circle.svg" />
+    <div class="icon-name">plus-circle.svg</div>
+    <div class="icon-usage">Add, create new</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="refresh.svg" />
+    <div class="icon-name">refresh.svg</div>
+    <div class="icon-usage">Refresh, reload, sync</div>
+  </div>
+
+  <div class="icon-box">
+    <img src="swap.svg" />
+    <div class="icon-name">swap.svg</div>
+    <div class="icon-usage">Swap, exchange directions</div>
+  </div>
+</div>
+
+</body>
+</html>

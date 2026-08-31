@@ -1,0 +1,51 @@
+Name: DesignTime
+Type: FolderType
+Children:
+- Name: ImportAndExportTranslations
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: CSVPath
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=7;%PROJECTDIR%/translations.csv"
+  - Class: Method
+    Name: ExportTranslations
+  - Class: Method
+    Name: ImportTranslations
+  - Name: CharacterSeparator
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ";"
+  - Name: WrapFields
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: LocalizationDictionary
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Optix_Demo_OvenDemo_Server/Translations/LocalizationDictionary1"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/LocalizationDictionary"
+  - Name: ns=4;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+       "objectGuid": "e7cab90d0ab7e8b5b02218e38bca9a0e",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }

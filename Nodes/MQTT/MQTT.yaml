@@ -1,0 +1,269 @@
+Name: MQTT
+Type: MQTTCategoryFolder
+Children:
+- Name: MQTTBroker
+  Id: g=05dfe0d95eb10a54f93398ed46bd661c
+  Type: MQTTBroker
+  Children:
+  - Name: ListenerPort
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 8883
+  - Name: MaxConnections
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 25
+  - Name: MaxQoS
+    Type: BaseDataVariableType
+    DataType: MaxQoSEnum
+    Value: 2
+  - Name: MaxInflightMessages
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 20
+  - Name: MaxQueuedMessages
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1000
+  - Name: MessageSizeLimit
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: RetainAvailable
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: DataPersistence
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: PersistentClientExpiration
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: AutosaveOnChanges
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: AutosaveInterval
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 20
+  - Name: AnonymousAuthentication
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: RequireClientCertificate
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: CACertificateFile
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+  - Name: CertificateFile
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+  - Name: CertificateKeyFile
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+  - Name: Running
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+- Name: MQTTClient
+  Type: MQTTClient
+  Children:
+  - Class: Reference
+    Target: ns=12;i=12
+    Direction: Forward
+  - Class: Reference
+    Target: ns=12;i=44
+    Direction: Forward
+  - Name: BrokerAddress
+    Type: PropertyType
+    DataType: String
+    Value: "localhost"
+  - Name: BrokerPort
+    Type: PropertyType
+    DataType: UInt16
+    Value: 8883
+  - Name: ClientId
+    Type: PropertyType
+    DataType: String
+    Value: "FTOptix-14546"
+  - Name: Status
+    Type: BaseDataVariableType
+    DataType: StatusEnum
+    ReferenceType: HasProperty
+    AccessLevel: Read
+  - Name: UserIdentityType
+    Type: BaseDataVariableType
+    DataType: UserIdentityTypeEnum
+  - Name: SSLTLSEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ValidateBrokerCertificate
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: WillMessageEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: WillTopic
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: WillPayload
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: WillQoS
+    Type: BaseDataVariableType
+    DataType: QoSLevelEnum
+  - Name: WillRetain
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: WillDelayInterval
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: MQTTSubscriber
+    Type: MQTTSubscriber
+    Children:
+    - Class: Reference
+      Target: ns=12;i=47
+      Direction: Forward
+    - Name: Subscriptions
+      Id: g=e6324e36ec5b7a0aeb5a6e70e460c91d
+      Type: BaseObjectType
+      Children:
+      - Name: Alarms
+        Type: SubscriptionPlainText
+        ReferenceType: HasOrderedComponent
+        Children:
+        - Name: Variable
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/IncomingAlarms"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
+        - Name: Topic
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "optix/iot/alarmslist"
+        - Name: QoS
+          Type: BaseDataVariableType
+          DataType: QoSLevelEnum
+      - Name: Messages
+        Type: SubscriptionPlainText
+        ReferenceType: HasOrderedComponent
+        Children:
+        - Name: Variable
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/IncomingMessages"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
+        - Name: Topic
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "optix/iot/ovenmessages"
+        - Name: QoS
+          Type: BaseDataVariableType
+          DataType: QoSLevelEnum
+      - Name: Statuses
+        Type: SubscriptionPlainText
+        ReferenceType: HasOrderedComponent
+        Children:
+        - Name: Variable
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/IncomingStatuses"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
+        - Name: Topic
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "optix/iot/status"
+        - Name: QoS
+          Type: BaseDataVariableType
+          DataType: QoSLevelEnum
+  - Name: MQTTPublisher
+    Type: MQTTPublisher
+    Children:
+    - Name: SamplingMode
+      Type: PropertyType
+      DataType: ns=12;SamplingModeEnum
+      Value: 1
+    - Name: DataSource
+      Type: BaseDataVariableType
+      DataType: DataSourceEnum
+      Value: 1
+    - Name: Folder
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+      - Name: ItemKind
+        Type: PropertyType
+        DataType: NodeId
+    - Name: DataLogger
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Loggers/OvensStatisticsLogger"
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/DataLogger"
+      - Name: ItemKind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType/VariableToLog"
+    - Name: Topic
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "optix/iot/datalogger"
+    - Name: QoS
+      Type: BaseDataVariableType
+      DataType: QoSLevelEnum
+    - Name: Retain
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: PFEnabled
+      Type: PropertyType
+      DataType: Boolean
+    - Name: PayloadUpdateTimestamp
+      Type: BaseDataVariableType
+      DataType: DateTime
+      ReferenceType: HasProperty
+      AccessLevel: Read
+    - Name: SFEnabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: SFBufferMaxSize
+      Type: BaseDataVariableType
+      DataType: UInt32
+      Value: 1000
+    - Name: SFBufferUsage
+      Type: BaseDataVariableType
+      DataType: UInt32
+      AccessLevel: Read
+    - Name: SFBufferOverflow
+      Type: BaseDataVariableType
+      DataType: Boolean
+      AccessLevel: Read
+    - Name: SFBufferOverwrite
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: Item
+      Type: Alias
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType/VariableToLog"

@@ -1,0 +1,1694 @@
+Name: Instances
+Type: FolderType
+Children:
+- Name: DigitalAlarm1
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: ExpressionEvaluator1
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        Value: "{0} != 1"
+      - Name: ns=2;Source0
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../../../MQTT/MQTTClient/Status"
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"MqttClientDisconnected"}
+  - Name: AutoConfirm
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1
+  - Name: AutoAcknowledge
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+- Name: BaseDigitalAlarmOven1_1
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[0]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven1/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_HIGH_002"}
+- Name: BaseDigitalAlarmOven1_2
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[1]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven1/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_MED_001"}
+- Name: BaseDigitalAlarmOven1_3
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[2]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven1/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 3
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_INFO_001"}
+- Name: BaseDigitalAlarmOven2_1
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[3]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven2/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_HIGH_003"}
+- Name: BaseDigitalAlarmOven2_2
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[4]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven2/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_MED_002"}
+- Name: BaseDigitalAlarmOven2_3
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[5]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven2/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 3
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_INFO_002"}
+- Name: BaseDigitalAlarmOven3_1
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[6]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven3/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_HIGH_004"}
+- Name: BaseDigitalAlarmOven3_2
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[7]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven3/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_MED_003"}
+- Name: BaseDigitalAlarmOven3_3
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[8]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven3/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 3
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_INFO_003"}
+- Name: BaseDigitalAlarmOven4_1
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[9]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven4/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_HIGH_005"}
+- Name: BaseDigitalAlarmOven4_2
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[10]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven4/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_MED_004"}
+- Name: BaseDigitalAlarmOven4_3
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[11]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven4/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 3
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_INFO_004"}
+- Name: BaseDigitalAlarmOven5_1
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[12]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven5/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_HIGH_006"}
+- Name: BaseDigitalAlarmOven5_2
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[13]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven5/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_MED_005"}
+- Name: BaseDigitalAlarmOven5_3
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[14]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven5/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 3
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_INFO_005"}
+- Name: BaseDigitalAlarmOven6_1
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[15]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven6/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_HIGH_007"}
+- Name: BaseDigitalAlarmOven6_2
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[16]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven6/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_MED_006"}
+- Name: BaseDigitalAlarmOven6_3
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[17]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven6/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 3
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_INFO_006"}
+- Name: BaseDigitalAlarmOven7_1
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[18]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven7/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_HIGH_008"}
+- Name: BaseDigitalAlarmOven7_2
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[19]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven7/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 2
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_MED_007"}
+- Name: BaseDigitalAlarmOven7_3
+  Type: BaseDigitalAlarm
+  Children:
+  - Class: Reference
+    Target: ns=33;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../NetLogic/RunTime/alarmSimulationLogic/alarmSimulationArray[20]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: OvenName
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Ovens/OptixOven7/OvenName"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 3
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":7,"TextId":"ALARM_INFO_007"}
