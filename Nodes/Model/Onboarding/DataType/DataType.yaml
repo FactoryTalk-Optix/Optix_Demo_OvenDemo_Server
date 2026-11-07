@@ -1,0 +1,20 @@
+Name: DataType
+Id: g=abc0de16a5d209cb4aeee29d6882f44a
+Type: FolderType
+Children:
+- Name: OnboardingRequestData
+  Id: g=2b4eac5b0eeed3d1fe5e63d553bae1aa
+  Supertype: BaseObjectType
+  Children:
+  - Name: Sender
+    Id: g=511a9cb7be2f3ab5a397740eafe8d965
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Content
+    Id: g=e3c7dd5183a3a203c234289d162d8a17
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Timestamp
+    Id: g=c28e39560bbdcf247da1958166c9faf6
+    Type: BaseDataVariableType
+    DataType: DateTime

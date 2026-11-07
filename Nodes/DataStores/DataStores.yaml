@@ -1,4 +1,5 @@
 Name: DataStores
+Id: g=3bcd87a83d6d4ae3f5f13dd61c4a5fee
 Type: DataStoresCategoryFolder
 Children:
 - Name: EmbeddedDatabase
@@ -6,121 +7,11 @@ Children:
   Type: SQLiteStore
   Children:
   - Name: Tables
+    Id: g=c70f16747eae487e91b1f590963d68d8
     Type: BaseObjectType
     Children:
-    - Name: OvensStatisticsLogger
-      Type: SQLiteStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=23;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=23;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=23;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=23;i=20
-        Direction: Forward
-      - Name: Columns
-        Type: BaseObjectType
-        Children:
-        - Name: Timestamp
-          Type: StoreColumn
-          DataType: UtcTime
-        - Name: LocalTimestamp
-          Type: StoreColumn
-          DataType: DateTime
-        - Name: PowerConsumption1
-          Type: StoreColumn
-          DataType: Int32
-        - Name: GasConsumption1
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentPhase1
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentTemperature1
-          Type: StoreColumn
-          DataType: Int32
-        - Name: PowerConsumption2
-          Type: StoreColumn
-          DataType: Int32
-        - Name: GasConsumption2
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentPhase2
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentTemperature2
-          Type: StoreColumn
-          DataType: Int32
-        - Name: PowerConsumption3
-          Type: StoreColumn
-          DataType: Int32
-        - Name: GasConsumption3
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentPhase3
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentTemperature3
-          Type: StoreColumn
-          DataType: Int32
-        - Name: PowerConsumption4
-          Type: StoreColumn
-          DataType: Int32
-        - Name: GasConsumption4
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentPhase4
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentTemperature4
-          Type: StoreColumn
-          DataType: Int32
-        - Name: PowerConsumption5
-          Type: StoreColumn
-          DataType: Int32
-        - Name: GasConsumption5
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentPhase5
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentTemperature5
-          Type: StoreColumn
-          DataType: Int32
-        - Name: PowerConsumption6
-          Type: StoreColumn
-          DataType: Int32
-        - Name: GasConsumption6
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentPhase6
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentTemperature6
-          Type: StoreColumn
-          DataType: Int32
-        - Name: PowerConsumption7
-          Type: StoreColumn
-          DataType: Int32
-        - Name: GasConsumption7
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentPhase7
-          Type: StoreColumn
-          DataType: Int32
-        - Name: CurrentTemperature7
-          Type: StoreColumn
-          DataType: Int32
-      - Name: RecordLimit
-        Type: BaseDataVariableType
-        DataType: UInt32
-        Value: 1000
     - Name: Recipes
+      Id: g=be7db8be4927677c36113f4634a5eea0
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -136,73 +27,93 @@ Children:
         Target: ns=23;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=c5ae2c1ef85011de41ae5eca74207e6d
         Type: BaseObjectType
         Children:
         - Name: Id
+          Id: g=31f221bc3a2a1586135bc6cc411e5a85
           Type: StoreColumn
           DataType: UInt32
           Children:
           - Name: PrimaryKey
+            Id: g=8bcb39cbdd1d421815be1ba251f33c2f
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: AutoIncrement
+            Id: g=ad30b20b6994f396a279e8501ae1f295
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: Nullable
+            Id: g=1bfa3d0c6d97067d94c690349a88d998
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: Name
+          Id: g=0f302f287a28788d813521636ac53c41
           Type: StoreColumn
           DataType: String
           Children:
           - Name: Nullable
+            Id: g=c83e7722651178a164470c406bf3fa6b
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: Version
+          Id: g=60d02f014f5840e60ddf266bfc2e3f21
           Type: StoreColumn
           DataType: String
           Children:
           - Name: Nullable
+            Id: g=035803c058b40970d3a758cf3f0bc18d
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: RecipeSchemaName
+          Id: g=c889f5c14400187d92d3674f3bb87268
           Type: StoreColumn
           DataType: String
           Children:
           - Name: Nullable
+            Id: g=fb76d4698ab4200b935b3995b406239c
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: RecipeSchemaNamespaceUri
+          Id: g=bdf6ad2dc23fa74e9a8225bac0fb8ef4
           Type: StoreColumn
           DataType: String
           Children:
           - Name: Nullable
+            Id: g=0414b65f1e1a57c8761472da1292647f
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: RecipeSchemaTimestamp
+          Id: g=5a260b6acf8b16a243547125db0ed285
           Type: StoreColumn
           DataType: DateTime
           Children:
           - Name: Nullable
+            Id: g=18653cb788a21bd946f42a8cc1c5c70a
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: CreatedAt
+          Id: g=b33e90a76592a7c5bfb5b51c59f75ca6
           Type: StoreColumn
           DataType: DateTime
           Children:
           - Name: Nullable
+            Id: g=3be4ba39ec0c1c862087547788e60678
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: ModifiedAt
+          Id: g=dfad15bbfac0f86b081fd308e7c5807e
           Type: StoreColumn
           DataType: DateTime
           Children:
           - Name: Nullable
+            Id: g=7593be48506a57243d3ac502d839602a
             Type: BaseDataVariableType
             DataType: Boolean
     - Name: RecipeItems
+      Id: g=28ff40fe0ff335c4b6e7bc49ff694a8d
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -218,45 +129,57 @@ Children:
         Target: ns=23;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=f1f82f05364b7e75ec84ea0eefc40055
         Type: BaseObjectType
         Children:
         - Name: Id
+          Id: g=e0d0f3d2396c1aad06cd96d574c5781b
           Type: StoreColumn
           DataType: UInt32
           Children:
           - Name: PrimaryKey
+            Id: g=486e038b7ff2d8ca42da4573956bb942
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: AutoIncrement
+            Id: g=76b69f1bf6a844d49b96e598ab18484d
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: Nullable
+            Id: g=3a8b3a3838371993d35039419439a2d0
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: RecipeId
+          Id: g=699fe069a787001867b223b82d619727
           Type: StoreColumn
           DataType: UInt32
           Children:
           - Name: Nullable
+            Id: g=074b465c88d0e2667da62419d2e77fb8
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: RelativeBrowsePath
+          Id: g=451f693de1987ac2cf38b15ea9c0defa
           Type: StoreColumn
           DataType: String
           Children:
           - Name: Nullable
+            Id: g=20e4ffb9f52dab0f9c598eb9afc2bbe1
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: TypeId
+          Id: g=dd1cc4e2500a570ef8d8356bf8bac604
           Type: StoreColumn
           DataType: String
           Children:
           - Name: Nullable
+            Id: g=635de01d9a7628a9586af5c353b188b9
             Type: BaseDataVariableType
             DataType: Boolean
     - Name: RecipeDataItems
+      Id: g=bb0c7ef0ca9fa526289509470bdb1a02
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -272,59 +195,75 @@ Children:
         Target: ns=23;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=818ae6dbfc9dc1d766c5139856293302
         Type: BaseObjectType
         Children:
         - Name: Id
+          Id: g=875194ead141d75976df6af4e0e91223
           Type: StoreColumn
           DataType: UInt32
           Children:
           - Name: PrimaryKey
+            Id: g=84df58bcb15af2f593508b421a0ee67b
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: AutoIncrement
+            Id: g=a948305f26d4869b5c032586060d1fcc
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: Nullable
+            Id: g=c3400e8e2436256c93d0b64853cde001
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: RecipeItemId
+          Id: g=21da24cf4fe5a556720537c2fda50813
           Type: StoreColumn
           DataType: UInt32
           Children:
           - Name: Nullable
+            Id: g=bb66a6b0212435b3ea77db61dfb46dcc
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: RelativeBrowsePath
+          Id: g=ed0b655b35c067d08d66811ee0864bd0
           Type: StoreColumn
           DataType: String
           Children:
           - Name: Nullable
+            Id: g=59cc9ca560441ee1ec27789e8f8b51d6
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: ElementAccess
+          Id: g=057c3a7508993f6672c1c6aa9c1e8725
           Type: StoreColumn
           DataType: String
           Children:
           - Name: Nullable
+            Id: g=c0f8a6b509e1fafffea885135e18004a
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: DataTypeId
+          Id: g=51ce004929d918e402c2aa2f2a365c90
           Type: StoreColumn
           DataType: String
           Children:
           - Name: Nullable
+            Id: g=c1484857388fb283d7d411a6d438fa09
             Type: BaseDataVariableType
             DataType: Boolean
         - Name: Value
+          Id: g=8b10864c817c65e3fa4d7fdace4ab18f
           Type: StoreColumn
           DataType: String
           Children:
           - Name: Nullable
+            Id: g=c3d9032bbacaa5d75f69ccafc68cbff3
             Type: BaseDataVariableType
             DataType: Boolean
     - Name: RecipeMetadata_RecipeSchema
+      Id: g=af3831279021e7d834ad38e926571d5b
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -340,84 +279,41 @@ Children:
         Target: ns=23;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=11588047de7d90c6be605bc08d53d2a4
         Type: BaseObjectType
         Children:
         - Name: RecipeId
+          Id: g=bdb25260363331d9250197b507c0a184
           Type: StoreColumn
           DataType: UInt32
           Children:
           - Name: PrimaryKey
+            Id: g=c49fd132bf0adac222ecc2371bd3b879
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: Nullable
+            Id: g=cef0eb5dcfb118302982c997e5533c8b
             Type: BaseDataVariableType
             DataType: Boolean
-        - Name: Approved
+        - Name: Status
+          Id: g=f0e7bd7b2e04b2061c77c48eec184e14
           Type: StoreColumn
-          DataType: Boolean
+          DataType: UInt32
         - Name: Used
+          Id: g=5f4b0c6cacb837f603eca2d57132f2eb
           Type: StoreColumn
           DataType: Boolean
-        - Name: Deprecated
-          Type: StoreColumn
-          DataType: Boolean
-    - Name: Oee
-      Type: SQLiteStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=23;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=23;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=23;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=23;i=20
-        Direction: Forward
-      - Name: Columns
-        Type: BaseObjectType
-        Children:
-        - Name: Timestamp
-          Type: StoreColumn
-          DataType: DateTime
-        - Name: ActiveSeconds
-          Type: StoreColumn
-          DataType: UInt32
-        - Name: Cycles
-          Type: StoreColumn
-          DataType: UInt32
-        - Name: GasConsumption
-          Type: StoreColumn
-          DataType: UInt32
-        - Name: ElectricityConsumption
-          Type: StoreColumn
-          DataType: UInt32
-        - Name: OvenId
+        - Name: Author
+          Id: g=e3e6e4fb2ce6b42bbf7c0ef9adbede8f
           Type: StoreColumn
           DataType: String
-        - Name: DailyCycles
-          Type: StoreColumn
-          DataType: UInt32
-        - Name: DailyGasConsumption
-          Type: StoreColumn
-          DataType: UInt32
-        - Name: DailyElectricityConsumption
-          Type: StoreColumn
-          DataType: UInt32
-        - Name: OvenName
+        - Name: Description
+          Id: g=124dd45666b67f9c22baf5812074dbff
           Type: StoreColumn
           DataType: String
-        - Name: LastUpdate
-          Type: StoreColumn
-          DataType: DateTime
-      - Name: RecordLimit
-        Type: BaseDataVariableType
-        DataType: UInt32
-        Value: 1000
     - Name: AlarmsEventLogger
+      Id: g=e47d82c870a79ec63c4c2231f6495344
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -433,57 +329,80 @@ Children:
         Target: ns=23;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=679fa29e7af8e0cc57364611f35458e6
         Type: BaseObjectType
         Children:
         - Name: ActiveState_Id
+          Id: g=44828a9b6985917246d77e22d8140418
           Type: StoreColumn
           DataType: Boolean
         - Name: AckedState_Id
+          Id: g=b4b7fc7f8abb9ef265a68284e4832a53
           Type: StoreColumn
           DataType: Boolean
         - Name: ConfirmedState_Id
+          Id: g=8684188cde18461a2f9095e3fcdcaf28
           Type: StoreColumn
           DataType: Boolean
         - Name: ConditionName
+          Id: g=2ad9969d0ebcadeec46fe23211c6d2f3
           Type: StoreColumn
           DataType: String
         - Name: EnabledState_Id
+          Id: g=ffba64f1d93717493997cadcb5b6ca93
           Type: StoreColumn
           DataType: Boolean
         - Name: SourceName
+          Id: g=097503b317c9b43649ff90d3064dd203
           Type: StoreColumn
           DataType: String
         - Name: Time
+          Id: g=a5ba580e9d1255893ad697f6c7e70f1d
           Type: StoreColumn
           DataType: UtcTime
         - Name: 'Message_en-US'
+          Id: g=009f5b6fbf5eaafc00c4651e97d202ae
           Type: StoreColumn
           DataType: String
         - Name: Severity
+          Id: g=0c8277c6440a04b1b36d9d5bad91132d
           Type: StoreColumn
           DataType: UInt16
         - Name: LocalTime
+          Id: g=064b56b8a5123050c06cd012f14b88ec
           Type: StoreColumn
           DataType: DateTime
         - Name: OvenName
+          Id: g=722e088621d22fae106caaa219866c2f
           Type: StoreColumn
           DataType: String
         - Name: 'Message_es-ES'
+          Id: g=90151c75e4d306473edbb645ab8827ef
           Type: StoreColumn
           DataType: String
         - Name: 'Message_it-IT'
+          Id: g=8f2cfed13e0579f23d41cc9168f65e34
           Type: StoreColumn
           DataType: String
         - Name: 'Message_fr-FR'
+          Id: g=d28b1d6ddb4ec23d1a384053a485ad35
           Type: StoreColumn
           DataType: String
         - Name: 'Message_de-DE'
+          Id: g=d7c00248989334f004e02cb6806d24de
           Type: StoreColumn
           DataType: String
         - Name: 'Message_zh-CN'
+          Id: g=a0641e9a5262bd1326f6d983a5a9a0ab
           Type: StoreColumn
           DataType: String
+      - Name: RecordLimit
+        Id: g=30881e6c77997e82dc9b878b1d0d78d1
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1000
     - Name: RuntimeOutputLogger
+      Id: g=5dfdd5a70151d5c779e2b880bd8210fa
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -499,36 +418,47 @@ Children:
         Target: ns=23;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=b942f8219aed8e0d11b23901e615e341
         Type: BaseObjectType
         Children:
         - Name: 'Message_en-US'
+          Id: g=f3a8e218f736044034c087fd6b1ef631
           Type: StoreColumn
           DataType: String
         - Name: ModuleName
+          Id: g=53a3cf94bd8f43481946f54e647d673f
           Type: StoreColumn
           DataType: String
         - Name: Time
+          Id: g=403664db827acdfb64cabbaf427a72e2
           Type: StoreColumn
           DataType: UtcTime
         - Name: Level
+          Id: g=1fa2f1e1fba261c11f5c6899a1e8777f
           Type: StoreColumn
           DataType: LogLevel
         - Name: 'Message_es-ES'
+          Id: g=f7f98c4ff2caa9f4e5420e874dacb0b5
           Type: StoreColumn
           DataType: String
         - Name: 'Message_it-IT'
+          Id: g=4d198b50722386580d14b304504b1ce7
           Type: StoreColumn
           DataType: String
         - Name: 'Message_fr-FR'
+          Id: g=b375c83362b423b857d6afab1553afdc
           Type: StoreColumn
           DataType: String
         - Name: 'Message_de-DE'
+          Id: g=165f13e9ff4016efbac9f9b52c562cdb
           Type: StoreColumn
           DataType: String
         - Name: 'Message_zh-CN'
+          Id: g=f2319695c39d9fdc44b8d580a9e1db59
           Type: StoreColumn
           DataType: String
       - Name: RecordLimit
+        Id: g=2b1865e037bba31aed0fa2a5dd80ae00
         Type: BaseDataVariableType
         DataType: UInt32
         Value: 1000
@@ -539,20 +469,24 @@ Children:
     Target: ns=25;i=33
     Direction: Forward
   - Name: MaxColumnNameLength
+    Id: g=54422400323c3a6324ab1b228d7f90d8
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
   - Name: MaxColumnCount
+    Id: g=9990d62b9fe123e79ea45bc0eb0770a0
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
   - Name: DataTypeCompatibilityMap
+    Id: g=8779800eecc3f9be3286a05e62ed1323
     Type: BaseDataVariableType
     DataType: NodeId
     AccessLevel: Read
     ValueRank: OneOrMoreDimensions
     ArrayDimensions: [0,0]
   - Name: Status
+    Id: g=f3f92ebae274144b009b580f365af74f
     Type: PropertyType
     DataType: StoreStatus
     AccessLevel: Read
@@ -594,6 +528,7 @@ Children:
     Target: ns=23;i=59
     Direction: Forward
   - Name: Filename
+    Id: g=562aa83c1cdc542445bbdfd32f579888
     Type: BaseDataVariableType
     DataType: String
     Value: "ovenDemoDatabase"

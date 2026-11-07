@@ -1,2 +1,184 @@
 Name: Retentivity
+Id: g=7dcad0e7f9bc2aeed3be54e788eba092
 Type: RetentivityCategoryFolder
+Children:
+- Name: SecurityRetentivityStorage
+  Id: g=78b4f98e99b25f9b252d94cdd97a5351
+  Type: RetentivityStorage
+  Children:
+  - Name: Nodes
+    Id: g=97b38aeddbddc8ed6747e7e29749318f
+    Type: BaseObjectType
+    Children:
+    - Name: Node1
+      Id: g=c95ee0e16205cbdbe455c0c30da65b32
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Security"
+      Children:
+      - Name: Kind
+        Id: g=cb853824e0db323a57c6207db798d019
+        Type: PropertyType
+        DataType: NodeId
+      - Name: NodeClass
+        Id: g=9adfbadd88619882d843bcfcc81e9792
+        Type: PropertyType
+        DataType: NodePointerNodeClass
+        Value: 2
+  - Name: WriteDelay
+    Id: g=2927709727f8b7309656a8460ce2bc74
+    Type: BaseDataVariableType
+    DataType: Duration
+    ReferenceType: HasProperty
+  - Name: DeltaObserverEnabled
+    Id: g=f3459d6ff8976d78813de40eb9620d93
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ReferenceType: HasProperty
+    Value: true
+  - Class: Reference
+    Target: ns=35;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=35;i=14
+    Direction: Forward
+- Name: AlarmsRetentivityStorage
+  Id: g=1c711a0bad4d7cdee3f3a7de55f18c92
+  Type: RetentivityStorage
+  Children:
+  - Name: Nodes
+    Id: g=c056a4aea4e2c31e2fb943028c72730b
+    Type: BaseObjectType
+    Children:
+    - Name: Node1
+      Id: g=accc1112fb3ba3d32935ab01c94c0b64
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Alarms"
+      Children:
+      - Name: Kind
+        Id: g=7039f687dd9afa86624d3b7a222043db
+        Type: PropertyType
+        DataType: NodeId
+      - Name: NodeClass
+        Id: g=6291583de4c2afc754786bdc7f0869f4
+        Type: PropertyType
+        DataType: NodePointerNodeClass
+        Value: 2
+  - Name: WriteDelay
+    Id: g=3440ebf2458df1fdc77bc664ffba2087
+    Type: BaseDataVariableType
+    DataType: Duration
+    ReferenceType: HasProperty
+  - Name: DeltaObserverEnabled
+    Id: g=ae45609f3e337a125914f9fa954fb2ac
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ReferenceType: HasProperty
+    Value: true
+  - Class: Reference
+    Target: ns=35;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=35;i=14
+    Direction: Forward
+- Name: HMIRetentivityStorage
+  Id: g=dbbd5b686432b98f614cbe18f357d598
+  Type: RetentivityStorage
+  Children:
+  - Name: Nodes
+    Id: g=9d798a52869595e00a95abcf171b32ae
+    Type: BaseObjectType
+    Children:
+    - Name: Node1
+      Id: g=3b473e7c05b35ba1f927c85fa1ef456f
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Fleet"
+      Children:
+      - Name: Kind
+        Id: g=a917c7a201d12b96509be53c80438031
+        Type: PropertyType
+        DataType: NodeId
+      - Name: NodeClass
+        Id: g=58a5f8bd7f7d6d26b4ff762be7369a27
+        Type: PropertyType
+        DataType: NodePointerNodeClass
+        Value: 2
+    - Name: Node2
+      Id: g=82d967eff30ab633959ea98ebcfe974c
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/HMISettings"
+      Children:
+      - Name: Kind
+        Id: g=475637a3a475f3373f1d1f70508e1ba2
+        Type: PropertyType
+        DataType: NodeId
+      - Name: NodeClass
+        Id: g=a039115155338afcac4d281492df5173
+        Type: PropertyType
+        DataType: NodePointerNodeClass
+        Value: 2
+    - Name: Node3
+      Id: g=cfb16eb477fde719aaaffcdcae68e512
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/MQTT/MQTTSupervisorClient"
+      Children:
+      - Name: Kind
+        Id: g=5f78bd3e2cf686ffda678a172380e5c9
+        Type: PropertyType
+        DataType: NodeId
+      - Name: NodeClass
+        Id: g=dceea7843c24d22a9d8743f891218649
+        Type: PropertyType
+        DataType: NodePointerNodeClass
+        Value: 2
+    - Name: Node4
+      Id: g=69aae29821bcc7cf9410c5c398e1b85c
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/OPC-UA/Clients"
+      Children:
+      - Name: Kind
+        Id: g=f1c02d746cdbf4dffeb5fd66bb4bbec4
+        Type: PropertyType
+        DataType: NodeId
+      - Name: NodeClass
+        Id: g=be6c4f4652c5855b4e9154f0d725e2bf
+        Type: PropertyType
+        DataType: NodePointerNodeClass
+        Value: 2
+    - Name: Node5
+      Id: g=5000c24217550d974500a1283776f3be
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/OvenEdgeManagers"
+      Children:
+      - Name: Kind
+        Id: g=231132e00c53dd1ace8dc116f044c373
+        Type: PropertyType
+        DataType: NodeId
+      - Name: NodeClass
+        Id: g=a6bca88fd31ee784e4da12b97daf4c68
+        Type: PropertyType
+        DataType: NodePointerNodeClass
+        Value: 2
+  - Name: WriteDelay
+    Id: g=f5267e766df5042c9ac8c2bad6b8eba5
+    Type: BaseDataVariableType
+    DataType: Duration
+    ReferenceType: HasProperty
+  - Name: DeltaObserverEnabled
+    Id: g=9060b1e09e6cb3545071522ba755ddf7
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ReferenceType: HasProperty
+    Value: true
+  - Class: Reference
+    Target: ns=35;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=35;i=14
+    Direction: Forward

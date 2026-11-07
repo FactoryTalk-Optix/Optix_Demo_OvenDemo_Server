@@ -1,0 +1,29 @@
+Name: HMISettings
+Id: g=46d4509ee2a2e882f7764bee795c4d1b
+Type: FolderType
+Children:
+- Name: ViewType
+  Id: g=2bea92c74f35e2f20280164b92da10ef
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Description: {"NamespaceIndex":7,"TextId":"False = Grid_True = List"}
+- Name: Interfaces
+  Id: g=51fd69167af0d48c61219775603cd899
+  Type: BaseObjectType
+- Name: MQTT
+  Id: g=f4548225b4efb77e778bd5400dbbc628
+  Type: BaseObjectType
+  Children:
+  - Name: Broker
+    Id: g=5b2161025adf39b1cb7ee01fe4591ae2
+    Type: BaseObjectType
+    Children:
+    - Name: AdvertisedHost
+      Id: g=0bf34927a5e042a9e27aa56fc4a89ee4
+      Type: BaseDataVariableType
+      DataType: String
+- Name: AnalyticsPlannedHours
+  Id: g=122b9b1b764c4c3194244570ecac6ca3
+  Type: BaseDataVariableType
+  DataType: Double
+  Value: 8.0

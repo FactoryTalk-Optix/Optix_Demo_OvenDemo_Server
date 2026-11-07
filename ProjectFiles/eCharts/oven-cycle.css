@@ -1,0 +1,5 @@
+html, body { height: 100%; margin: 0; overflow: hidden; background: var(--surface); font-family: Bahnschrift, Lato, 'Segoe UI', sans-serif; }
+body[data-theme="light"] { --surface: #f8fafb; --muted: #5f7690; --ink: #16304d; --grid: #dfe7ee; --band-a: rgba(44, 114, 192, 0.07); --band-b: rgba(44, 114, 192, 0.15); --setpoint: #7d8e97; --actual: #2c72c0; --now: #d9480f; }
+body[data-theme="dark"] { --surface: #354357; --muted: #c0cddc; --ink: #f1f5f9; --grid: #4b5d73; --band-a: rgba(127, 182, 245, 0.10); --band-b: rgba(127, 182, 245, 0.22); --setpoint: #c0cddc; --actual: #6aa5e6; --now: #ff922b; }
+#chart { position: absolute; inset: 0; }
+#status { position: absolute; top: 8px; right: 12px; z-index: 1; font-size: 12px; color: var(--muted); }

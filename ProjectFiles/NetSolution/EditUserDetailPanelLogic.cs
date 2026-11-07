@@ -3,6 +3,9 @@ using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using FTOptix.UI;
 using UAManagedCore;
+using FTOptix.HighAvailability;
+using FTOptix.Retentivity;
+using FTOptix.OPCUAClient;
 using OpcUa = UAManagedCore.OpcUa;
 #endregion
 

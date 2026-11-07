@@ -1,4 +1,5 @@
 Name: NetLogic
+Id: g=8cc8c14c9af69c22946a1030935bdf7b
 Type: NetLogicCategoryFolder
 Children:
 - File: DesignTime/DesignTime.yaml

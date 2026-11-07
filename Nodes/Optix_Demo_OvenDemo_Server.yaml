@@ -1,51 +1,64 @@
 Name: Optix_Demo_OvenDemo_Server
+Id: g=1e380e7ecd4451dd7a33b42387e469f2
 Type: ProjectFolder
 Children:
 - Name: Localization
+  Id: g=99541ace40c7b6815c87fecd8546d4ac
   Type: PropertyGroup
   Children:
   - Name: Locales
+    Id: g=f0e47bfe7a81b675d93d13d131a91038
     Type: BaseDataVariableType
     DataType: LocaleId
     ValueRank: OneDimension
     ArrayDimensions: [0]
     Value: ["en-US","es-ES","it-IT","fr-FR","de-DE","zh-CN"]
   - Name: LocaleFallbackList
+    Id: g=4c6fd5ca419be5644d12d2c33a165155
     Type: BaseDataVariableType
     DataType: LocaleId
     ValueRank: OneDimension
     ArrayDimensions: [0]
     Value: ["en-US"]
 - Name: Authentication
+  Id: g=38b3a1f8946a12cd4f9dc05121e6e0f2
   Type: PropertyGroup
   Children:
   - Name: DefaultUserFolder
+    Id: g=f0ee814b32ce85d71dd50bde48f197ef
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/Optix_Demo_OvenDemo_Server/Security/Users"
     Children:
     - Name: Kind
+      Id: g=5ba362c8ec904f4c308a6285a16f95a2
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
 - Name: PasswordPolicy
+  Id: g=6635e4e8e19efce0faafd9d5aeca9a0b
   Type: PasswordPolicy
   Children:
   - Name: MaximumPasswordAge
+    Id: g=056fd499846a9020c945606147b684d5
     Type: BaseDataVariableType
     DataType: UInt16
   - Name: EnforcePasswordHistory
+    Id: g=d1d0e2b92455bd2ea047773619ecdb23
     Type: BaseDataVariableType
     DataType: Byte
     Value: 1
   - Name: MinimumPasswordAge
+    Id: g=e106b464c7e644b25167a50676f5c048
     Type: BaseDataVariableType
     DataType: UInt16
   - Name: MinimumPasswordLength
+    Id: g=1bc3c9b0c058d194d3a7bf58db86943d
     Type: BaseDataVariableType
     DataType: Byte
     Value: 8
 - Name: AlarmConfiguration
+  Id: g=da403e8402e7ac91418de9a4fc74c64b
   Type: PropertyGroup
 - File: UI/UI.yaml
 - File: Model/Model.yaml
@@ -64,9 +77,16 @@ Children:
 - File: Translations/Translations.yaml
 - File: Retentivity/Retentivity.yaml
 - Name: RuntimeOptimization
+  Id: g=b1e34e10f85a84dce7c632c63a6e5d8b
   Type: PropertyGroup
   Children:
   - Name: DynamicLinks
+    Id: g=1fa597977f2536f78973c2143f72675d
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Tags
+    Id: g=324c6cc62b190fca074feb7ec811bc17
     Type: BaseDataVariableType
     DataType: Boolean
 - File: AlarmTypes/AlarmTypes.yaml
+- File: HighAvailability/HighAvailability.yaml

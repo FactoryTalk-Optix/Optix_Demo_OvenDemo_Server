@@ -1,0 +1,233 @@
+Name: Components
+Id: g=5678aea99ebbf4a5c41e58bcf93b6471
+Type: FolderType
+Children:
+- File: RecipeListViewRow/RecipeListViewRow.yaml
+- File: RecipeEditListViewRow/RecipeEditListViewRow.yaml
+- Name: RecipeGroup
+  Id: g=6b19fd3da54304b1747b2348f506ab40
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: div
+    Id: g=3be3131f08537318ba63f3471c03b543
+    Type: ColumnLayout
+    Children:
+    - Name: HorizontalAlignment
+      Id: g=3821232478ff99841bc8d7ee2deb4d30
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: BaseCard1
+      Id: g=13dadb263af5eae08c42aab4765f8d6e
+      Type: BaseCard
+      Children:
+      - Name: Background
+        Id: g=6c566e6c348866c6c389bc1339d0b699
+        Type: Rectangle
+        Children:
+        - Name: Style
+          Id: g=ba28f0533dd9f87f8d3844a1cf7543bf
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "Transparent"
+      - Name: div
+        Id: g=7d9717496f24847f795c1897a55aef8a
+        Type: ColumnLayout
+        Children:
+        - Name: Title
+          Id: g=035172b7be4ca91ae34dd8dff91071d4
+          Type: Label
+          Children:
+          - Name: Text
+            Id: g=88687a31f36e8634ed8a32c246fe37a0
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Id: g=ca6f59a2d45a8fa05491186f608210b0
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../RecipeName"
+          - Name: Style
+            Id: g=22dcd8e2f0efe7cafb61dbe5a08bdc6c
+            Type: BaseDataVariableType
+            DataType: String
+            ModellingRule: Optional
+            Value: "H3"
+    - Name: ListView1
+      Id: g=c09584b1214ea3ad4daae528931a9a05
+      Type: ListView
+      Children:
+      - Name: Model
+        Id: g=c082e52eff09db635333691c14b35e33
+        Type: NodePointer
+        DataType: NodeId
+        Children:
+        - Name: ItemKind
+          Id: g=bfbe861c7278e698e8be417d0c327e5e
+          Type: PropertyType
+          DataType: NodeId
+        - Name: Kind
+          Id: g=2a2803071a12069a4f6fc19137e079f6
+          Type: PropertyType
+          DataType: NodeId
+        - Name: DynamicLink
+          Id: g=aa41490435e8c1fe8ef011247000a5e9
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Optix_Demo_OvenDemo_Server/Recipes/RecipeSchema/Store@NodeId"
+      - Name: Query
+        Id: g=f5e80fbb0e29e4ee4a3bfbb56fdd7b45
+        Type: BaseDataVariableType
+        DataType: String
+        Children:
+        - Name: StringFormatter1
+          Id: g=c7544d92d0b903d6d841ab4929653def
+          Type: StringFormatter
+          Children:
+          - Name: Format
+            Id: g=fb0bf0e99a5f0c3c1d0682cdcd988296
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"SELECT RecipesList.*, MetadataList.* FROM Recipes AS RecipesList JOIN RecipeMetadata_{#RecipeName} AS MetadataList   ON RecipesList.Id = MetadataList.RecipeId WHERE RecipesList.RecipeSchemaName = '{#RecipeName}'   AND RecipesList.Name = {#RecipeGroupName:sql_literal} ORDER BY RecipesList.Name"}
+          - Name: ns=2;SourceRecipeName
+            Id: g=c0f0bb0038509b4bc555148c17ac132e
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=a96e047247e7096080e28946edb96b0a
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Optix_Demo_OvenDemo_Server/Recipes/RecipeSchema@BrowseName"
+          - Name: ns=2;SourceRecipeGroupName
+            Id: g=cdc0123a43cff6f8c40b72cc3f47e4eb
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=eda37018bcc06f7a01a9f183c84977c7
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../RecipeName"
+      - Name: SelectorKind
+        Id: g=9aaea0e92bbb5e41deb1f2e07a8fb08c
+        Type: BaseDataVariableType
+        DataType: ListViewSelectorTypeEnum
+        AccessLevel: Read
+      - Name: TypeSelectors
+        Id: g=8b39ecacd34717668d8113330ba87f95
+        Type: BaseObjectType
+        Children:
+        - Name: TypeSelector1
+          Id: g=b6bb3178efb0b8dec32582da9729ce4d
+          Type: TypeSelector
+          Children:
+          - Name: Template
+            Id: g=4881794fd427d7555e31066bcfe6794f
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/UITypes/RecipesEditor/Components/RecipeListViewRow/RecipeListTemplate"
+            Children:
+            - Name: Kind
+              Id: g=f609cea70d35b8ff8d5ce2e57a9a1f0a
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container/Panel/ListViewRow"
+          - Name: Type
+            Id: g=e4f11773ddd317bffb9db7836bd9bd57
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
+            Children:
+            - Name: Kind
+              Id: g=ab80d0e4fb0096809011f65e81f70042
+              Type: PropertyType
+              DataType: NodeId
+      - Class: Reference
+        Target: ns=3;i=1457
+        Direction: Forward
+      - Name: Width
+        Id: g=82318d7b0546cab09d209ba17d638834
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 320.0
+      - Name: RowHeight
+        Id: g=35c5c382bd9685d4a3f079ba5bba2095
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 96.0
+      - Name: Height
+        Id: g=db48c97f81b3e2dfa4080ae952ff7806
+        Type: BaseVariableType
+        DataType: Size
+        Value: 96.0
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=1f245f37687f2093832c44f3e51960e3
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=077328564b154b4122b519fb63c1462e
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{#RowHeight}*{#Count}"
+          - Name: ns=2;SourceRowHeight
+            Id: g=3a5359cef2737b4fa9677341593adad9
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=2ce720beef265ea8aa5b388b4ca31969
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../RowHeight"
+          - Name: ns=2;SourceCount
+            Id: g=79d2639571c9c0d0baadd74104a2f127
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=ba736d639cfa7f904603dd8481733073
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Count"
+      - Name: HorizontalAlignment
+        Id: g=7d7f48d0864afafaeb6b29c09e0ed55e
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+  - Name: RecipeName
+    Id: g=792462140bde2c43c82d8eb141dbb461
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Width
+    Id: g=9eeb273795779034901cccd2b2caa28f
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 320.0
+  - Name: Count
+    Id: g=12592cb6968f0588360146f279feded3
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 1
+  - Name: HorizontalAlignment
+    Id: g=0bc2da4ff28e43088bcda623e93c8525
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3

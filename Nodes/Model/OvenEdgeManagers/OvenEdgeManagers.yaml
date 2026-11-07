@@ -1,0 +1,316 @@
+Name: OvenEdgeManagers
+Id: g=28057a88536f2894893f9d4b29061117
+Type: FolderType
+Children:
+- Name: 'OvenEdgeManager_OVEN-987ZX'
+  Id: g=a1809a52a223474bebaef6993f6b614c
+  Type: OvenEdgeManager
+  Children:
+  - Name: Connection
+    Id: g=aa40288e5a62b001afacbb62020ac8b5
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: IsMonitored
+    Id: g=802dd5b784e1725f288b53c484a150aa
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: TelemetryDataPointer
+    Id: g=555101eed3bca85e740b2b8914e2fca7
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Fleet/OVEN-987ZX"
+    Children:
+    - Name: Kind
+      Id: g=423a8c60ab1fa3dd76f278910b1a0fad
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Types/OvenType"
+  - Name: ConnectionTimeout
+    Id: g=0bc0ae3e61fe9c7c6b26eff541689dee
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:10.0000000"
+  - Name: Chat
+    Id: g=5059e71f85a66d5d8a4437fc3d1c46ca
+    Type: OvenEdgeChat
+    Children:
+    - Name: UnreadCount
+      Id: g=b39d1f7b3cba402949a7720f48c6b444
+      Type: BaseDataVariableType
+      DataType: Int32
+  - Name: OnboardingDateTime
+    Id: g=9598f9155e707a9e37375952fbc10e92
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: OnboardedBy
+    Id: g=aa2e2e021077cf62ae654533986d15d2
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ConnectionError
+    Id: g=cadee04d5765928ca5541e9bf38712c7
+    Type: OffNormalAlarmController
+    Children:
+    - Name: NormalStateValue
+      Id: g=1223dd25646e0c9511a3ad9a63a57e68
+      Type: BaseDataVariableType
+      DataType: Double
+    - Name: InputValue
+      Id: g=79e5c14a223880c8688749d534cbf173
+      Type: BaseDataVariableType
+      DataType: Double
+    - Name: LastEvent
+      Id: g=a87480902506047d601e19d5c5a2bbd8
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+    - Class: Reference
+      Target: ns=33;i=81
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=82
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=83
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=130
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=135
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=132
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=146
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=148
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=150
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=152
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=154
+      Direction: Forward
+    - Name: Message
+      Id: g=d56ef64958df698ca5573ae76107f606
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Oven OVEN-987ZX is disconnected"}
+  - Name: ProcessError
+    Id: g=a68ba566d558f72872ad4c7cdc9b3d24
+    Type: OffNormalAlarmController
+    Children:
+    - Name: NormalStateValue
+      Id: g=b5faceae4db1dfd37ab6a317613c3c9b
+      Type: BaseDataVariableType
+      DataType: Double
+    - Name: InputValue
+      Id: g=5e80a13b8caf610dcf1a7797412f1ed8
+      Type: BaseDataVariableType
+      DataType: Double
+    - Name: LastEvent
+      Id: g=a4592827ef7a8821bae5cb97e07105d5
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+    - Class: Reference
+      Target: ns=33;i=81
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=82
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=83
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=130
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=135
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=132
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=146
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=148
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=150
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=152
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=154
+      Direction: Forward
+    - Name: Message
+      Id: g=adde2b5e0ba020d74ecedb2da116567e
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Oven OVEN-987ZX: process fault"}
+- Name: 'OvenEdgeManager_OVEN-999ZZ'
+  Id: g=141e45671113306f4e9bffd6b3fff466
+  Type: OvenEdgeManager
+  Children:
+  - Name: Connection
+    Id: g=0a1de9a4317895f20e45df6d4b5feffb
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: IsMonitored
+    Id: g=574b95e51060160ce054480a1ce0d2fb
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: TelemetryDataPointer
+    Id: g=87815f66ffae957caad9cba6a5b9dc89
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Fleet/OVEN-999ZZ"
+    Children:
+    - Name: Kind
+      Id: g=deb42513dd5c7de31076289933d3ec39
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Types/OvenType"
+  - Name: ConnectionTimeout
+    Id: g=aee6172924c127af708f37677775bceb
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:10.0000000"
+  - Name: Chat
+    Id: g=cf4a287f48571116be616c3c3712c14f
+    Type: OvenEdgeChat
+    Children:
+    - Name: UnreadCount
+      Id: g=98aa39c05ce8312b387fff9040d40654
+      Type: BaseDataVariableType
+      DataType: Int32
+  - Name: OnboardingDateTime
+    Id: g=90c88ff75676274752922e91f47c84d6
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: OnboardedBy
+    Id: g=b14524fa92da68e9a214e5a4d3a76f60
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ConnectionError
+    Id: g=e25f94b03148d4651d9aa8d4ea344b17
+    Type: OffNormalAlarmController
+    Children:
+    - Name: NormalStateValue
+      Id: g=f432977632141bdb9d1207ba4abae13f
+      Type: BaseDataVariableType
+      DataType: Double
+    - Name: InputValue
+      Id: g=e9bb767bfafe9f44a8cee76e0661a815
+      Type: BaseDataVariableType
+      DataType: Double
+    - Name: LastEvent
+      Id: g=f58de6c5fcc606bb58be9741522f3f43
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+    - Class: Reference
+      Target: ns=33;i=81
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=82
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=83
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=130
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=135
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=132
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=146
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=148
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=150
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=152
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=154
+      Direction: Forward
+    - Name: Message
+      Id: g=f5d22c93de849f0237e36f62643956c4
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Oven OVEN-999ZZ is disconnected"}
+  - Name: ProcessError
+    Id: g=3bd0d96508f802d0e229621901aed590
+    Type: OffNormalAlarmController
+    Children:
+    - Name: NormalStateValue
+      Id: g=93e99eff52b5a4869a562cd014555179
+      Type: BaseDataVariableType
+      DataType: Double
+    - Name: InputValue
+      Id: g=47de79480bc30f5847d6b43c8559fdc0
+      Type: BaseDataVariableType
+      DataType: Double
+    - Name: LastEvent
+      Id: g=f3650f504fca4f74b126f74a56e4351d
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+    - Class: Reference
+      Target: ns=33;i=81
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=82
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=83
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=130
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=135
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=132
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=146
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=148
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=150
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=152
+      Direction: Forward
+    - Class: Reference
+      Target: ns=33;i=154
+      Direction: Forward
+    - Name: Message
+      Id: g=8f41ad007c8c34c45d787fd5d1cf3f5c
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Oven OVEN-999ZZ: process fault"}

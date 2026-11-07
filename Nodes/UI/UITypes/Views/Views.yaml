@@ -1,0 +1,241 @@
+Name: Views
+Id: g=bae9ff2058b36c33dddf3a79e82a23f6
+Type: FolderType
+Children:
+- Name: FleetGrid
+  Id: g=0e352a2373ec217f4f80aba818915e85
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: HorizontalAlignment
+    Id: g=f08a57188ab8a2633faa5abddf47bbad
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=848a2e6bbb2e653eb02cd8c61992076a
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: Width
+    Id: g=ccdf87b838891d8ebb33abbbc967245c
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 800.0
+  - Name: Height
+    Id: g=2f56822767619b8ecf5f99a6f94004da
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 600.0
+  - Name: div
+    Id: g=d6d3f6749f3bbfcfea4b46a149eb7ac2
+    Type: ScrollView
+    Children:
+    - Name: ContentWidth
+      Id: g=07fd0938dad16d1a96cae8b3c0efb599
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ContentHeight
+      Id: g=d7f190155f94ceedbc620ca87b8aaded
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ViewWidth
+      Id: g=7399ab327de3d892c531960ac0872e21
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ViewHeight
+      Id: g=5c9d2984fb4eaec9e9294671f011ef78
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ContentX
+      Id: g=04ea0ceeecee5f7f4733610e94cca3b7
+      Type: BaseDataVariableType
+      DataType: Size
+    - Name: ContentY
+      Id: g=ca55dc4905eb46a9f88809d1a65b6153
+      Type: BaseDataVariableType
+      DataType: Size
+    - Class: Reference
+      Target: ns=3;i=1394
+      Direction: Forward
+    - Name: Content
+      Id: g=6d79d7370ddebf20fa059f5af373ab01
+      Type: GridLayout
+      Children:
+      - Name: Rows
+        Id: g=c8a07d3ea8a685255d9e9fecedc9071e
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: ["Auto"]
+      - Name: Columns
+        Id: g=10adf247e1890c6f4545e7c9382d8298
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: ["1fr","1fr","1fr"]
+      - Name: HorizontalAlignment
+        Id: g=b327a11a5c8f6d7dcd338a66dfff576e
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: HorizontalGap
+        Id: g=23a70304332ceb71b16a60d0f7a5f705
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: VerticalGap
+        Id: g=de9d37e0bce6e94587c00543163b2266
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+    - Name: HorizontalAlignment
+      Id: g=7b61dafd461a9141a081cf1e18498c36
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=1762dcbe7b45dfb857efa7b81894a631
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+  - Name: FleetGridLogic
+    Id: g=bc7a418b1838a8b098c27628f789a39b
+    Type: NetLogic
+    Children:
+    - Name: FleetFolder
+      Id: g=8856314392c9e88c6c61a258b62250f1
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/OvenEdgeManagers"
+      Children:
+      - Name: Kind
+        Id: g=de4ec753be2e19f08b45fa38980d5bc1
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+    - Name: MonitoredFilter
+      Id: g=f53a8a4ff4c62f9bef990bbeca7623af
+      Type: BaseDataVariableType
+      DataType: Boolean
+- Name: FleetList
+  Id: g=f8b9b37b641914f74f5f20956abf855b
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=664b02596919177cd74685e2383440c6
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 800.0
+  - Name: Height
+    Id: g=88846aaba62e7dfe6ed2e9c6ec1d6d05
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 600.0
+  - Name: HorizontalAlignment
+    Id: g=a1dee30d73018c66d1c7e11f678e27f3
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=3cd8f7c563feab4b87eec49fac2096e9
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: ListView1
+    Id: g=998d5ad1cc5750f66dd2777495fc16db
+    Type: ListView
+    Children:
+    - Name: Model
+      Id: g=3780b3970c2291de169dfa8ade7f9345
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/OvenEdgeManagers"
+      Children:
+      - Name: ItemKind
+        Id: g=4fabb924ee3d6a76163c3f7df5f44b6a
+        Type: PropertyType
+        DataType: NodeId
+      - Name: Kind
+        Id: g=72d8c02bf9ff5435d728bb803b844dcc
+        Type: PropertyType
+        DataType: NodeId
+    - Name: Query
+      Id: g=39ca3d0409ee153020dc3cbf267744a7
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SelectorKind
+      Id: g=c47a2c714e764482a716f5b5afbe1457
+      Type: BaseDataVariableType
+      DataType: ListViewSelectorTypeEnum
+      AccessLevel: Read
+    - Name: TypeSelectors
+      Id: g=b2127b9eabf97e241f65becc5324e4b8
+      Type: BaseObjectType
+      Children:
+      - Name: TypeSelector1
+        Id: g=fd724bda0f5f7a55d181b0c0e50c8b00
+        Type: TypeSelector
+        Children:
+        - Name: Template
+          Id: g=36a89ba72110581fbb4b64230b13325d
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/UITypes/ListViewRows/FleetListRow"
+          Children:
+          - Name: Kind
+            Id: g=8d47bbf45e35ecafe11f444ac7955728
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container/Panel/ListViewRow"
+        - Name: Type
+          Id: g=991ab1dcfb9e3ec3398612c51c934090
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Types/OvenEdgeManager"
+          Children:
+          - Name: Kind
+            Id: g=dc50469b6594df87d3d0fdd10a82306c
+            Type: PropertyType
+            DataType: NodeId
+    - Class: Reference
+      Target: ns=3;i=1457
+      Direction: Forward
+    - Name: RowHeight
+      Id: g=635667bf1fa9b2b78268bc65e5013cf9
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 64.0
+    - Name: HorizontalAlignment
+      Id: g=f82dbd8eee2ec0d693685ca2337a267e
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=a627e058c95e088eea7cf81af7d017a9
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3

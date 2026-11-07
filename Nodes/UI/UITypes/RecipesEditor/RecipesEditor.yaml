@@ -1,0 +1,49 @@
+Name: RecipesEditor
+Id: g=69dacdd61ebef83403dbe7488ec5b3ae
+Type: FolderType
+Children:
+- File: Dialogs/Dialogs.yaml
+- File: Components/Components.yaml
+- Name: ns=4;LibraryReference
+  Id: g=b07d3cdb78a81b36a22c7baa818a7a94
+  Type: ObjectLibraryReference
+  DataType: ObjectLibraryReferenceDataType
+  Value: 
+   {
+    "TypeId": {
+     "Id": 72,
+     "Namespace": 4
+    },
+    "Body": {
+     "libraryGuid": "de905a58759b4ff38bbb66c9d44c67ad",
+     "objectGuid": "327cbf511b46fa4dfbd03bba504db44a",
+     "objectVersion": 1,
+     "highestIgnoredVersion": 0
+    }
+   }
+- Name: BaseCard1
+  Id: g=c7f09d016b069540f1005641c39f12ac
+  Supertype: BaseCard
+  ReferenceType: HasComponent
+  Children:
+  - Name: Background
+    Id: g=f55eb69104334a09b0848e94f721beb2
+    Type: Rectangle
+  - Name: div
+    Id: g=f671bdb364794514db9ca69191bf3326
+    Type: ColumnLayout
+    Children:
+    - Name: Title
+      Id: g=6f721ce51a34df58506ca8a51c4850d6
+      Type: Label
+      Children:
+      - Name: Text
+        Id: g=01c23ced6c6c384d39dcb0a73e27bd44
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Children:
+        - Name: DynamicLink
+          Id: g=1a118b3b3c415693dbf01607ba2f9fa0
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../..@DisplayName"

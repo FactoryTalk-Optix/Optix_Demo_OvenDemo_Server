@@ -1,0 +1,8 @@
+html, body { height: 100%; margin: 0; overflow: hidden; background: var(--bg); font-family: Bahnschrift, Lato, 'Segoe UI', sans-serif; }
+body[data-theme="light"] { --bg: #eef2f4; --surface: #f8fafb; --line: #c7d0d5; --muted: #5f7690; }
+body[data-theme="dark"] { --bg: #2b3646; --surface: #354357; --line: #4b5d73; --muted: #c0cddc; }
+#root { box-sizing: border-box; height: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.panel { position: relative; min-width: 0; min-height: 0; box-sizing: border-box; background: var(--surface); border: 1px solid var(--line); }
+.chart { position: absolute; inset: 0; }
+#empty { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; font-size: 14px; color: var(--muted); pointer-events: none; }
+@media (max-width: 720px) { #root { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; } }

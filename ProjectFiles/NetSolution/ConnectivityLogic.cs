@@ -19,6 +19,9 @@ using FTOptix.MQTTBroker;
 using FTOptix.MQTTClient;
 using FTOptix.Alarm;
 using FTOptix.Core;
+using FTOptix.HighAvailability;
+using FTOptix.Retentivity;
+using FTOptix.OPCUAClient;
 #endregion
 
 public class ConnectivityLogic : BaseNetLogic

@@ -1,82 +1,85 @@
 Name: Converters
+Id: g=72152f27ef7a173e1327fb0c49b9755c
 Type: ConvertersCategoryFolder
 Children:
-- Class: DataType
-  Name: Theme
-  Id: g=061292f8a8ef88d0e086c852c09f1e56
-  Supertype: Enumeration
-  Children:
-  - Name: ns=0;EnumValues
-    Type: BaseDataVariableType
-    DataType: EnumValueType
-    ModellingRule: None
-    ValueRank: OneDimension
-    ArrayDimensions: [0]
-    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"NamespaceIndex":7,"TextId":"Light"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"NamespaceIndex":7,"TextId":"Dark"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
 - Name: AlarmSeverityIconPaths
   Id: g=445130a488774e572e9d1082ac149e9f
   Supertype: ValueMapConverter
   ReferenceType: HasComponent
   Children:
   - Name: Source
+    Id: g=0983ced6f77a5db5203b7bce962db631
     Type: BaseDataVariableType
     DataType: BaseDataType
     ReferenceType: HasSource
   - Name: ns=2;Pairs
+    Id: g=1ed896afd6d6d07a3512019c9e0052c2
     Type: BaseObjectType
     ModellingRule: None
     Children:
     - Name: Pair
+      Id: g=0e664af23f442ac7e2bbf5daea0485b7
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
+        Id: g=a807efa4c6ca6bb9599ef7b4e9770edc
         Type: BaseDataVariableType
         DataType: UInt16
         ModellingRule: None
       - Name: Value
+        Id: g=75627c7274e04e17f10a865ca980a9f0
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
         Value: "ns=7;%PROJECTDIR%/res/icons/alarms/Alarms_Icons_Urgent_Priority.svg"
     - Name: Pair1
+      Id: g=bca79f7d36c58d138185ed48deb3bfb7
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
+        Id: g=13421f6aecf6a2650f832c4639285e91
         Type: BaseDataVariableType
         DataType: UInt16
         ModellingRule: None
         Value: 1
       - Name: Value
+        Id: g=84019a4a5b0931124ed3bf83e3dd441b
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
         Value: "ns=7;%PROJECTDIR%/res/icons/alarms/Alarms_Icons_High_Priority.svg"
     - Name: Pair2
+      Id: g=f26c4a8e5de7e331acac20707d0bdbb6
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
+        Id: g=9384a3caacc016d53aeb9f518a236cb7
         Type: BaseDataVariableType
         DataType: UInt16
         ModellingRule: None
         Value: 2
       - Name: Value
+        Id: g=8e275c188a2f45fce2c09fcdd906605b
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
         Value: "ns=7;%PROJECTDIR%/res/icons/alarms/Alarms_Icons_Medium_Priority.svg"
     - Name: Pair3
+      Id: g=30913bf3040ec594e833f2ee632ccecf
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
+        Id: g=6672b8897c37b8a4feceff491c6512c8
         Type: BaseDataVariableType
         DataType: UInt16
         ModellingRule: None
         Value: 3
       - Name: Value
+        Id: g=f23e68fa5e6ea4d3c0ea42bd97fb84a5
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
@@ -87,42 +90,690 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: Condition
+    Id: g=b28f04ed47a0abb9f78c0b3233021a38
     Type: BaseDataVariableType
     DataType: Boolean
     ReferenceType: HasSource
     Children:
     - Name: ExpressionEvaluator1
+      Id: g=c8fb2e7213d153daee8cafe7f1840f0d
       Type: ExpressionEvaluator
       Children:
       - Name: Expression
+        Id: g=192cfc26c8e5b6601ebbc146a5b3928f
         Type: BaseDataVariableType
         DataType: String
         ReferenceType: HasParameter
         ModellingRule: Optional
         Value: "{0}==1"
       - Name: ns=2;Source0
+        Id: g=cb55269dacf92e3cbb5ad9908d680446
         Type: BaseDataVariableType
         DataType: BaseDataType
         ReferenceType: HasSource
         Children:
         - Name: DynamicLink
+          Id: g=96fa13a9e79f8ce3c0216cc0e51e9e48
           Type: DynamicLink
           DataType: NodePath
   - Name: TrueValue
+    Id: g=c606a0945909144e5d6c08fa872a6701
     Type: BaseDataVariableType
     DataType: BaseDataType
     ReferenceType: HasParameter
     Children:
     - Name: DynamicLink
+      Id: g=1f094d1f4a8d67e8f46077ae1167f7e9
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/StyleSheets/Light/ButtonStyles/Accent@BrowseName"
   - Name: FalseValue
+    Id: g=16b5785348747ae2bed1db619b3bf3d4
     Type: BaseDataVariableType
     DataType: BaseDataType
     ReferenceType: HasParameter
     Children:
     - Name: DynamicLink
+      Id: g=259ad387b05d97b9b50e71c8c14ab7c2
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/StyleSheets/Light/ButtonStyles/Empty@BrowseName"
+- Name: SeverityColors
+  Id: g=4df2e4550393c5b499b72c0cba99d8e8
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=fc52560b0da3055d1bc4a1665efb7e66
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=2;Pairs
+    Id: g=e9a7c4758c008e5bfc543600677d89d9
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Id: g=35ba7a688d6342e135b4ac30be0cd04c
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=cf94084119dfbb11ec3490867e8a3cbf
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+        Value: 1
+      - Name: Value
+        Id: g=2711753e6bd198276a30bad310e17ac1
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#c9363b"
+    - Name: Pair1
+      Id: g=50fda0b45ab546d02420c7c1cc04345a
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=9e1d37cbee0e8d1e33a09eb8cc9690a4
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+        Value: 2
+      - Name: Value
+        Id: g=4f7cd83c5a1a843ea080f971dbef461f
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#fddc00"
+    - Name: Pair2
+      Id: g=c76d59409b71f8dbc46f759167806c17
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=d61a51557d7a6e866e9d70211c9c10ac
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+        Value: 3
+      - Name: Value
+        Id: g=b7d79cbad5e8a349f27a83d7aa1c306d
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#235d9f"
+- Name: SeverityText
+  Id: g=1b407ea962de02a27277b95df3e102fd
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=f740c91856235a8eaa2b504cea1882de
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=2;Pairs
+    Id: g=0d56863785030cc4a86494e710b06b16
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Id: g=5f18f4b245c57b5b97d12e920d0e8110
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=a4fcbe8e78a37170b1c52977db7a103e
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+        Value: 1
+      - Name: Value
+        Id: g=b397ad8433af44e8ce7d085940c6432a
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"High"}
+    - Name: Pair1
+      Id: g=853cf989b831955f2ff5b569ce93ece4
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=b010b2844a1e2bfe1c4d5c5eef2696c1
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+        Value: 2
+      - Name: Value
+        Id: g=1e0a9501e2750095384b065175ff5426
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Med"}
+    - Name: Pair2
+      Id: g=cfefb3d7e8b25ed2af9c13336baa8486
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=d5de98b3043d347879f5cf05b5b24d03
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+        Value: 3
+      - Name: Value
+        Id: g=38d6056282f8ed7f97e09485bc66e806
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Info"}
+- Name: RecipeStatusColors
+  Id: g=192c45f574104b8ea32e95fe1d67864e
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=680ca310730499e60c29f1d0adda4a25
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=2;Pairs
+    Id: g=8a48e5cbb475e069248946780ae9a406
+    Type: BaseObjectType
+    Children:
+    - Name: Pair
+      Id: g=ff2eb49513bbff803ca66d116304022d
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=9fa3a3e3de14e3c011ffaf9e3ab9f774
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Value
+        Id: g=08e57a59a0fd3869a855e80dc903de50
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b3b3b3"
+    - Name: Pair1
+      Id: g=fc5f477bab625bdd63ca95038e4e4fb2
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=6821d62e2ac698b15c2462a247e83035
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Value
+        Id: g=6980fbbe6d89fc1e2c70df3ab36fe785
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b3b3b3"
+    - Name: Pair2
+      Id: g=570b3a01af55a703faa781ecc3be9666
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=94479c8a746a7e07866512fbeac52df1
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+      - Name: Value
+        Id: g=35333603ff3d65269ff53344b000c2cd
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b3b3b3"
+    - Name: Pair3
+      Id: g=c291730f552abbdfe18c6f551bb32104
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=da0bb9f2c96ea67b072a550ccd18df97
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+      - Name: Value
+        Id: g=6cee088a96c86236d998ba7c8f2ceecf
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b3b3b3"
+    - Name: Pair4
+      Id: g=6f4ecad09c355210cb6ec4dafe4e6a44
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=dbc9e9ae182eb453fa3b380f23b706a4
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+      - Name: Value
+        Id: g=543af1e5183e862d7baf81bde210673d
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b3b3b3"
+    - Name: Pair5
+      Id: g=085bf162e2f65855671e8a80b5a35626
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=59448923b6643b11d5adb6fa5168d1e5
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 5
+      - Name: Value
+        Id: g=bfb298068c1479fff26efbc6f5fde8be
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b3b3b3"
+- Name: RecipeStatusText
+  Id: g=97a0133d9528c1dad45fa91d4bc4fd80
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=4df05b5fe06e0834dbc2a882b2f4f3a6
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=2;Pairs
+    Id: g=2e19788d9312990ed151ed05c8dbefd0
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Id: g=a7b00872f48068bfa2b281a6563c1e8c
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=2b489ddfbda397cdf36d311e9989c29d
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+      - Name: Value
+        Id: g=1b1eb7539c5ab64ae8ec389d1e12be0f
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Draft"}
+    - Name: Pair1
+      Id: g=315fd4021fb5160bca6dc104c6d5d6f6
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=f66f27dfc3bf1e170902d680906ded86
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+        Value: 1
+      - Name: Value
+        Id: g=bc80590767a7099877b0b83b50728823
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"In review"}
+    - Name: Pair2
+      Id: g=28800af86db3752790bc2f0caea607ab
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=85a343e77032509c2b74256d8a6169d3
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+        Value: 2
+      - Name: Value
+        Id: g=8ea7a41a20f8045389454bff6a5ff8f3
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Approved"}
+    - Name: Pair3
+      Id: g=d761bbf3f85cef2fa9585f5e64e801f9
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=670d8fcf515ecf33cff9071357f39461
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+        Value: 3
+      - Name: Value
+        Id: g=cb62184e4bddd4364fcad3af5ff8e6d4
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Deprecated"}
+- Name: StateText
+  Id: g=7ec20a76a33bafcab98ff5d52dbf4503
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=e8017dc89c7611afbad69bb1da79703e
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=2;Pairs
+    Id: g=cd78ce9f8b005baf4fcd72d260f454c2
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair1
+      Id: g=13bace691d442c195f058c2cb3b130f5
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=a6f288674267cc9a53d9becb2e03ddaa
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+      - Name: Value
+        Id: g=f9296bb3dcaf5be47b7979bb00ecac06
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Idle"}
+    - Name: Pair2
+      Id: g=e497aa2bed4a76cfa52a4db0fcdb0814
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=dd8af29fc041fc983311830e957a06e9
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 1
+      - Name: Value
+        Id: g=739d1379681ae7e903dc4568098688a7
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Preheat"}
+    - Name: Pair3
+      Id: g=dc307127fcf74544ce2f6547fde6a6a9
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=2acebf3aa9a088554ea3a117e1ca04df
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 2
+      - Name: Value
+        Id: g=5e8203b48630ff9a13497a7714f24a87
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Bake"}
+    - Name: Pair4
+      Id: g=77ff5600345f6fa31f013d57f4cd8efc
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=57b0f1b18f6d0e540a24a85a13ff22bd
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 3
+      - Name: Value
+        Id: g=75aaecf9fb9f2d1a5a7dbe774ed4e71e
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Cooldown"}
+    - Name: Pair5
+      Id: g=8b2e9244e938e9106699a26273b59814
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=c69e1143f52673f1797a7e8cfa38d1c0
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 4
+      - Name: Value
+        Id: g=463b40e8e85eca46300be8613fbbc84d
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Hold"}
+    - Name: Pair6
+      Id: g=2bee0ccbd3cdcd2cff9fb0aa24ef8900
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=1cfa53efbeb4220faa781fc27010fb29
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 5
+      - Name: Value
+        Id: g=c280623d6c344b7661301f53b047dee8
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"Fault"}
+- Name: StateColor
+  Id: g=a4f9dfdaec9afb3985d37e2825660f05
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=984ab0fb83859d8a1cb87ffaa1df178c
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=2;Pairs
+    Id: g=01478cba9daf628585e9737d132fedcf
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Id: g=41c6a982c459b302e3fabd7a781fe631
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=682569a4ad175ae6ca2ca16f2b8258ab
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+      - Name: Value
+        Id: g=ba7ac6515f922d99d08425aa42df6008
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#b3b3b3"
+    - Name: Pair1
+      Id: g=58d67910ff2fc6fe55927d420dad272e
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=76af844dd15b8e2641834a175d3da37c
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 1
+      - Name: Value
+        Id: g=b7f8209003481c9cab43185af3ea936d
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#b3b3b3"
+    - Name: Pair2
+      Id: g=4bde8cfe2602a158e89dd46520ff6ce3
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=81a8fb2c15d90bec0c1b2cdc0ed79a61
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 2
+      - Name: Value
+        Id: g=e72b26ce8c9f071705a18a574bbb0dbb
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#b3b3b3"
+    - Name: Pair3
+      Id: g=f14056e9695da467fa520603e2155575
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=69d88c27b84c5a9570f1ef09fd618fe7
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 3
+      - Name: Value
+        Id: g=4b93d0bf97b89bd3d723e2ecb745ccbd
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#b3b3b3"
+    - Name: Pair4
+      Id: g=83227e0bad016e77b880793896d04753
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=401ae59fed036e76697ce7ea4a265393
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 4
+      - Name: Value
+        Id: g=5e78ea2f0e336cf45f04fef3d0fd857a
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#b3b3b3"
+    - Name: Pair5
+      Id: g=f34aaba99a72141d9265a7c3de8d00c4
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=43e36ff32961a65ecd88e510e23d4d5e
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 5
+      - Name: Value
+        Id: g=1df0a72307a14ffc49df7d572bfc6ac4
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#c9363b"
+- Name: ConnettivityText
+  Id: g=fb3de7efb988a23aae68bd1e4b114693
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=d116fe9886b8e67997f3d3b418b439ea
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=2;Pairs
+    Id: g=bf5b442434319d65ac8c19591b67ca79
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair1
+      Id: g=5ff213afb90e3ddb1b620d4adf0468b4
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=3772255fd1ce34b8d3c7172687c5556b
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+      - Name: Value
+        Id: g=395c7a165ad4798306f4ce6ed3c1b9af
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"DISCONNECTED"}
+    - Name: Pair2
+      Id: g=9fdddd6ab5db5f34700b5be3a315759c
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=6ff91dae447611c85871e0005743aa27
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 1
+      - Name: Value
+        Id: g=6765ccefdd2c376a21827342cfe4f74c
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: None
+        Value: {"NamespaceIndex":7,"TextId":"CONNECTED"}
+- Name: ConnettivityColor
+  Id: g=8e06e566c32e5a70dfb687553ff077ff
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=8a8936132739339769cbc914f08bc306
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=2;Pairs
+    Id: g=e1494b80daa31ade7426e374d1d512c7
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Id: g=2b846ad4268dea900253d8e94fa11e06
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=f4d0984e75832c5c17f1793a66026367
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+      - Name: Value
+        Id: g=4a9ca16645b461e9eedb02c42c56ed68
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#e5484d"
+    - Name: Pair2
+      Id: g=82e6e5479d5741ba8843ba8ec64fdf6d
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=c8bdaf11c03b2d964527e77fb368200c
+        Type: BaseDataVariableType
+        DataType: Byte
+        ModellingRule: None
+        Value: 1
+      - Name: Value
+        Id: g=c7a11a34e834608f30104aa5e3d5321d
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: None
+        Value: "#35c46a"

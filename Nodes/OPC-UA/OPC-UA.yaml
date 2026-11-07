@@ -1,71 +1,36 @@
 Name: 'OPC-UA'
+Id: g=4ec70f8900e94ad1490ceb38376c1c71
 Type: OPCUACategoryFolder
 Children:
 - Name: OPCUAServer
+  Id: g=79ef4db7a32c52125b3e974b8fdb8746
   Type: OPCUAServer
   Children:
   - Name: EndpointURL
+    Id: g=7b1f2a7465a7ffb8f13d1ba74b10701d
     Type: PropertyType
     DataType: ResourceUri
     Value: "opc.tcp://localhost:59100"
   - Name: NodesToPublish
+    Id: g=f5c2dcabee857ff8c138bd07c06612cc
     Type: BaseObjectType
-    Children:
-    - Name: Configuration1
-      Type: NodesToPublishConfigurationEntry
-      Children:
-      - Name: Nodes
-        Type: BaseObjectType
-        Children:
-        - Name: Node1
-          Type: NodePointer
-          DataType: NodeId
-          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model"
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-          - Name: NodeClass
-            Type: PropertyType
-            DataType: NodePointerNodeClass
-            Value: 2
-        - Name: Node2
-          Type: NodePointer
-          DataType: NodeId
-          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Ovens"
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-          - Name: NodeClass
-            Type: PropertyType
-            DataType: NodePointerNodeClass
-            Value: 2
-      - Name: Users
-        Type: BaseObjectType
-        Children:
-        - Name: User1
-          Type: NodePointer
-          DataType: NodeId
-          Value: "/Objects/Users/Anonymous"
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/ObjectTypes/BaseObjectType/UserType"
-          - Name: NodeClass
-            Type: PropertyType
-            DataType: NodePointerNodeClass
-      - Name: PublishDynamicConfiguration
-        Type: BaseDataVariableType
-        DataType: Boolean
   - Name: MinimumMessageSecurityMode
+    Id: g=32c02af5666d63d566d5b6e42a60b924
     Type: PropertyType
-    DataType: MessageSecurityModeEnum
+    DataType: ns=29;MessageSecurityModeEnum
   - Name: MinimumSecurityPolicy
+    Id: g=776fe29f25250b68c8f9396922d9b1e4
     Type: PropertyType
-    DataType: SecurityPolicyEnum
+    DataType: ns=29;SecurityPolicyEnum
   - Name: CertificateIsExpired
+    Id: g=b99ead9356dec650dbea59dee637de2e
     Type: BaseDataVariableType
     DataType: Boolean
     AccessLevel: Read
+  - Name: EnableAnonymousAccess
+    Id: g=93d03d8a2d817daaa95740a8c63c2e96
+    Type: PropertyType
+    DataType: Boolean
+    Value: true
+- File: OPCUAClient1/OPCUAClient1.yaml
+- File: Clients/Clients.yaml

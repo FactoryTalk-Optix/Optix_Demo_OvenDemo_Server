@@ -1,4 +1,5 @@
 Name: MQTT
+Id: g=a9b2134e706945c0e5b788f914a6ece2
 Type: MQTTCategoryFolder
 Children:
 - Name: MQTTBroker
@@ -6,66 +7,84 @@ Children:
   Type: MQTTBroker
   Children:
   - Name: ListenerPort
+    Id: g=00774c98c9304fdd07e46f28c0b40135
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 8883
   - Name: MaxConnections
+    Id: g=4c3ee7e5611d050404e3459d25bf6ca2
     Type: BaseDataVariableType
     DataType: UInt32
     Value: 25
   - Name: MaxQoS
+    Id: g=706aad4ed78cef5e84f0a08593aa3f8f
     Type: BaseDataVariableType
     DataType: MaxQoSEnum
     Value: 2
   - Name: MaxInflightMessages
+    Id: g=df770c64c81f4ad9ee1693396341185b
     Type: BaseDataVariableType
     DataType: UInt32
     Value: 20
   - Name: MaxQueuedMessages
+    Id: g=0f0dcdca28e89a9a03764d8693702fee
     Type: BaseDataVariableType
     DataType: UInt32
     Value: 1000
   - Name: MessageSizeLimit
+    Id: g=ad0e7231ef4cb6b4d17abeff8dd45216
     Type: BaseDataVariableType
     DataType: UInt32
   - Name: RetainAvailable
+    Id: g=301ab8b5bf342ff5162493f3c8144b80
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: DataPersistence
+    Id: g=fae080be0c1ce6c6db0fa87cbfa04b98
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: PersistentClientExpiration
+    Id: g=25159151c99c973811a62abfc4a4405e
     Type: BaseDataVariableType
     DataType: String
   - Name: AutosaveOnChanges
+    Id: g=9375cda294a2ad00c87ba7ada439f5c0
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: AutosaveInterval
+    Id: g=15e652159436b08b161155c02e6ea829
     Type: BaseDataVariableType
     DataType: UInt32
     Value: 20
   - Name: AnonymousAuthentication
+    Id: g=130b66d1a03c395bc880130c2d2c282b
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: RequireClientCertificate
+    Id: g=216cdff6a28b56fbc5fe74e2bdbbaa01
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CACertificateFile
+    Id: g=2afd5b3f88ebdbf6d1cc5daf8d2a54ad
     Type: BaseDataVariableType
     DataType: ResourceUri
   - Name: CertificateFile
+    Id: g=02095e34f122a4d0a2394a17cb58f949
     Type: BaseDataVariableType
     DataType: ResourceUri
   - Name: CertificateKeyFile
+    Id: g=c52a1427b88d0177e8251bfe645cf932
     Type: BaseDataVariableType
     DataType: ResourceUri
   - Name: Running
+    Id: g=e19075f30dc5ca537975a0845796d7dc
     Type: BaseDataVariableType
     DataType: Boolean
     AccessLevel: Read
-- Name: MQTTClient
+- Name: MQTTSupervisorClient
+  Id: g=8d1f6c3570e763cfe12478a21ee4fb2e
   Type: MQTTClient
   Children:
   - Class: Reference
@@ -75,50 +94,76 @@ Children:
     Target: ns=12;i=44
     Direction: Forward
   - Name: BrokerAddress
+    Id: g=3fd7f83e3baedbcf20509132043c2f4e
     Type: PropertyType
     DataType: String
     Value: "localhost"
   - Name: BrokerPort
+    Id: g=6ac51c90bcb529a5b21855bf5e97cbdb
     Type: PropertyType
     DataType: UInt16
     Value: 8883
   - Name: ClientId
+    Id: g=83012c43ac25e01d3abf575c47e9b85f
     Type: PropertyType
     DataType: String
-    Value: "FTOptix-14546"
+    Value: "FTOptix-1"
+    Children:
+    - Name: DynamicLink
+      Id: g=4e86e5ecf0f8f03ad58b32f3bafbef9a
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "..@BrowseName"
+      Children:
+      - Name: Mode
+        Id: g=d8be9da7394e27b8060a908f606a22cd
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
   - Name: Status
+    Id: g=29ab5f734b294993d998ff2870931e11
     Type: BaseDataVariableType
     DataType: StatusEnum
     ReferenceType: HasProperty
     AccessLevel: Read
   - Name: UserIdentityType
+    Id: g=fdd397a051538ee706e83ec996e0070c
     Type: BaseDataVariableType
-    DataType: UserIdentityTypeEnum
+    DataType: ns=12;UserIdentityTypeEnum
   - Name: SSLTLSEnabled
+    Id: g=86685ce346cc420b0ba0e8fdd1097a8d
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: ValidateBrokerCertificate
+    Id: g=754a8e7afc103e7fa12028d8bde2f83e
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: WillMessageEnabled
+    Id: g=cc1d219c0107e9ac789884c0bb09e6d1
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: WillTopic
+    Id: g=c971c9b9ae1c2671e8b138a2f7fdb5db
     Type: BaseDataVariableType
     DataType: String
   - Name: WillPayload
+    Id: g=576e263fc52abe105e0f8a6b8612d198
     Type: BaseDataVariableType
     DataType: String
   - Name: WillQoS
+    Id: g=9f223e1fc00766d4fd50decac1f4e014
     Type: BaseDataVariableType
     DataType: QoSLevelEnum
   - Name: WillRetain
+    Id: g=0f78a06346da334328a5e8e616050e83
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: WillDelayInterval
+    Id: g=20046664e152d622449770a791feff77
     Type: BaseDataVariableType
     DataType: Duration
   - Name: MQTTSubscriber
+    Id: g=af8be6cc2b1138ef1455bca753699a87
     Type: MQTTSubscriber
     Children:
     - Class: Reference
@@ -128,142 +173,37 @@ Children:
       Id: g=e6324e36ec5b7a0aeb5a6e70e460c91d
       Type: BaseObjectType
       Children:
-      - Name: Alarms
+      - Name: OnboardingRequests
+        Id: g=7d1e9b094aa0c50644db77819cb3ec5e
         Type: SubscriptionPlainText
-        ReferenceType: HasOrderedComponent
         Children:
         - Name: Variable
+          Id: g=af4535d547764b0645b1bb432c50e5e8
           Type: NodePointer
           DataType: NodeId
-          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/IncomingAlarms"
+          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Onboarding/OnboardingRequestPayload"
           Children:
           - Name: Kind
+            Id: g=893232f2b7676676690f0038808e5fbc
             Type: PropertyType
             DataType: NodeId
             Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
         - Name: Topic
+          Id: g=7088df20e4a22fbd516bf62e3982cb32
           Type: BaseDataVariableType
           DataType: String
-          Value: "optix/iot/alarmslist"
+          Value: "OnboardingRequest"
         - Name: QoS
+          Id: g=dd1e1774499408e6d07a057897867890
           Type: BaseDataVariableType
           DataType: QoSLevelEnum
-      - Name: Messages
-        Type: SubscriptionPlainText
-        ReferenceType: HasOrderedComponent
-        Children:
-        - Name: Variable
-          Type: NodePointer
-          DataType: NodeId
-          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/IncomingMessages"
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
-        - Name: Topic
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "optix/iot/ovenmessages"
-        - Name: QoS
-          Type: BaseDataVariableType
-          DataType: QoSLevelEnum
-      - Name: Statuses
-        Type: SubscriptionPlainText
-        ReferenceType: HasOrderedComponent
-        Children:
-        - Name: Variable
-          Type: NodePointer
-          DataType: NodeId
-          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/IncomingStatuses"
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
-        - Name: Topic
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "optix/iot/status"
-        - Name: QoS
-          Type: BaseDataVariableType
-          DataType: QoSLevelEnum
-  - Name: MQTTPublisher
-    Type: MQTTPublisher
+  - Name: MQTTSubscriber1
+    Id: g=e0d8fb85dd2ec443c970dec22426f8dc
+    Type: MQTTSubscriber
     Children:
-    - Name: SamplingMode
-      Type: PropertyType
-      DataType: ns=12;SamplingModeEnum
-      Value: 1
-    - Name: DataSource
-      Type: BaseDataVariableType
-      DataType: DataSourceEnum
-      Value: 1
-    - Name: Folder
-      Type: NodePointer
-      DataType: NodeId
-      Children:
-      - Name: Kind
-        Type: PropertyType
-        DataType: NodeId
-        Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
-      - Name: ItemKind
-        Type: PropertyType
-        DataType: NodeId
-    - Name: DataLogger
-      Type: NodePointer
-      DataType: NodeId
-      Value: "/Objects/Optix_Demo_OvenDemo_Server/Loggers/OvensStatisticsLogger"
-      Children:
-      - Name: Kind
-        Type: PropertyType
-        DataType: NodeId
-        Value: "/Types/ObjectTypes/BaseObjectType/DataLogger"
-      - Name: ItemKind
-        Type: PropertyType
-        DataType: NodeId
-        Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType/VariableToLog"
-    - Name: Topic
-      Type: BaseDataVariableType
-      DataType: String
-      Value: "optix/iot/datalogger"
-    - Name: QoS
-      Type: BaseDataVariableType
-      DataType: QoSLevelEnum
-    - Name: Retain
-      Type: BaseDataVariableType
-      DataType: Boolean
-    - Name: PFEnabled
-      Type: PropertyType
-      DataType: Boolean
-    - Name: PayloadUpdateTimestamp
-      Type: BaseDataVariableType
-      DataType: DateTime
-      ReferenceType: HasProperty
-      AccessLevel: Read
-    - Name: SFEnabled
-      Type: BaseDataVariableType
-      DataType: Boolean
-    - Name: SFBufferMaxSize
-      Type: BaseDataVariableType
-      DataType: UInt32
-      Value: 1000
-    - Name: SFBufferUsage
-      Type: BaseDataVariableType
-      DataType: UInt32
-      AccessLevel: Read
-    - Name: SFBufferOverflow
-      Type: BaseDataVariableType
-      DataType: Boolean
-      AccessLevel: Read
-    - Name: SFBufferOverwrite
-      Type: BaseDataVariableType
-      DataType: Boolean
-    - Name: Item
-      Type: Alias
-      DataType: NodeId
-      Children:
-      - Name: Kind
-        Type: PropertyType
-        DataType: NodeId
-        Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType/VariableToLog"
+    - Name: Subscriptions
+      Id: g=d5ef3f498e1948989935bdba06faadd4
+      Type: BaseObjectType
+    - Class: Reference
+      Target: ns=12;i=47
+      Direction: Forward

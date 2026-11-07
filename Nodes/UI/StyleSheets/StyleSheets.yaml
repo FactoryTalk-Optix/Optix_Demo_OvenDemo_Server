@@ -1,4 +1,5 @@
 Name: StyleSheets
+Id: g=4a29b80ee5870f26351f2a6515db6c4f
 Type: FolderType
 Children:
 - Name: Dark
@@ -6,1284 +7,1893 @@ Children:
   Type: BaseStyleSheet
   Children:
   - Name: ButtonStyles
+    Id: g=b2d21b06e10829b022bdaf8fc6d825db
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=31240a83c99a1da9ac26c9f55efa120a
       Type: ButtonStyle
       Children:
-      - Name: Color
+      - Name: BorderColor
+        Id: g=ea05131762a8d039eee617c6e023e06f
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#3b3b3b"
+        Value: "#c7d0d5"
+        Children:
+        - Name: DynamicLink
+          Id: g=e4adee523151d1fbee955a3b7adbe58f
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Line2"
     - Name: Accent
+      Id: g=5553b759d65dd30a64b515ab7a9c9423
       Type: ButtonStyle
       Children:
       - Name: Color
+        Id: g=47568decaab935bebec102a48e6e00c4
         Type: BaseDataVariableType
         DataType: Color
         Value: "#235d9f"
         Children:
         - Name: DynamicLink
+          Id: g=f7e8b2626eebeff405202f8456518661
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Accent"
     - Name: BorderedRectangular
+      Id: g=175c7ff9883ff9e247c229d68ce83116
       Type: ButtonStyle
     - Name: BorderedCircular
+      Id: g=f7a5025fb3542f54122b1ea5b2857a7f
       Type: ButtonStyle
     - Name: Emergency
+      Id: g=c40406a8977e8477e8c35239e37b84a4
       Type: ButtonStyle
     - Name: Transparent
+      Id: g=49b41240f8e39762d9fb02cbe83f5fe3
       Type: ButtonStyle
+      Children:
+      - Name: PressedColor
+        Id: g=1c3d4a4f82d1f0905b7830405c1f5595
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#235d9f00"
     - Name: Empty
+      Id: g=848387f83f8388ea3efa965694c156c4
       Type: ButtonStyle
   - Name: InputBoxStyles
+    Id: g=282131792eccc21676aa71133c656d8d
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=7647d9a4d607808db695a504dca47346
       Type: InputBoxStyle
       Children:
       - Name: TextColor
+        Id: g=fa23043a34fdd6ad90349907e7feb49c
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
       - Name: BorderColor
+        Id: g=c95a9af0f8e07d964512d7300a4ff9ae
         Type: BaseDataVariableType
         DataType: Color
         Value: "#235d9f"
       - Name: BackgroundColor
+        Id: g=9549c98bb0983c73f16f84edc9f35437
         Type: BaseDataVariableType
         DataType: Color
         Value: "#0f2743"
+    - Name: InputBoxStyle1
+      Id: g=8486941a5b882e8143cd47eec25ccbca
+      Type: InputBoxStyle
+      Children:
+      - Name: BackgroundColor
+        Id: g=4380c542b7d62788abd1db73c75eb4cd
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+        Children:
+        - Name: DynamicLink
+          Id: g=1c6532ad4c992620367224aeeefd5202
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Surface"
+      - Name: TextColor
+        Id: g=b14dd9e93e857f2c247f3e78467a956f
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=78d972d7903a4bd7902744930cd55336
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Text"
   - Name: SwitchStyles
+    Id: g=14d1bc0ffda4215d945f59fc4541b90f
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=4206a23b193c726c70d97bdb159c56d9
       Type: SwitchStyle
   - Name: GaugeStyles
+    Id: g=8e6471d87d65952623c43631c6120fdb
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=32860726b4c07c31ab5ba3eb22a66dc1
       Type: GaugeStyle
   - Name: NavigationPanelStyles
+    Id: g=8cba6eb298a363e9cb30101df3afde5b
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=2fb8fb8bf6aafaef7036054911c39fc8
       Type: NavigationPanelStyle
   - Name: ChartStyles
+    Id: g=8be1a29a45ca1be2d2b6ae4fcf1b3117
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=30fe631dc0de954e22c1e2d6b5c5377f
       Type: ChartStyle
   - Name: DataListStyles
+    Id: g=e8c81b0a79f11d06079c752f6b42687e
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=fbbe597b78ba171351945d66a9b117f0
       Type: DataListStyle
       Children:
       - Name: TextColor
+        Id: g=6d9ce6287ea788f20f8435e18d7470c4
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
       - Name: BorderColor
+        Id: g=eb7eb934eb87738563714c28c083736b
         Type: BaseDataVariableType
         DataType: Color
         Value: "#0f2743"
   - Name: ToolTipStyles
+    Id: g=ce27ecccf8962d62002064d0619de380
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=b497109be35b278e1aeca20f7664cb58
       Type: ToolTipStyle
   - Name: ScrollBarStyles
+    Id: g=c19285f407246e839685e04e56a9a5ea
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=d4c5f43740e9cdb8726d7f0122b407de
       Type: ScrollBarStyle
       Children:
       - Name: BackgroundColor
+        Id: g=3a9f66e1fcee4b01f39cefa88f617eec
         Type: BaseDataVariableType
         DataType: Color
         Value: "#f0f0f000"
       - Name: HandleColor
+        Id: g=6ab17b931f12979494d775691a5013df
         Type: BaseDataVariableType
         DataType: Color
         Value: "#235d9f"
+        Children:
+        - Name: DynamicLink
+          Id: g=e475a56f51643993a1475b087ae5427d
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Line2"
       - Name: HandleBorderColor
+        Id: g=b176dc71c0a12debf6accefc56336bb4
         Type: BaseDataVariableType
         DataType: Color
         Value: "#b3b3b300"
   - Name: AccordionStyles
+    Id: g=4fd4681899fb5efd57dc8d313b1bb31a
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=f2941b4da63acffe90a5dcc2bc5a6f3f
       Type: AccordionStyle
       Children:
       - Name: HeaderBackgroundColor
+        Id: g=4ef7ecab2dd455597419b8ce01248770
         Type: BaseDataVariableType
         DataType: Color
         Children:
         - Name: DynamicLink
+          Id: g=6b6b47effe49944f290f75e9b254462c
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Surface"
       - Name: ContentBackgroundColor
+        Id: g=b8d84fa668946074134347f9bd292870
         Type: BaseDataVariableType
         DataType: Color
         Children:
         - Name: DynamicLink
+          Id: g=ddf161c7e114fabd0004be1da1bdff5b
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Surface"
   - Name: PieChartStyles
+    Id: g=413299500a60ea90714c03224f67cfd5
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=8edca60a88bef9a6d61d479809fc1a9d
       Type: PieChartStyle
   - Name: HistogramChartStyles
+    Id: g=3a43b99a5164f6b908700998112b11e4
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=b0673c0f0edd35a9d25ee52f3270d010
       Type: HistogramChartStyle
   - Name: LabelStyles
+    Id: g=8ab8f9bf7f27dbbdc0d03310c06e8328
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=245b87d694172cdf0c172ed393f896b7
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=9e4bf3fe8c55f331d2d58dee08ad3d65
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
     - Name: Accent
+      Id: g=c092fe993608e7a0796c06079f097e23
       Type: LabelStyle
     - Name: ChipAccent
+      Id: g=6c2f268277a3faf63750f2cdebdcf97b
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=d459733b7d08f70335998e1419693527
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
     - Name: H1
+      Id: g=eb0f6fe40c5794a8f86d005a4fbb9a68
       Type: LabelStyle
     - Name: H2
+      Id: g=18ff50e42160e19919c108e37f280414
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=ef4e7e47817327200fdefa0173ec2bdf
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=2910b8a022ab73522af2ec654b419518
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../TextSoft"
-    - Name: ChipErrText
+          Value: "../../../Text"
+    - Name: H3
+      Id: g=429cb4603a523373796508267669ff71
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=61e1e24f2a65364bf74537747b102efa
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=a3f68b6bf5ad60ea87ccbd42de7842a0
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Text"
+    - Name: ChipErrText
+      Id: g=7468804064058c90c36370cc42c71b5f
+      Type: LabelStyle
+      Children:
+      - Name: TextColor
+        Id: g=5c2bf33d7ad878b2eebf42708e2a654f
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=9ff67230636c588a75b945eeb206e377
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../HighText"
     - Name: ChipWarnText
+      Id: g=4c6cb5110bfd2fc41f64d2b4dcac56ca
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=691b02350e5927e26ec8b9acb5c25cf3
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=db9d07a9d6e551f81d80f22d480335bd
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../MedText"
     - Name: ChipInfoText
+      Id: g=f9bc7b2fba306f4c03b6184b921887ec
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=0d9f63df28a9a77e38c5fd6eaff02990
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=de0fa0c8177d6ca3984893869d427f31
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../InfoText"
     - Name: ChipGoodText
+      Id: g=3ddaa3bb3ffc54e5b5b4a56c7503ce0e
       Type: LabelStyle
+    - Name: H4
+      Id: g=321835655eb450bec8a71c5006abeb2b
+      Type: LabelStyle
+      Children:
+      - Name: TextColor
+        Id: g=1cf9cbb59863aa7d343ba0ed26aa2338
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=903a3c4cb9a1ced01e65121e91e49074
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../TextSoft"
+    - Name: H5
+      Id: g=8f05819d2c638d278d629a18dc98c9bd
+      Type: LabelStyle
+      Children:
+      - Name: TextColor
+        Id: g=54c02de32303edc5eab1d6cc43fd8cbc
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=73a5deaaba9eccc9c664d35901f32841
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Text"
   - Name: RadioButtonStyles
+    Id: g=7f870cb318fd9654908adb6afe1fabb3
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=131ba2a3c708daea0c47f079d938a759
       Type: RadioButtonStyle
     - Name: Accent
+      Id: g=1ba913398e354445de741a3b2f5d71e1
       Type: RadioButtonStyle
   - Name: CheckBoxStyles
+    Id: g=c3e7240fe50b172190fe2a10cb0ba1a3
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=2f8cc24e916a8d51f1436bb4c3e2d89d
       Type: CheckBoxStyle
   - Name: RectangleStyles
+    Id: g=fccbd3765c1c6f8434db733542fbeccf
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=f4b6a7e6316ef2c149b7367c33ba930b
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=fe26e8bac06e74f2f0d1285733bf7d61
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=cf6ccd7db30c007f5600aebb48ce23b0
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Surface"
     - Name: Chip
+      Id: g=699f0dfdb7b74e54d8b18dadf010dfc8
       Type: RectangleStyle
       Children:
       - Name: BorderColor
+        Id: g=0cd83df614b711a0a25e9f86b91d728d
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=e242f2408687b7f541ffdb46c85968b2
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Line2"
     - Name: ChipAccent
+      Id: g=52137eb2a4a17ecde6fa4197e0f5767b
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=9d33256e9098f102e650ef2ca24ac034
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff00"
         Children:
         - Name: DynamicLink
+          Id: g=0a73e372483d41540ec6e8588b91b725
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Accent"
       - Name: BorderColor
+        Id: g=0c563be3fb3a7e73ec9b4a8e8d16a598
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=9a2f86b720249376dde5e2b5b2c5dc57
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Line2"
     - Name: Underline
+      Id: g=3fcfdb3f21c041f8d40a569faec3b6f1
       Type: RectangleStyle
       Children:
       - Name: BorderColor
+        Id: g=101918cc5d2fed6cdecdfa6dad40f865
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=ff16585ddcad7baec4502e1ecb07a842
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Line2"
     - Name: GaugeLine
+      Id: g=53ee4b42eaef51d02d603086cb2d89a4
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=5250ba8e3f6d065d8b4296ef215f2f65
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=d0919418fc72ea04c305e8500f506e1c
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Brand700"
     - Name: GaugeBackground
+      Id: g=ed4f5af898a83490af307f9ea88c37aa
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=c24ed60a288df84b3cac69c38566b958
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=43a6a30f85353e86e74566eb888f36cb
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Line"
     - Name: GaugeLimitsBackground
+      Id: g=c3f933e67569008bb0601fb09300f321
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=f710f99e31f86be0c76f57c65b00b315
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=24a36eb0431aa84e618be9cebd5d0cb4
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Brand400"
     - Name: Background
+      Id: g=c3de2850a4efbede798b9ec7132dd0e2
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=fcbaf7e7e87ac04db560d894a933e2ad
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=2b689b3069e0d5b47ea13921a32a5fe7
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Surface"
       - Name: BorderColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#000000"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../Line2"
-    - Name: GridHeader
-      Type: RectangleStyle
-      Children:
-      - Name: BorderThickness
-        Type: BaseDataVariableType
-        DataType: Size
-        Value: 1.0
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#ffffff"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../SurfaceSoft"
-      - Name: BorderColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#000000"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../Line2"
-    - Name: GridRow
-      Type: RectangleStyle
-      Children:
-      - Name: BorderThickness
-        Type: BaseDataVariableType
-        DataType: Size
-        Value: 1.0
-      - Name: CornerRadius
-        Type: BaseDataVariableType
-        DataType: Size
-    - Name: NavBarDefault
-      Type: RectangleStyle
-      Children:
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#3b3b3b"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../Surface"
-    - Name: NavBarAccent
-      Type: RectangleStyle
-    - Name: BackgroundErr
-      Type: RectangleStyle
-      Children:
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#f5e7e6"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../HighColor"
-      - Name: BorderColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#c13f31"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../HighText"
-    - Name: BackgroundWarn
-      Type: RectangleStyle
-      Children:
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#f4eddd"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../MedColor"
-      - Name: BorderColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#e8d1a0"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../MedText"
-    - Name: BackgroundInfo
-      Type: RectangleStyle
-      Children:
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#ffffff"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../InfoColor"
-      - Name: BorderColor
+        Id: g=a8cdd552c40aeb6e98768d9ebebbb1a2
         Type: BaseDataVariableType
         DataType: Color
         Value: "#e6e8ec"
         Children:
         - Name: DynamicLink
+          Id: g=9e51ae846c353203cd9775943398510d
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../InfoText"
-    - Name: BackgroundGood
+          Value: "../../../Line2"
+    - Name: GridHeader
+      Id: g=0a9be58d7482114837b98afb0b70f3b6
       Type: RectangleStyle
       Children:
-      - Name: BorderColor
+      - Name: BorderThickness
+        Id: g=3a91301867dd1e07c9773b5e587847f5
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: FillColor
+        Id: g=2b0167b74522bc148305a616f1f4349f
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#c13f31"
+        Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=846f0893819f72f9e59ac5d662d8e7d4
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../GoodText"
+          Value: "../../../SurfaceSoft"
+      - Name: BorderColor
+        Id: g=3d3f65b78f0193b1aadb884b5cb74fe5
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=b0b2b944212480bfd95793ce18901175
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Line2"
+    - Name: GridRow
+      Id: g=89a0c8a8aad5e987118fac0c816c73e2
+      Type: RectangleStyle
+      Children:
+      - Name: BorderThickness
+        Id: g=16966190fdd98b16867ce4500f3c4d62
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: CornerRadius
+        Id: g=dfd43286843d3443032129f5c860963d
+        Type: BaseDataVariableType
+        DataType: Size
+    - Name: NavBarDefault
+      Id: g=abde68a5af4cacd345e4fa1dcfcdebab
+      Type: RectangleStyle
+      Children:
       - Name: FillColor
+        Id: g=23e9b84a5749ed6d86356b0eeb67f559
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#3b3b3b"
+        Children:
+        - Name: DynamicLink
+          Id: g=1741fda3be044385c9702dc19a3d3d11
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Surface"
+    - Name: NavBarAccent
+      Id: g=14a638d2738129645d88f72f3992d6b4
+      Type: RectangleStyle
+    - Name: BackgroundErr
+      Id: g=1c0e1f488089d9e5e1e41ea0db0cc3c7
+      Type: RectangleStyle
+      Children:
+      - Name: FillColor
+        Id: g=2956fdcccad68f94b7267ed83e69c0e4
         Type: BaseDataVariableType
         DataType: Color
         Value: "#f5e7e6"
         Children:
         - Name: DynamicLink
+          Id: g=c3da804791c40b9c7f21011548a5e5c6
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../HighColor"
+      - Name: BorderColor
+        Id: g=67453fd774a4a2fd99ff83e1d1093929
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c13f31"
+        Children:
+        - Name: DynamicLink
+          Id: g=fcc8d92b78a6ea79061043b67108725d
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../HighText"
+    - Name: BackgroundWarn
+      Id: g=26504fa13540dd9512ec851ac43e4554
+      Type: RectangleStyle
+      Children:
+      - Name: FillColor
+        Id: g=592dac329d8de081b91c37d22b13ba47
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f4eddd"
+        Children:
+        - Name: DynamicLink
+          Id: g=6797ec9c55ae70d4d94b51c0d4b213c0
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../MedColor"
+      - Name: BorderColor
+        Id: g=906b5e8d7699adb21b365fa487bbdd73
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e8d1a0"
+        Children:
+        - Name: DynamicLink
+          Id: g=e941da49a7aabc2b7f65ec24cd9f779f
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../MedText"
+    - Name: BackgroundInfo
+      Id: g=985bd9664b3f5dd0c109985ea5b5c931
+      Type: RectangleStyle
+      Children:
+      - Name: FillColor
+        Id: g=1e4ab964989b1f3d3d7b80de64da78b4
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+        Children:
+        - Name: DynamicLink
+          Id: g=ee18b66030b904f3936db2cafc6a7a07
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../InfoColor"
+      - Name: BorderColor
+        Id: g=9b6efd40a9d3044d39ebb7411460a856
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e6e8ec"
+        Children:
+        - Name: DynamicLink
+          Id: g=17366c6fa6d53ea33ef839d727cea57d
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../InfoText"
+    - Name: BackgroundGood
+      Id: g=f88ea324cd8863cf504a02404b26b9cd
+      Type: RectangleStyle
+      Children:
+      - Name: BorderColor
+        Id: g=d98e9688415d7838a279ea6fa07677e0
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c13f31"
+        Children:
+        - Name: DynamicLink
+          Id: g=93d1ab3eb569da59b981201d11539501
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../GoodText"
+      - Name: FillColor
+        Id: g=57f01e219bf9e443abfb001213692a92
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f5e7e6"
+        Children:
+        - Name: DynamicLink
+          Id: g=7da76d5976ffca92cbe6da8464581b46
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../GoodColor"
-      - Name: CornerRadius
+    - Name: Transparent
+      Id: g=b11b1a6a05a557d102a72c2d769c7625
+      Type: RectangleStyle
+      Children:
+      - Name: BorderColor
+        Id: g=b62f91af1ff36b8ea548c170f7f3c950
         Type: BaseDataVariableType
-        DataType: Size
-        Value: 16.0
+        DataType: Color
+        Value: "#c7d0d5"
+        Children:
+        - Name: DynamicLink
+          Id: g=8815df2b93ea04d6f5bc7be0c5e43d29
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Line2"
+    - Name: Overlay
+      Id: g=8bb65d70e334511b0d558dbf6b66590e
+      Type: RectangleStyle
   - Name: ScreenStyles
+    Id: g=844c9f457b4a29bf54ee514fec5d5c06
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=3b070b19f20cfeb642963a449854b266
       Type: ScreenStyle
   - Name: WindowColor
+    Id: g=d195821af534fd996a3a5e17df906d0f
     Type: BaseDataVariableType
     DataType: Color
     Value: "#0b131f"
     Children:
     - Name: DynamicLink
+      Id: g=7fc9010734a8ca264c1e667dbd141953
       Type: DynamicLink
       DataType: NodePath
       Value: "../Bg"
   - Name: TextColor
+    Id: g=7e21a5dd1ee63501d7c1e81333e86f91
     Type: BaseDataVariableType
     DataType: Color
     Value: "#ffffff"
     Children:
     - Name: DynamicLink
+      Id: g=5c5a4fea22a7ece0cdda64995de190d3
       Type: DynamicLink
       DataType: NodePath
       Value: "../Text"
   - Name: Brand900
+    Id: g=f801d918fe2c7c077a5228cc6ab330cc
     Type: BaseDataVariableType
     DataType: Color
     Value: "#16395f"
   - Name: Brand800
+    Id: g=c92555e3b2d92bdb1023a4516697d9ff
     Type: BaseDataVariableType
     DataType: Color
     Value: "#1b4b7f"
   - Name: Brand700
+    Id: g=9c4a34c480e81719910bad73ecc7e716
     Type: BaseDataVariableType
     DataType: Color
     Value: "#235d9f"
   - Name: Brand600
+    Id: g=74ac1843e290edca13d65d3c30b7ff30
     Type: BaseDataVariableType
     DataType: Color
     Value: "#2c72c0"
   - Name: Brand500
+    Id: g=af0277ba6fbd9afd4f625f6a71bc8049
     Type: BaseDataVariableType
     DataType: Color
     Value: "#4a8ed2"
   - Name: Brand400
+    Id: g=63014f0ad1a40b7fc612fa68811b564d
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#78acdf"
+    Value: "#3f86d6"
   - Name: Brand300
+    Id: g=28685fbc94d264aaf0afcfaa475ff9b0
     Type: BaseDataVariableType
     DataType: Color
     Value: "#a9caec"
   - Name: Brand200
+    Id: g=626e35b447a3d242b629d1f13dd0e7c6
     Type: BaseDataVariableType
     DataType: Color
     Value: "#d4e4f6"
   - Name: Brand100
+    Id: g=678dbc298b1633af9d18a1ebbbc3b5f1
     Type: BaseDataVariableType
     DataType: Color
     Value: "#eaf2fb"
   - Name: Brand50
+    Id: g=df8f33779c925cbcbca38a75b94809b8
     Type: BaseDataVariableType
     DataType: Color
     Value: "#f5f9fe"
   - Name: Bg
+    Id: g=4c0485c6b5ea0eaea8bdade562afd8d9
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#0e1116"
+    Value: "#2b3646"
   - Name: Surface
+    Id: g=00e991b242d29b26e4e2809523178786
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#161a21"
+    Value: "#354357"
   - Name: SurfaceSoft
+    Id: g=de6fd956b851316698c004c260858ce8
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#2f3847"
+    Value: "#425269"
   - Name: Text
+    Id: g=d351b809c2d9828102d7c661350cc7f4
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#e6eef8"
+    Value: "#f1f5f9"
   - Name: TextSoft
+    Id: g=b4728c177f613f5eb589893377034042
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#9cb3cb"
+    Value: "#c0cddc"
   - Name: Line
+    Id: g=7e338c2c3919e5ef7710d4deb4c11885
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#21485f"
+    Value: "#5b6e86"
   - Name: Line2
+    Id: g=1873259438a44f94c0e335f94746f847
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#262b34"
+    Value: "#4b5d73"
   - Name: Accent
+    Id: g=4e78f640ff9a82c7d3c9ac74009a5e5f
     Type: BaseDataVariableType
     DataType: Color
     Value: "#ffffff"
     Children:
     - Name: DynamicLink
+      Id: g=66ed339ccc671168d8c639c00970ccc4
       Type: DynamicLink
       DataType: NodePath
       Value: "../Brand400"
   - Name: AccentSoft
+    Id: g=bfd34507d2840e97f1cfee9f5b850c14
     Type: BaseDataVariableType
     DataType: Color
     Value: "#eaf2fb"
     Children:
     - Name: DynamicLink
+      Id: g=cf37fc52d6d0d8bda7203a2944c53ae4
       Type: DynamicLink
       DataType: NodePath
       Value: "../Brand900"
   - Name: Ok
+    Id: g=7a8d1473ae4dbda8ae6fca18104ca201
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#2a7c4f"
+    Value: "#3aa76d"
   - Name: Warn
+    Id: g=0dbc530d59b62a141d8b06b0ebd51eba
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#fddc00"
+    Value: "#f0c040"
   - Name: Danger
+    Id: g=f1293fe9e61760981e26ddae66dd8db7
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#b64141"
+    Value: "#e0605b"
   - Name: BorderColor
+    Id: g=209d5eac80019b734593a696bbeb54b3
     Type: BaseDataVariableType
     DataType: Color
     Value: "#b3b3b3"
     Children:
     - Name: DynamicLink
+      Id: g=7fe3ffd306f33abad35665af0a929929
       Type: DynamicLink
       DataType: NodePath
       Value: "../Line2"
   - Name: FocusColor
+    Id: g=50fb3527d61ee5b0a126b0299b1835b3
     Type: BaseDataVariableType
     DataType: Color
     Value: "#0fafff"
     Children:
     - Name: DynamicLink
+      Id: g=4ef9589bf0c49a923e09388c035d897e
       Type: DynamicLink
       DataType: NodePath
       Value: "../Brand400"
   - Name: HighText
+    Id: g=cdd129727bf56a97b3690844d40c1247
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#c0392b"
+    Value: "#ffb3ad"
   - Name: HighColor
+    Id: g=47d44b4c30bd8f980b70d2a50a5baaca
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#f5e7e6"
+    Value: "#5a2f33"
   - Name: MedText
+    Id: g=c8f3dbad811c44b69ea6a9db46de8289
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#cb8e09"
+    Value: "#ffd78a"
   - Name: MedColor
+    Id: g=bac870eb6cef75f5196b659c646cc72b
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#f4eddd"
+    Value: "#5a4a26"
   - Name: InfoText
+    Id: g=b196d0cdd381b01f40f6d1a47cc873e1
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#8a909b"
+    Value: "#c5d0de"
   - Name: InfoColor
+    Id: g=03183761331c20e95fddc7a1168bd569
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#ffffff"
+    Value: "#3d4c61"
   - Name: AccentColor
+    Id: g=3b6c10102e7ed9bce7e453f9bf7a2951
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#235d9f"
+    Value: "#7fb6f5"
   - Name: GoodText
+    Id: g=56d4ab1ed9c8d305474c1c21f0d99000
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#b7d8c6"
+    Value: "#a8e6c0"
   - Name: GoodColor
+    Id: g=d1ff86fad7eae8bce51051153dcdcbb0
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#e4efea"
+    Value: "#25503a"
 - Name: Light
   Id: g=fc7676556888e4e49320fa7002a4732f
   Type: BaseStyleSheet
   Children:
   - Name: ButtonStyles
+    Id: g=d7aa9ed3c493e940264a25874536e312
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=1cef72d9eaa1c8899692866f11d440ee
       Type: ButtonStyle
+      Children:
+      - Name: BorderColor
+        Id: g=c0c7e9e845f270aae683164cbc4ade9f
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+        Children:
+        - Name: DynamicLink
+          Id: g=555fe047a1445c694a4d28730cfd32ad
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Line2"
     - Name: Accent
+      Id: g=d3ecfb42e52a8b2030ebf228e1ae7a60
       Type: ButtonStyle
       Children:
       - Name: Color
+        Id: g=abb9f4edeade296c9ba1b1e523083187
         Type: BaseDataVariableType
         DataType: Color
         Value: "#235d9f"
         Children:
         - Name: DynamicLink
+          Id: g=292e935821dd2420e150356ca1d654b6
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Accent"
     - Name: BorderedRectangular
+      Id: g=bd11fcccfd15f0380d66cd40f5885009
       Type: ButtonStyle
     - Name: BorderedCircular
+      Id: g=2d4f3c44f8842131845b2ca03c49d3d7
       Type: ButtonStyle
     - Name: Emergency
+      Id: g=2b1634bb8416b3745a1be0b800a46b50
       Type: ButtonStyle
     - Name: Transparent
+      Id: g=3929b7927b4e698ccea062e2d3ab349c
       Type: ButtonStyle
+      Children:
+      - Name: PressedColor
+        Id: g=e4b9f834a7f1d3a69bd69cafb18eb169
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderWidth
+        Id: g=4ed4089347e8a76945d424e83079c568
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 2.0
     - Name: Empty
+      Id: g=56b51d9cb04702aadb857bee3dc8a573
       Type: ButtonStyle
       Children:
       - Name: Color
+        Id: g=5316341d682c86b071330af5f7962dbe
         Type: BaseDataVariableType
         DataType: Color
         Value: "#e4e4e400"
+      - Name: BorderColor
+        Id: g=e5dbf3fd28b65cb2affcf70a21f27d4c
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b3b3b300"
   - Name: InputBoxStyles
+    Id: g=7408027d7d6487399f3e88e239f5e941
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=64157e9d123a3143b6def634f4988ffe
       Type: InputBoxStyle
+    - Name: InputBoxStyle1
+      Id: g=293432d1b36fcf7b1a3e842f10df394b
+      Type: InputBoxStyle
+      Children:
+      - Name: BackgroundColor
+        Id: g=77930830ffbbce71dd91e447c168d662
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+        Children:
+        - Name: DynamicLink
+          Id: g=85cf1292322a9d5c11211be1a9514e2a
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Surface"
+      - Name: BorderWidth
+        Id: g=820418e3ac89be9db194b3b87017ab90
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 2.0
   - Name: SwitchStyles
+    Id: g=7fd7f9c3d8cbfb57c9236056b29abaf8
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=2819c8a1af74f5b292508783b37d0ae6
       Type: SwitchStyle
   - Name: GaugeStyles
+    Id: g=f9fa14c5e5df385f1575ba362a904f16
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=965bb983caa565ea75f247c0ba272b45
       Type: GaugeStyle
   - Name: NavigationPanelStyles
+    Id: g=9509b3dd906748be120e0e1744debfa5
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=e06372df3f3b0735460258aa2ad03f98
       Type: NavigationPanelStyle
   - Name: ChartStyles
+    Id: g=e9b56cc888e40b520627b15c745b9ff7
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=841d87c5080247a6b99bfcdc145c879a
       Type: ChartStyle
       Children:
       - Name: AxisColor
+        Id: g=35611018c7099ff13e86f68f50a7f1d5
         Type: BaseDataVariableType
         DataType: Color
         Value: "#3b3b3b00"
       - Name: GridColor
+        Id: g=b45dc6aecb35e3e3561e810459656c55
         Type: BaseDataVariableType
         DataType: Color
         Value: "#b3b3b300"
   - Name: DataListStyles
+    Id: g=a28ebfb5faf1abc14a7ebbbe641139bf
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=2019ac5d1824cf00d451b7fb611a7c8b
       Type: DataListStyle
       Children:
       - Name: Radius
+        Id: g=a6ad85ff2224b09a05c78a4c0f060869
         Type: BaseDataVariableType
         DataType: Size
   - Name: ToolTipStyles
+    Id: g=38787b8c648b3a9ece77193cc551c6f3
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=a409395c897935cd549ab7e6ffb99481
       Type: ToolTipStyle
   - Name: ScrollBarStyles
+    Id: g=7094f29c40001ad2aad6a74aa35f13e9
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=8915402a28cc0d59886f178b18e88aa4
       Type: ScrollBarStyle
+      Children:
+      - Name: HandleColor
+        Id: g=4ef639972c855f8ba4909b2a51576ebc
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+        Children:
+        - Name: DynamicLink
+          Id: g=ef94fb609fd067e710d0adc2180139b1
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Line2"
   - Name: AccordionStyles
+    Id: g=02d16f92e0609ede548d6b256723d1ce
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=a0717b8b3fda1ba99380196ed10d33c1
       Type: AccordionStyle
       Children:
       - Name: HeaderBackgroundColor
+        Id: g=a0dacdc169c7369d4c51150a72fb58dd
         Type: BaseDataVariableType
         DataType: Color
         Children:
         - Name: DynamicLink
+          Id: g=c4f33ce7aa607a86418295d38734f1db
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Surface"
       - Name: ContentBackgroundColor
+        Id: g=db2c14d6dd1f1f1778d93762d67b59ff
         Type: BaseDataVariableType
         DataType: Color
         Children:
         - Name: DynamicLink
+          Id: g=e0c55a766033267339cdc71d0b8f41f9
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Surface"
   - Name: PieChartStyles
+    Id: g=6f41f0389ea37da4bed8e116fa7772b2
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=f944db5544d53b82d0ee9932427a5afa
       Type: PieChartStyle
   - Name: HistogramChartStyles
+    Id: g=1e3a1dfa9758fce37bd3321e5c825011
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=066ca9c69449ec5791695a7de0e3fae7
       Type: HistogramChartStyle
   - Name: LabelStyles
+    Id: g=c3c3464ea7e77eb7bfa923141ba8eeeb
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=ca3535f597a15673493fc60f889509b6
       Type: LabelStyle
     - Name: Accent
+      Id: g=18b1ca57788e4a4bbc550506e5eb1a14
       Type: LabelStyle
     - Name: ChipAccent
+      Id: g=6659cd4621d3012a876009ab5ae9673b
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=6330f577dcbad8a87ffd1aa1bae2087e
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
     - Name: H1
+      Id: g=cb536963e05d9ed92af98fe2eab2b1cc
       Type: LabelStyle
+      Children:
+      - Name: FontWeight
+        Id: g=cb55e32d8b982ff2d4072af8349b82b4
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
+      - Name: FontSize
+        Id: g=9c5aaeb52a4070ebc319c33439b0af50
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 32.0
     - Name: H2
+      Id: g=1b9066571fbe9fdb10f3ee46e3a8b1fd
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=daa7431fbdc06b629994881bc7a5e112
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=90c7a2f0662bf4440a0c44d1bd934fb9
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../TextSoft"
-    - Name: ChipErrText
+          Value: "../../../Text"
+      - Name: FontSize
+        Id: g=43673ad796bcd6f2f94ddae4affd8c4b
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 24.0
+    - Name: H3
+      Id: g=0229da6b4ff6fe6e5b1354049d36d49c
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=08d35a9b13f0f8f0c2f926b35abea66c
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=a9855e3f73d207210617712ad5ca6171
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Text"
+      - Name: FontWeight
+        Id: g=2469b3b8b948353930a493d03ad31382
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
+    - Name: ChipErrText
+      Id: g=d4b3cb99c1c92d4f489480d5b9582e96
+      Type: LabelStyle
+      Children:
+      - Name: TextColor
+        Id: g=3bce034ad9557bcb903aeb15d50a8843
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=cd7ed8ef26bdb9b097c254f1ea21a6c0
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../HighText"
     - Name: ChipWarnText
+      Id: g=91dea87073a48d9dfaef8a13f477e5a9
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=6ff2d6bf111501efea1be51e35492d74
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=d024512c422c6502fbf6f46afceb0bc5
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../MedText"
     - Name: ChipInfoText
+      Id: g=e929ab1ef78e725ec2300b09a97ee8d7
       Type: LabelStyle
       Children:
       - Name: TextColor
+        Id: g=735b261e0739637977dad9813a863c97
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=df727c0a73633c2642f42d0d7585f2a6
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../InfoText"
     - Name: ChipGoodText
+      Id: g=6cac978623bf155af9aaeebe5bbe8d34
       Type: LabelStyle
+    - Name: H4
+      Id: g=e91f39799fc2c075385b13fa32e0ba83
+      Type: LabelStyle
+      Children:
+      - Name: TextColor
+        Id: g=b2081005ce8a3f0ac3c18654ad37dfb1
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=4f94dc514d22340621f86038052e3c72
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../TextSoft"
+      - Name: FontSize
+        Id: g=2a1bd96b244cffcab566a5a2432e8605
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
+      - Name: FontWeight
+        Id: g=dd3417da7709c866af99cf766d4373cb
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 400
+    - Name: H5
+      Id: g=9c45b08511c263094f292e973224a2bd
+      Type: LabelStyle
+      Children:
+      - Name: TextColor
+        Id: g=90a9adb15222f4de542bc3f45481b584
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=4a897573e545bc1b8fb6fd32eefb15c4
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Text"
   - Name: RadioButtonStyles
+    Id: g=3715925dcad694c806922ddad99a8973
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=db678b4e04fcf84752fba4f5e3f44390
       Type: RadioButtonStyle
       Children:
       - Name: IndicatorSize
+        Id: g=f90287b2efbd0d4f54647f0a033aab13
         Type: BaseDataVariableType
         DataType: Size
     - Name: Accent
+      Id: g=30eab66d824bfa472372d251abd1bf8a
       Type: RadioButtonStyle
   - Name: CheckBoxStyles
+    Id: g=11b4f712a1e4bccfd4c35b6fb145ae12
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=87bd1004957280362bc03975f489e554
       Type: CheckBoxStyle
   - Name: RectangleStyles
+    Id: g=347fe6a15882054745fab25673f82fac
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=1b580bfe6deafcc4b0133ef50acaa953
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=5a37a4283b21b551334219e69e46157e
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=ec2a34f15be671891bdd480115fd254a
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Surface"
     - Name: Chip
+      Id: g=68f0e00e8883ce1b765cefa4b281be6a
       Type: RectangleStyle
       Children:
       - Name: BorderColor
+        Id: g=2a94a015ae48487ee397db64c9301679
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=b5f8f102c53bbb7c6c4d99be2846e2f7
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Line2"
     - Name: ChipAccent
+      Id: g=23a6033630b4bc0bc8f0aef1540142d2
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=7233d06e53338d79d76481d27dc5c626
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff00"
         Children:
         - Name: DynamicLink
+          Id: g=a46187561ed57bfb187f112abde46a1a
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Accent"
       - Name: BorderColor
+        Id: g=b67099af62eea3ee1f9668ea1db082f1
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=acc00dbb62a15d44a87c694fdcd309bf
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Line2"
     - Name: Underline
+      Id: g=481bcfd38b5b1e0a908dc2a0ed03f215
       Type: RectangleStyle
       Children:
       - Name: BorderColor
+        Id: g=76c6cc7afc83229a61f2d54ffc07b189
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: DynamicLink
+          Id: g=e1d28c5b421395c18a426bb57126bca2
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Line2"
       - Name: FillColor
+        Id: g=2cede2438079f89e3dd5e528abcb55f5
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=a9c34de1b716ab3d959aae5763510634
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../SurfaceSoft"
     - Name: GaugeLine
+      Id: g=2c1aeda6f367f343edc5cf5ef2c519bd
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=5ae92da49ade0afdf3d0136f2d4f5b42
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=c5f9998950394edf9ba521e11466e68f
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Brand700"
     - Name: GaugeBackground
+      Id: g=3e5ec40ce0294a144348554c95be84a9
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=2073c4ab4d565c463dfb1613961f7e81
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=5d2c7a82aab3a84a8e0a887f416b20ab
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Line"
     - Name: GaugeLimitsBackground
+      Id: g=03712436571df2a9da05ff6efa866c98
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=6849172037b67d9895ec8d1ae4016323
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=1eb9450409f2a4dd89205191740bc186
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Brand400"
     - Name: Background
+      Id: g=7355de842866d6ecb4c6cfcee25a7e1c
       Type: RectangleStyle
       Children:
       - Name: FillColor
+        Id: g=0c46ac282bd34aa1682a58afed58259d
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=56c8395983d567faa7b1860234657d78
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Surface"
       - Name: BorderColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#000000"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../Line2"
-    - Name: GridHeader
-      Type: RectangleStyle
-      Children:
-      - Name: BorderThickness
-        Type: BaseDataVariableType
-        DataType: Size
-        Value: 1.0
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#ffffff"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../SurfaceSoft"
-      - Name: BorderColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#000000"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../Line2"
-    - Name: GridRow
-      Type: RectangleStyle
-      Children:
-      - Name: BorderThickness
-        Type: BaseDataVariableType
-        DataType: Size
-        Value: 1.0
-      - Name: CornerRadius
-        Type: BaseDataVariableType
-        DataType: Size
-    - Name: NavBarDefault
-      Type: RectangleStyle
-    - Name: NavBarAccent
-      Type: RectangleStyle
-    - Name: BackgroundErr
-      Type: RectangleStyle
-      Children:
-      - Name: BorderColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#c13f31"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../HighText"
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#f5e7e6"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../HighColor"
-    - Name: BackgroundWarn
-      Type: RectangleStyle
-      Children:
-      - Name: BorderColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#e8d1a0"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../MedText"
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#f4eddd"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../MedColor"
-    - Name: BackgroundInfo
-      Type: RectangleStyle
-      Children:
-      - Name: BorderColor
+        Id: g=69cd55dcc33712c4416309ee491e1ee5
         Type: BaseDataVariableType
         DataType: Color
         Value: "#e6e8ec"
         Children:
         - Name: DynamicLink
+          Id: g=5cb10794ba7bec4db652faec98e88d56
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../InfoText"
+          Value: "../../../Line2"
+    - Name: GridHeader
+      Id: g=70347bd06df17b6eaa5b9653516b7b9d
+      Type: RectangleStyle
+      Children:
+      - Name: BorderThickness
+        Id: g=23397a671883eb7ee021c9afa9898c35
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
       - Name: FillColor
+        Id: g=8dd4b868feb99bb3c7bd78d670a4ccb4
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
+          Id: g=d99f2636c116c4d13bc3995099418103
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../InfoColor"
-    - Name: BackgroundGood
+          Value: "../../../SurfaceSoft"
+      - Name: BorderColor
+        Id: g=d6c9716accae6f5a43c63b1457467169
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=9a1a5f3d9e83798d109807ecba34bba5
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Line2"
+    - Name: GridRow
+      Id: g=13cb9f4cd747d1306413c1b890ce8d4b
+      Type: RectangleStyle
+      Children:
+      - Name: BorderThickness
+        Id: g=67ef9b2107d81ab0fb3a72f2350b8fee
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: CornerRadius
+        Id: g=08421a5a8df14811960c0796bcec83f0
+        Type: BaseDataVariableType
+        DataType: Size
+    - Name: NavBarDefault
+      Id: g=263c1715613f3aca0a2356536e7b1404
+      Type: RectangleStyle
+      Children:
+      - Name: FillColor
+        Id: g=753b7b76ddac1b4adfead103742c45d5
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+        Children:
+        - Name: DynamicLink
+          Id: g=4ba71c1ca38b6ada5b235457168e3b75
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Surface"
+    - Name: NavBarAccent
+      Id: g=e725ac113cfadec673576f23b221d8bd
+      Type: RectangleStyle
+    - Name: BackgroundErr
+      Id: g=8b4b4a5c4033096d3408af263320059b
       Type: RectangleStyle
       Children:
       - Name: BorderColor
+        Id: g=63176218ebbf583f223606f52077a72b
         Type: BaseDataVariableType
         DataType: Color
         Value: "#c13f31"
         Children:
         - Name: DynamicLink
+          Id: g=6f25fa356f1730975cccb5a11a894638
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../GoodText"
+          Value: "../../../HighText"
       - Name: FillColor
+        Id: g=6a72ae915f3e427fd6c418f3397a1003
         Type: BaseDataVariableType
         DataType: Color
         Value: "#f5e7e6"
         Children:
         - Name: DynamicLink
+          Id: g=1d9aadc1c49ebbb0c58ca267c9bdfaec
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../HighColor"
+    - Name: BackgroundWarn
+      Id: g=9054a0d8b572a2dbe0d7908b8c2f76d7
+      Type: RectangleStyle
+      Children:
+      - Name: BorderColor
+        Id: g=7131c9109928f98e52bf9c9bcdaca688
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e8d1a0"
+        Children:
+        - Name: DynamicLink
+          Id: g=fcf8ee07382cb3fe15a63da30babc25a
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../MedText"
+      - Name: FillColor
+        Id: g=5179eaecafb6736b25ed8cbeeead8181
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f4eddd"
+        Children:
+        - Name: DynamicLink
+          Id: g=3079bb0b57cfdd21996c74486e0fb109
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../MedColor"
+    - Name: BackgroundInfo
+      Id: g=efd38b6c9dd8c081411d408e17c441a5
+      Type: RectangleStyle
+      Children:
+      - Name: BorderColor
+        Id: g=d0cadfbdf64f568a7373a5b39249c99a
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e6e8ec"
+        Children:
+        - Name: DynamicLink
+          Id: g=d9e2cc7ca4ada87a8da585cc03895c9a
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../InfoText"
+      - Name: FillColor
+        Id: g=a4358e4957cd49abeac4a96f455f79d3
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+        Children:
+        - Name: DynamicLink
+          Id: g=ddd897aa4ea02d29a44cc8de765cd6db
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../InfoColor"
+    - Name: BackgroundGood
+      Id: g=5731487bace732973744023c916bb001
+      Type: RectangleStyle
+      Children:
+      - Name: BorderColor
+        Id: g=ff10d217c8c12183fe17565d3a9b725e
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c13f31"
+        Children:
+        - Name: DynamicLink
+          Id: g=01429634ee23171ed60358ce229fef32
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../GoodText"
+      - Name: FillColor
+        Id: g=6648a13c1100de5bce19e00160f226e5
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f5e7e6"
+        Children:
+        - Name: DynamicLink
+          Id: g=5bbf5665abb8c1ee8b7f35fbeb968960
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../GoodColor"
-      - Name: CornerRadius
+    - Name: Transparent
+      Id: g=255531e3f2a86d86995ab1d728a31ca8
+      Type: RectangleStyle
+      Children:
+      - Name: BorderColor
+        Id: g=5adc154afa5ee8df1f5432dcf07e1f31
         Type: BaseDataVariableType
-        DataType: Size
-        Value: 16.0
+        DataType: Color
+        Value: "#c7d0d5"
+        Children:
+        - Name: DynamicLink
+          Id: g=6cf405aac6ef9e57a7da2d31f6c6f64c
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Line2"
+    - Name: Overlay
+      Id: g=ad9bef27f009aeccd2b81391fddefd76
+      Type: RectangleStyle
   - Name: ScreenStyles
+    Id: g=4102d3eed55a48df9e50380cf9f2bdcf
     Type: BaseObjectType
     Children:
     - Name: Default
+      Id: g=2e74e68a0718ca54a8e175bdc5ff3597
       Type: ScreenStyle
   - Name: WindowColor
+    Id: g=ba50b2a69c52a54a77d64797569b0f71
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#f3f7fc"
+    Value: "#eef2f4"
     Children:
     - Name: DynamicLink
+      Id: g=3e67c427bc13a23e09df7804d33a3bc1
       Type: DynamicLink
       DataType: NodePath
       Value: "../Bg"
   - Name: Brand900
+    Id: g=5f2af50c6659177594e894f674e58c57
     Type: BaseDataVariableType
     DataType: Color
     Value: "#16395f"
   - Name: Brand800
+    Id: g=73017c89400bd7316191e88325f7cbcd
     Type: BaseDataVariableType
     DataType: Color
     Value: "#1b4b7f"
   - Name: Brand700
+    Id: g=15caf7084b15322596316c6df3a8d082
     Type: BaseDataVariableType
     DataType: Color
     Value: "#235d9f"
   - Name: Brand600
+    Id: g=37aaa689d7efe1c75587e34ec0241310
     Type: BaseDataVariableType
     DataType: Color
     Value: "#2c72c0"
   - Name: Brand500
+    Id: g=769281b13236e5e7be5477f821b6cc6c
     Type: BaseDataVariableType
     DataType: Color
     Value: "#4a8ed2"
   - Name: Brand400
+    Id: g=2a8473bb19a9f6cbbad6380b623edbfd
     Type: BaseDataVariableType
     DataType: Color
     Value: "#78acdf"
   - Name: Brand300
+    Id: g=5616e34559c616332ee4b9e31ba58441
     Type: BaseDataVariableType
     DataType: Color
     Value: "#a9caec"
   - Name: Brand200
+    Id: g=6cde7f27c9548a89e09b55df04e1c3a3
     Type: BaseDataVariableType
     DataType: Color
     Value: "#d4e4f6"
   - Name: Brand100
+    Id: g=4d59595362abd3de1cbc7f799b967014
     Type: BaseDataVariableType
     DataType: Color
     Value: "#eaf2fb"
   - Name: Brand50
+    Id: g=54294ac238b9890d5146b685b1feae78
     Type: BaseDataVariableType
     DataType: Color
     Value: "#f5f9fe"
   - Name: Bg
+    Id: g=25da6c5af1ee252a34416ae53d7dd970
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#f3f7fc"
+    Value: "#eef2f4"
   - Name: Surface
+    Id: g=6fe568274067753edb57fc626896afe9
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#ffffff"
+    Value: "#f8fafb"
   - Name: SurfaceSoft
+    Id: g=158156ff64536bd7e201dc5c06a7b79a
     Type: BaseDataVariableType
     DataType: Color
     Value: "#fafbfc"
   - Name: Text
+    Id: g=b147248cc13cbf00d206bd86fbff3adf
     Type: BaseDataVariableType
     DataType: Color
     Value: "#16304d"
   - Name: TextSoft
+    Id: g=0fd52123b1d09da9c882a8928489b14c
     Type: BaseDataVariableType
     DataType: Color
     Value: "#5f7690"
   - Name: Line
+    Id: g=2f5192dcec2b55116fbb8b4ea7f8cf37
     Type: BaseDataVariableType
     DataType: Color
     Value: "#bfd0e3"
   - Name: Line2
+    Id: g=421914d95399e1e8a86a0f704449ccb7
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#e6e8ec"
+    Value: "#c7d0d5"
   - Name: Accent
+    Id: g=861b6d47f5157ea806187377d0926263
     Type: BaseDataVariableType
     DataType: Color
     Value: "#ffffff"
     Children:
     - Name: DynamicLink
+      Id: g=b71adbd2da797fb35352579f1057db4f
       Type: DynamicLink
       DataType: NodePath
       Value: "../Brand700"
   - Name: AccentSoft
+    Id: g=d4fb9da76ce2d66b38de3e1391ff566d
     Type: BaseDataVariableType
     DataType: Color
     Value: "#eaf2fb"
     Children:
     - Name: DynamicLink
+      Id: g=0e282198754150096dd2af36a630fc38
       Type: DynamicLink
       DataType: NodePath
       Value: "../Brand100"
   - Name: Ok
+    Id: g=94e6f45e7b62a6b8d54d649319c59b10
     Type: BaseDataVariableType
     DataType: Color
     Value: "#2a7c4f"
   - Name: Warn
+    Id: g=f617aba637a19b5eb3e1b965744e367c
     Type: BaseDataVariableType
     DataType: Color
     Value: "#fddc00"
   - Name: Danger
+    Id: g=96f54d0531d0e04dc98d1e5638c3f08e
     Type: BaseDataVariableType
     DataType: Color
     Value: "#b64141"
   - Name: TextColor
+    Id: g=559ef0b680ab3ebfe80edb955fcd083b
     Type: BaseDataVariableType
     DataType: Color
     Value: "#3b3b3b"
     Children:
     - Name: DynamicLink
+      Id: g=b6c14825fa046209faab78b85ac905ef
       Type: DynamicLink
       DataType: NodePath
       Value: "../Text"
   - Name: BorderColor
+    Id: g=acc348d05bff8061001134cb65b97895
     Type: BaseDataVariableType
     DataType: Color
     Value: "#b3b3b3"
     Children:
     - Name: DynamicLink
+      Id: g=1dfd5785e65b02d80374945070e76d3c
       Type: DynamicLink
       DataType: NodePath
       Value: "../Line2"
   - Name: HighText
+    Id: g=0b64a60c512156af69fbe3f36c01a155
     Type: BaseDataVariableType
     DataType: Color
     Value: "#c0392b"
   - Name: HighColor
+    Id: g=a42f46a5af217ef3779e92be2ab8b25a
     Type: BaseDataVariableType
     DataType: Color
     Value: "#f5e7e6"
   - Name: MedText
+    Id: g=89c0baebd0444a859f252aa8f4cc4dfb
     Type: BaseDataVariableType
     DataType: Color
     Value: "#cb8e09"
   - Name: MedColor
+    Id: g=e5e5e4dd8265c23622edfd4bc00c0a83
     Type: BaseDataVariableType
     DataType: Color
     Value: "#f4eddd"
   - Name: InfoText
+    Id: g=d9a3bb0bc66909d2faf4b1992f8de222
     Type: BaseDataVariableType
     DataType: Color
     Value: "#8a909b"
   - Name: InfoColor
+    Id: g=25e4706f6e7309245da5801199d7b6bf
     Type: BaseDataVariableType
     DataType: Color
     Value: "#ffffff"
   - Name: FocusColor
+    Id: g=f839d70c162795bc4959146571da9811
     Type: BaseDataVariableType
     DataType: Color
     Value: "#0fafff"
     Children:
     - Name: DynamicLink
+      Id: g=6152bbbae141d389845dd94efc9bc4f0
       Type: DynamicLink
       DataType: NodePath
       Value: "../Brand700"
   - Name: AccentColor
+    Id: g=0762de0963db725f5e7a67818b5f938b
     Type: BaseDataVariableType
     DataType: Color
     Value: "#235d9f"
   - Name: GoodText
+    Id: g=17da9fb3dfe24dd1c2cf03af3340551b
     Type: BaseDataVariableType
     DataType: Color
     Value: "#b7d8c6"
   - Name: GoodColor
+    Id: g=6cef219e16f3fef67c4220529495c892
     Type: BaseDataVariableType
     DataType: Color
     Value: "#e4efea"

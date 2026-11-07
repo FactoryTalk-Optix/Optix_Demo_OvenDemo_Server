@@ -1,137 +1,72 @@
 Name: RunTime
+Id: g=28708dd77efab08881c8a50208fc1f8d
 Type: FolderType
 Children:
-- Name: OvensBehaviorLogic
-  Type: NetLogic
-- Name: OvensOeeLogic
-  Type: NetLogic
-- Name: RecipesBroadcastLogic
-  Type: NetLogic
-- Name: AlarmsBroadcastLogic
-  Type: NetLogic
-- Name: WebServer
-  Type: NetLogic
-- Name: OvensBroadcastLogic
-  Type: NetLogic
-- Name: AlarmSubscriberLogic
-  Type: NetLogic
-  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
-  Children:
-  - Name: AlarmCount
-    Type: BaseDataVariableType
-    DataType: Int32
-  - Name: LastAlarm
-    Type: NodePointer
-    DataType: NodeId
-    Children:
-    - Name: Kind
-      Type: PropertyType
-      DataType: NodeId
-      Value: "/Types/EventTypes/BaseEventType/ConditionType/AcknowledgeableConditionType/AlarmConditionType"
-  - Name: ns=4;LibraryReference
-    Type: ObjectLibraryReference
-    DataType: ObjectLibraryReferenceDataType
-    Value: 
-     {
-      "TypeId": {
-       "Id": 72,
-       "Namespace": 4
-      },
-      "Body": {
-       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
-       "objectGuid": "df11bd104ff09de7f31867e99d8d1bc3",
-       "objectVersion": 1,
-       "highestIgnoredVersion": 0
-      }
-     }
-  - Name: AlarmCountSeverity1
-    Type: BaseDataVariableType
-    DataType: Int32
-  - Name: AlarmCountSeverity2
-    Type: BaseDataVariableType
-    DataType: Int32
-  - Name: AlarmCountSeverity3
-    Type: BaseDataVariableType
-    DataType: Int32
-- Name: alarmSimulationLogic
-  Type: NetLogic
-  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
-  Children:
-  - Name: alarmSimulationArray
-    Type: BaseDataVariableType
-    DataType: Boolean
-    ValueRank: OneDimension
-    ArrayDimensions: [24]
-  - Name: enableSimulation
-    Id: g=ac541dee9f3443374e6ba0bede1b40aa
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: ns=4;LibraryReference
-    Type: ObjectLibraryReference
-    DataType: ObjectLibraryReferenceDataType
-    Value: 
-     {
-      "TypeId": {
-       "Id": 72,
-       "Namespace": 4
-      },
-      "Body": {
-       "libraryGuid": "1013c0cd4c0ff202c80cb0526c104c9f",
-       "objectGuid": "7c2322523c324a725ba7c49191cf8c6a",
-       "objectVersion": 1,
-       "highestIgnoredVersion": 0
-      }
-     }
 - Name: ClockLogic
+  Id: g=9dbeeaf974fe4ce79b2d77fbabb1b3f1
   Type: NetLogic
   WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
   Children:
   - Name: Time
+    Id: g=0103a924a04fb21e2dbf455ebf7b78b8
     Type: BaseDataVariableType
     DataType: DateTime
     Children:
     - Name: Year
+      Id: g=8e0b747a5b75b66a98007694352e8eb0
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Month
+      Id: g=8e5f8518a327f2c8ee538d620f824f92
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Day
+      Id: g=0cdd4ed287b859ee7bd3a10343ba21d4
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Hour
+      Id: g=5c3af5f4d202dd95643d4370a50f41ee
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Minute
+      Id: g=066ea68b8134749fdbe18ddb0a20f180
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Second
+      Id: g=ffd72a0cf5044e94ee8a211ab9f1a266
       Type: BaseDataVariableType
       DataType: Int32
   - Name: UTCTime
+    Id: g=10fcad66ff23d0ea7c8da44b88600509
     Type: BaseDataVariableType
     DataType: DateTime
     Children:
     - Name: Year
+      Id: g=2c6286c0efbd11f68dfa735ef3099041
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Month
+      Id: g=057eb49cfe6da895ddf9ddbccf9ffa58
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Day
+      Id: g=3fc2de68d0230547c08e17f8a495b659
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Hour
+      Id: g=09af88b40af8b772472af8bb43f11259
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Minute
+      Id: g=b1697be9613cb5cc1a4696bb9a77a93b
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Second
+      Id: g=45b9895fd584f5e22c8af77431343619
       Type: BaseDataVariableType
       DataType: Int32
   - Name: ns=4;LibraryReference
+    Id: g=98e85b35205f8990134093aeadff0e7c
     Type: ObjectLibraryReference
     DataType: ObjectLibraryReferenceDataType
     Value: 
@@ -148,8 +83,121 @@ Children:
       }
      }
   - Name: TimeMinus10secs
+    Id: g=b5cf0426ea42a1f5d3c3c9c2a890f1f7
     Type: BaseDataVariableType
     DataType: DateTime
   - Name: UTCTimeMinus10secs
+    Id: g=ca43a263ff0b390bf9b61211051fefbe
     Type: BaseDataVariableType
     DataType: DateTime
+- Name: ProjectLogic
+  Id: g=e53337c767d0002406e61cc2ddd34fce
+  Type: NetLogic
+  Children:
+  - Name: LocalDateTime
+    Id: g=d99fa201cee24c0b1efb620ac7ac6994
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: UptimeSeconds
+    Id: g=0e091021104c0fa2c74bf7618cb11aff
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Class: Method
+    Name: ApplyLocalRecipe
+    Id: g=c04b9f40e95fc4b3f8c41ffd4e85c83c
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=98d2ff3ba807ff94153d40a75f5433b6
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"deviceId","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"name","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"version","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Class: Method
+    Name: StartLocalCycle
+    Id: g=2646fc2bb36a6cdc4007633dbee65fe9
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=555a915c898d27f7669e12938854ae60
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"deviceId","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Class: Method
+    Name: StopLocalCycle
+    Id: g=a3afc854c5d3d81f64cdcc07c689c2d6
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=4cee072d9a1894e1d7698dd924ad0a75
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"deviceId","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: OpcUaClientRuntimeHelper
+  Id: g=f001e3a71e3c674d4b80f0545b64f48c
+  Type: NetLogic
+- Name: ChatLogic
+  Id: g=cde057593b4ec544a73d5fe8e200a5f2
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: SendMessage
+    Id: g=7f2c14196be78bb94fedb7dac5ecda4b
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=c72c4ee27d96986b755d86c74e3aa922
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"oven","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"text","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: RecipeOrchestratorLogic
+  Id: g=2dd3e14b449f40e9aa824388b0fd03e0
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: SendToFleet
+    Id: g=c89b36193e0348bd954e68eb4910a048
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=fca9273b2f344c8983d5a972edc01441
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"name","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"version","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Class: Method
+    Name: ResendToOven
+    Id: g=54aa10d413be4230bc414dc5bf61e4c2
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=f51cb187b42d40f6962c900a99fa094c
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"deviceId","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"name","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"version","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: ActiveAlarmCardLogic
+  Id: g=3fa555d96ac4e622698e619293498ecf
+  Type: NetLogic
+  Children:
+  - Name: ActiveAlarmCount
+    Id: g=31034f3eaa9087e2e3e0f93b53365d6a
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: MaxSeverity
+    Id: g=a90b96e6b8ea1d465e0756ace98b3dc2
+    Type: BaseDataVariableType
+    DataType: Int16
+  - Name: HasActiveAlarms
+    Id: g=8ed6b47a92798adc46b8c918f6c3269e
+    Type: BaseDataVariableType
+    DataType: Boolean

@@ -1,0 +1,286 @@
+Name: Fleet
+Id: g=9e534d7ef270916122552f1f75ee1f8b
+Type: FolderType
+Children:
+- Name: 'OVEN-987ZX'
+  Id: g=0a420237797fd4217515e24da508648a
+  Type: OvenType
+  Children:
+  - Name: DeviceId
+    Id: g=6c184065c41277acaf16cc1b9d24c246
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "OVEN-987ZX"
+  - Name: ExecutionState
+    Id: g=c9308e5f3d63a4bf6a341b55a8a87137
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Temperature
+    Id: g=eb81fd7b2b5a0f800feab80e5a7f36c5
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: EngineeringUnits
+      Id: g=be2854b78a1dc2d25e60627b947b4983
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Id: g=7fe52f1bfa3390eaba8f63c72cb3765c
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 4408652
+      - Name: DisplayName
+        Id: g=974c4ab2c0ddf64112ec6fe7f9084c69
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+      - Name: Description
+        Id: g=0290f39131aab4bc87ee73a8f29879fe
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+  - Name: TemperatureSetpoint
+    Id: g=0f59c4299e44d58fb6e46365c712ea5f
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: EngineeringUnits
+      Id: g=325431ec27c7d889d17001ec4f94e780
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Id: g=1c2209dd5de9290ac2e6180fe357e599
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 4408652
+      - Name: DisplayName
+        Id: g=05b88d7c056abfc4d82cf4550e8918b6
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+      - Name: Description
+        Id: g=443211f94958941d59abcbfb28f42947
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+  - Name: CurrentBatchId
+    Id: g=7fec655be44a32dd7501a790fef726b7
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: AppliedRecipe
+    Id: g=525dfc918058905e8db9669b51c607e6
+    Type: BaseDataVariableType
+    DataType: RecipeId
+  - Name: CurrentPhase
+    Id: g=7704f5521aba2f9e802ae7a3b8d93c73
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: PhaseElapsedSeconds
+    Id: g=f67148720353b47c46ece7b02c90aa92
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: ActiveAlarmCount
+    Id: g=e2567fbf6f763892ddeeda4bb55d2f05
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: Timestamp
+    Id: g=22d286a1a95e9546ce31d92f7a07424e
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: DoorOpen
+    Id: g=f38aec7aeb47e92d78ee9093e455420e
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: CyclesCompletedToday
+    Id: g=79d0f4fc93f2755e35678715396023da
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: PowerDraw
+    Id: g=38ba4910596c1fc1f7d1ec67ad21350f
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: EngineeringUnits
+      Id: g=c916bc5129c3bcaf262aa3ea13e44ce3
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Id: g=bee7c79cb045255d0a6f4cbd185f1ab0
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 4937556
+      - Name: DisplayName
+        Id: g=17dab46d8ea4b2a07fb0b0a370956cca
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+      - Name: Description
+        Id: g=4078d6059885a04ad94f133957babbfa
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+  - Name: EnergyConsumedToday
+    Id: g=40e39545aa53cc023a07590a8c109741
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: EngineeringUnits
+      Id: g=df7206efa0c550f10616d13e8d70056c
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Id: g=d1f3d9da52de7f3e907e2cc96d32b7e3
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 4937544
+      - Name: DisplayName
+        Id: g=36c1c4cf7f1e0a6b1a43c310982bf2d3
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+      - Name: Description
+        Id: g=eea3faef0dd2e0efd6d749a17eb5f150
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+  - Name: UptimeSeconds
+    Id: g=38ea1fd43552e43d972f3eaa490ff7ca
+    Type: BaseDataVariableType
+    DataType: Int32
+- Name: 'OVEN-999ZZ'
+  Id: g=55cf200365c1b865b08c5fddf2acf81c
+  Type: OvenType
+  Children:
+  - Name: DeviceId
+    Id: g=1816f5d6e1e1b4f696c7c22553e4d178
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "OVEN-987ZX"
+  - Name: ExecutionState
+    Id: g=371c6cdb31c61852193af167ccfc3410
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Temperature
+    Id: g=e1abb0adc6d7a18006cfa616f651425b
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: EngineeringUnits
+      Id: g=2a119b446a98a7a1fd45fae52ef2018e
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Id: g=d3b7d4f67bce0d7df690357edb12079d
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 4408652
+      - Name: DisplayName
+        Id: g=679603d92c4c6998971f2c45f752bc8f
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+      - Name: Description
+        Id: g=c0393730d4374f4e114e4286475ae01c
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+  - Name: TemperatureSetpoint
+    Id: g=a1361ab8011db035300fbda879f4c65c
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: EngineeringUnits
+      Id: g=99f20f2099d222e4cbe00c12cfe32bc0
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Id: g=76dc48a8b452c0a0ebcb002250e06f1c
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 4408652
+      - Name: DisplayName
+        Id: g=f20b86c8da147f247e227ba2d563b9c6
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+      - Name: Description
+        Id: g=e73e2fac59ee9040b1e86082692ba396
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+  - Name: CurrentBatchId
+    Id: g=a2a741fdf89810562fe382f4e1eff177
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: AppliedRecipe
+    Id: g=4a9cc8cdc76334dad99f9fcf3ea10790
+    Type: BaseDataVariableType
+    DataType: RecipeId
+  - Name: CurrentPhase
+    Id: g=7ef173514a5c1b83e32416525dacb9fb
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: PhaseElapsedSeconds
+    Id: g=68e36004ebef46d31fb4fe1fc451d3ae
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: ActiveAlarmCount
+    Id: g=3711ec72fc44359563c9b9044670481e
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: Timestamp
+    Id: g=ee04559b3fb49f353920a95d6a3a9273
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: DoorOpen
+    Id: g=b5fb2aa6425bfd1211614f38026331bc
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: CyclesCompletedToday
+    Id: g=f4789d498d0048f3c6c4c6d28f0d6ce1
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: PowerDraw
+    Id: g=78fed2e6a37e763b7714fe52ccb0202b
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: EngineeringUnits
+      Id: g=2518594bea1272cbd19aefa5f3e318d2
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Id: g=93767b0e2b11587dcf3d019393196bd5
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 4937556
+      - Name: DisplayName
+        Id: g=cd3c2c873bd0a2610c32dffbffaf5e4b
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+      - Name: Description
+        Id: g=4102529f59111768da74a3b13c2937c4
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+  - Name: EnergyConsumedToday
+    Id: g=ec32503d36456b2b2d5808b90517261d
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: EngineeringUnits
+      Id: g=ad66b68864427981784dbbcd706f54f8
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Id: g=4b7751f9b7365fab528166383b6d7852
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 4937544
+      - Name: DisplayName
+        Id: g=9c0715221011a12d30e40b5ff1cb7d7d
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+      - Name: Description
+        Id: g=3f818d3b6f2e74524a1f93dff0ade1d0
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+  - Name: UptimeSeconds
+    Id: g=cc39d01301db19125ce1757e7e5d76b2
+    Type: BaseDataVariableType
+    DataType: Int32

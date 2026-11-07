@@ -1,0 +1,3129 @@
+Name: Dialogs
+Id: g=53149932ae90e50201aa19703e37c9fa
+Type: FolderType
+Children:
+- Name: NotificationDialog
+  Id: g=7606d3facdce8fa654ef0ee6eb3efab9
+  Supertype: Dialog
+  ReferenceType: HasComponent
+  Children:
+  - Class: Reference
+    Target: ns=3;i=519
+    Direction: Forward
+  - Name: Width
+    Id: g=3e7aac213ec63f5d70bfccd68f6d811d
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Height
+    Id: g=34a7559d046faeb130993df9a3c73102
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: IncomingTargetOvenId
+    Id: g=de1d2a5f5f10be4182d1995078d75b83
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=41f3432fc8553c73baecd3902267a2c5
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
+  - Name: ns=4;LibraryReference
+    Id: g=a6e2cc9277d1bc17d5fc01a9584ebf2e
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    ModellingRule: None
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "ff9f5fb9695eea76b4a8c0579bd4dc7c",
+       "objectGuid": "39183c1994616b98f5e7b8db5e879764",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
+- Name: EditMonitoredOveneDialog
+  Id: g=a3a1355d947ed7a240f13a3c09b7de7f
+  Supertype: Dialog
+  ReferenceType: HasComponent
+  Children:
+  - Class: Reference
+    Target: ns=3;i=519
+    Direction: Forward
+  - Name: Width
+    Id: g=cd8a4c95e91573b6f342e5196496d5ee
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1920.0
+  - Name: Height
+    Id: g=e7e1ccbe86d9b2b33a5dfb6ab2994fc0
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1080.0
+  - Name: Background
+    Id: g=d68bdffc3fd92517cc3dd391482d2724
+    Type: Background
+    Children:
+    - Name: BorderLeft
+      Id: g=de2b0d603170a629780e0943b4a039c8
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=b2da8c6d1ebb26f569f223fba11ebae0
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: BorderRight
+      Id: g=a571eda9716b56727db5d10c2935f8fc
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=da9a7cdc544651c490e26672a7511b1d
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: BorderTop
+      Id: g=8a7a4d9209d0661ff42692efeae36877
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=026c38e69b7a41b20e4e4507691ee365
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: BorderBottom
+      Id: g=f195502ad704429537a2051954449efc
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=7ad6c04ee50f33782cfe68663da149e2
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: Style
+      Id: g=d1e5012d6068b511f14155d7dc745ec7
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Overlay"
+  - Name: Action
+    Id: g=be54feaf119c62c7c9ad39613e86ca84
+    Type: Button
+    Children:
+    - Name: Style
+      Id: g=6f0dc01058727adca618e12bab11dc9c
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Empty"
+    - Name: HorizontalAlignment
+      Id: g=1f9bf1a75a5bdcf35bd39c70cf0f8d16
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=ae2f0d2b8296d7985c86990afcc9f5b6
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: MouseClickEventHandler1
+      Id: g=c17d9512f9189ef1052d09b08b9f7448
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=022136a75916641a760bcb09d9208a00
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=12a08328bb6d330f044038437642327e
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=50b13973102b8ab9d8be166693c9c213
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Id: g=6f3e104d5ba9eb1def7eab56216b33d2
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=905a60b6b659b939a9d7223b6284f1ec
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=47157ee7acfd3767c9b8525cf4edb58b
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../..@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=1041a7f58920ff4aba488c610eb7a73d
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Id: g=e669ec854618c55e71ee756b0ff8a1cd
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Id: g=da78f488b4e353dd733fab3e6e99587c
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=06bb754db399a60a2c881fc6bcfca552
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=0387b7ae3afce3b8452e624722fba2ba
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=8a78e2210362e5e324565b87385f3706
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=9e7e2373903f92e23171ecf7a36c9701
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=a3b3ecb1e4a724e321b5ada2266f3aec
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=45098ad1bc09b602d47c294e8a42f279
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=740b5ed1f81d49663d6991d16c060852
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=159db51be60c7ae254e4f02b7ac09782
+          Type: PropertyType
+          DataType: UInt16
+  - Name: ManageMoniteredOvens
+    Id: g=8dd6129b45d707dd6ec3f0dff4b06117
+    Type: Panel
+    Children:
+    - Name: Width
+      Id: g=bac635e9332369e34cf225e5998a03b8
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 640.0
+    - Name: Height
+      Id: g=2c778616f3f586a68fa242c15f56c6d1
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 480.0
+    - Name: Background
+      Id: g=0bb0852e491c1f7b89180972006228e5
+      Type: Background
+      Children:
+      - Name: BorderLeft
+        Id: g=c9153c8e0d1fee7a2b039f7f8f9d7bc0
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=4ef84d72ecab00273b125c3173f193de
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderRight
+        Id: g=aeb0843bc425673580d6b5e0c27eae1a
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=ee2d83d5aa1acf826c7655dcc5ff4afb
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderTop
+        Id: g=828078d416a5ee68f994b4beed71731a
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=0909fde7eda642ccab8be42950aedcd3
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderBottom
+        Id: g=316c2fb5445ab7eaa2db80ceb399b044
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=7ab44c8a7e434b48f260b0d3bc9df938
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderThickness
+        Id: g=36869704b95f52129499bc41e351b9f2
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+    - Name: div
+      Id: g=050cb4c16428e1fddf3d60dfd50253c5
+      Type: ColumnLayout
+      Children:
+      - Name: Width
+        Id: g=041afddb8f4fe64784e6e3319458cde6
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Label1
+        Id: g=491b91b01154e30863142dee5f134a3d
+        Type: Label
+        Children:
+        - Name: Text
+          Id: g=89b16f44d2f4da3a2754d9d366feefc3
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":7,"TextId":"Manage monitored ovens"}
+        - Name: Style
+          Id: g=70a87bf6e3cf1cadfb851936f01a9bc6
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "H2"
+      - Name: Label2
+        Id: g=9d65944b2c0c3c727ef7f9e6cefad5a8
+        Type: Label
+        Children:
+        - Name: Text
+          Id: g=f9b66537c8c4be0538f67c9ec30021ac
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":7,"TextId":"Choose whic ovens appear in \"My monitored assets\" on the Dashboard"}
+        - Name: Style
+          Id: g=45a14db42202b9647949da29bb5d8093
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "H4"
+      - Name: ListView1
+        Id: g=37de2cbeda846775704bc96cba9bc1fd
+        Type: ListView
+        Children:
+        - Name: Model
+          Id: g=6f7cf3db3633d295016c373a439e3789
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/OvenEdgeManagers"
+          Children:
+          - Name: ItemKind
+            Id: g=78aed531a941d626c85f2ea405c8acde
+            Type: PropertyType
+            DataType: NodeId
+          - Name: Kind
+            Id: g=9a132587261bfd3b8a20e01c8920e34c
+            Type: PropertyType
+            DataType: NodeId
+        - Name: Query
+          Id: g=0d3f88f3054381a4bc56c9e9a8c4e931
+          Type: BaseDataVariableType
+          DataType: String
+        - Name: SelectorKind
+          Id: g=4cd4347e620b6bf1837391f8679ea31c
+          Type: BaseDataVariableType
+          DataType: ListViewSelectorTypeEnum
+          AccessLevel: Read
+        - Name: TypeSelectors
+          Id: g=66b4b24b32614ed457d4047d54a965b8
+          Type: BaseObjectType
+          Children:
+          - Name: TypeSelector1
+            Id: g=df124dbe893a61a125175ed4150e0ddb
+            Type: TypeSelector
+            Children:
+            - Name: Template
+              Id: g=3771825f7fa24642f8f698061583197d
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/UITypes/ListViewRows/MonitoredAssetsListRow"
+              Children:
+              - Name: Kind
+                Id: g=3fd5d39e522afea6bff2934f91842c1e
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container/Panel/ListViewRow"
+            - Name: Type
+              Id: g=e514e906cea74e06af0f7fa0bfffb79b
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Types/OvenEdgeManager"
+              Children:
+              - Name: Kind
+                Id: g=096a1e05ec8d9ac0a92ed092aa8efeaa
+                Type: PropertyType
+                DataType: NodeId
+        - Class: Reference
+          Target: ns=3;i=1457
+          Direction: Forward
+        - Name: RowHeight
+          Id: g=c33a2d68c788a12cf2998fadf524edde
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 64.0
+        - Name: HorizontalAlignment
+          Id: g=2fe91887662ba94b90244ef75a0af3a6
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Id: g=ce78e0dbc290f9075b9e40fa2c8a4894
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: TopMargin
+          Id: g=1e3e43a59740176f23357a761e962d16
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 16.0
+      - Name: CloseDialogButton
+        Id: g=494105cfe2c4ed864411e138d33349fa
+        Type: BaseButton
+        DisplayName: {"NamespaceIndex":7,"TextId":"Close"}
+        Children:
+        - Name: Background
+          Id: g=6587ad53dba6d7de95d2a75bd4b396c7
+          Type: Rectangle
+        - Name: ActionButton
+          Id: g=2b1500b245000ec06155069c2cf01cf8
+          Type: Button
+          Children:
+          - Name: MouseClickEventHandler1
+            Id: g=4593a9d1fef44b5a667f0685abf3adc2
+            Type: EventHandler
+            Children:
+            - Name: ListenEventType
+              Id: g=76e1428bcf92cf854bd28b3e3803e35b
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+            - Name: MethodsToCall
+              Id: g=931decb7864b72fa114dd6a0591c89c6
+              Type: BaseObjectType
+              Children:
+              - Name: MethodContainer1
+                Id: g=aa56d039bd3c693d3d36b521203e0ee3
+                Type: BaseObjectType
+                Children:
+                - Name: ns=2;ObjectPointer
+                  Id: g=6e9d74581b5603c1c905b347b51d3845
+                  Type: NodePointer
+                  DataType: NodeId
+                  Children:
+                  - Name: Kind
+                    Id: g=3939ea5f183dcc46be60acbfab7c35de
+                    Type: PropertyType
+                    DataType: NodeId
+                    Value: "/Types/ObjectTypes/BaseObjectType"
+                  - Name: DynamicLink
+                    Id: g=56261cb756a68da2f32e34dc098b5fa5
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../../..@NodeId"
+                    Children:
+                    - Name: Mode
+                      Id: g=fd84da0a825a5c3f22b2ba0b9d829f59
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: ns=2;Method
+                  Id: g=73d67fb4e6febcb1217e6e2d4db35e2e
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "Close"
+            - Name: EventArguments
+              Id: g=a92e88366cd8cf38e394e12c35654e88
+              Type: MouseClickEvent
+              Children:
+              - Name: EventId
+                Id: g=b1091a9c59c19aa509e9773c4ff30043
+                Type: PropertyType
+                DataType: ByteString
+              - Name: EventType
+                Id: g=5959818ea1fa5ef425aa0476746bde3c
+                Type: PropertyType
+                DataType: NodeId
+              - Name: SourceNode
+                Id: g=d2372ce34c4ddb82d28a5b930d353cdd
+                Type: PropertyType
+                DataType: NodeId
+              - Name: SourceName
+                Id: g=31287fa18f1a539b3d5c3f9c7e34420c
+                Type: PropertyType
+                DataType: String
+              - Name: Time
+                Id: g=9bb4b3d918164dc2fd7ccb0722fcfd48
+                Type: PropertyType
+                DataType: UtcTime
+              - Name: ReceiveTime
+                Id: g=431882a814d9e8bb17befb9030628e33
+                Type: PropertyType
+                DataType: UtcTime
+              - Name: Message
+                Id: g=cd67c771bbdcaaed4ee58c0da10f3fba
+                Type: PropertyType
+                DataType: LocalizedText
+              - Name: Severity
+                Id: g=522cd30537f48f3f3a5db5cb9968bbfe
+                Type: PropertyType
+                DataType: UInt16
+        - Name: Content
+          Id: g=5154f0981b1e1011dfe99a99218cfb93
+          Type: RowLayout
+          Children:
+          - Name: ButtonText
+            Id: g=b4ad3be152779ff7a74c687e3e2feec5
+            Type: Label
+            Children:
+            - Name: Text
+              Id: g=8d3ea0b2976751cc2e83ddac4a2220e8
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Id: g=8d12d9d0c6f62a4e306ec69fa862b6cd
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../..@DisplayName"
+            - Name: Style
+              Id: g=28acf7d3b7747549bc72801d2ba561b2
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Default"
+        - Name: Visible
+          Id: g=701df1c56a58f690e629df0062d5da79
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: HorizontalAlignment
+          Id: g=9b631051ce05f15d737effff12266376
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 1
+        - Name: VerticalAlignment
+          Id: g=94ab541095b60e4dfa6b35b16c6cf5c6
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 1
+        - Name: Width
+          Id: g=37e75b02bdf23cc88f7bc016ee8e4d10
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 96.0
+        - Name: TopMargin
+          Id: g=da1a03e3fb232d1537bd5bcf3b2b78eb
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 16.0
+      - Name: HorizontalAlignment
+        Id: g=f86872a8e38670a0ec1f9c4e76a087f3
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Id: g=93431137692f005e22a43a3188ad11b1
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: LeftMargin
+        Id: g=754fcda86b9959165981ff4080156a74
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: TopMargin
+        Id: g=2cc1ea0460ed6318e942404ab87cfd11
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: RightMargin
+        Id: g=e71bed0db0baf911d0d9469a1922bae1
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: BottomMargin
+        Id: g=d46d0a883c3a8485c18d844c7550b45b
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: VerticalGap
+        Id: g=8198aa904da3cd276ea2c8be4afb217f
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+    - Name: HorizontalAlignment
+      Id: g=b680d87e17e3b5f5d76062453b38a1cb
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=bb818fce12dddb0cb5448b7eee9d6632
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: HitTestVisible
+      Id: g=187889c51fa048d108949319f4794128
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+  - Name: HorizontalAlignment
+    Id: g=2f7209cd3401bc812dec1abfc560c61c
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=9c28a5741ec5d607fd35b8a41a9a6c05
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+- Name: OvenDetails
+  Id: g=aa46049d93028ac0b3d8d995bdcd8de5
+  Supertype: Dialog
+  DisplayName: {"NamespaceIndex":7,"TextId":"Details"}
+  Description: {"NamespaceIndex":7,"TextId":"Current status of the selected oven"}
+  ReferenceType: HasComponent
+  Children:
+  - Class: Reference
+    Target: ns=3;i=519
+    Direction: Forward
+  - Name: Width
+    Id: g=493d8cf9ee78963b301b8f86f3456cbb
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1920.0
+  - Name: Height
+    Id: g=02c86385f82ec1bddd57248bcd2a61d8
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1080.0
+  - Name: HorizontalAlignment
+    Id: g=56756c4b67c3589993fa8a0a748de96a
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=0ee28e6e813f91476423f57a225ebdbb
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: Background
+    Id: g=058495993d32e2d6e4e36196d65797dd
+    Type: Background
+    Children:
+    - Name: BorderLeft
+      Id: g=843a0f92d5665018a84a21e70d1dc429
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=12c40341c3b55385f5d65c10d1760d58
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: BorderRight
+      Id: g=243f9caff64e41151f603562cd778e17
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=3d7453f2d25916bd33c2aa91f7def9f3
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: BorderTop
+      Id: g=579dece21342ed9868cf21213483b400
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=c41b0ec0af89f5c6a4f31abdb7499018
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: BorderBottom
+      Id: g=d7bd7289693612fd793e1cdbf17da4db
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=263398688ee234afa4bf147a9b2bea70
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: Style
+      Id: g=05663e57fb124d8d5d7081527c48caba
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Overlay"
+  - Name: Action
+    Id: g=129f0eb61d341fc553ad762ca7929be7
+    Type: Button
+    Children:
+    - Name: Style
+      Id: g=77ec790e6386e48b22c14d4bf2926219
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Transparent"
+    - Name: HorizontalAlignment
+      Id: g=b20936f50f5b6aebf0a3f24520fd9dc8
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=411b3802e3d1f9c3848954e7ed9ef9de
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: MouseClickEventHandler1
+      Id: g=4c194be1de79eb1942d12cbf3a5026b5
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=1a3f0116970e234b897b341d5ec61507
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=6bce812b72ee467e54973c31c119cb8f
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=ebd5cfd15e8b205fa0a3c4a850170fad
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Id: g=5e934950ac946fa4fae05fa1c56cc01b
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=741d590304e085f60dfa78f192f0cb37
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=3c2e08185579569d7051ee050f9d82b8
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../..@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=41bb16042d1280b3928e32bc307245a1
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Id: g=68ce81ed8584c3869b552fb7fa84b7c3
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Id: g=9d196ecb4601c3476db8a096b480bc04
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=99f3f44fce922867d614ac91c1a88ae7
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=6438e141f8bee822b966926cbf9c4daf
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=3cc5de67492cef4a4dab34b9c890e04f
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=da5ab6ea5f99f250c6f414a3b5690194
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=50edee7aa4d0c2d1ff4a53e31a4f7d1b
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=e4539aad1473f2968d49cb6ee6d42c90
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=c76c95791cc0dd630c7c76613efaf681
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=957120f480a8c1b1cc32843f5f97ca94
+          Type: PropertyType
+          DataType: UInt16
+  - Name: OvenDetail
+    Id: g=61820b29b01a7f397f8ab0b1d49ba67a
+    Type: Panel
+    Children:
+    - Name: Width
+      Id: g=86b4e700da632ce932cb6de197fb356d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 640.0
+    - Name: Background
+      Id: g=541e9b2859d40d24a0c4f06ae729155c
+      Type: Background
+      Children:
+      - Name: BorderLeft
+        Id: g=010cc2c1acad75fd75f9483ff22c6089
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=7a5696ea0a55ce5d4af14df96b0f26c5
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderRight
+        Id: g=193adca0357090c7a7613f066da5e494
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=00ad037ca9f6e49ed8c586dec8dc3060
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderTop
+        Id: g=2f93faacad0ab7f74560d710aa9794e4
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=41d60683fc7b6e003de0e86722f51087
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderBottom
+        Id: g=77c9f7c41ecae4868413ed8c038d3ff2
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=209d0c9d4073b224ae083ab3a363c386
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderThickness
+        Id: g=f122391c5c12c63aabb2680b2e1251ec
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+    - Name: div
+      Id: g=4ed2bfc91b48bf37b930f40a5a734ee0
+      Type: ColumnLayout
+      Children:
+      - Name: Width
+        Id: g=f74defcf79482f6696d69bf9f57708d3
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Header
+        Id: g=d6f7816d050eba280f6aeb93c809e911
+        Type: ColumnLayout
+        Children:
+        - Name: Title
+          Id: g=e3e646c883f09b7b049eabf7e02f60e0
+          Type: Label
+          Children:
+          - Name: Style
+            Id: g=a5bef44c1c991a36572e0db479d8f5af
+            Type: BaseDataVariableType
+            DataType: String
+            ModellingRule: Optional
+            Value: "H2"
+          - Name: Text
+            Id: g=18fa51378aff45310ae2a3d423725a6c
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: StringFormatter1
+              Id: g=b2bd786c278865087d3a810de5bf6977
+              Type: StringFormatter
+              Children:
+              - Name: Format
+                Id: g=f4f585a3f3c0b477e643d31f3e0b1b43
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: {"LocaleId":"en-US","Text":"{#SelectedOven} {#DisplayName:u}"}
+              - Name: ns=2;SourceSelectedOven
+                Id: g=ae06e6cd722e445826b4ded1327f5a33
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=219dfc56ffbca702ff9c87edb88a3b09
+                  Type: DynamicLink
+                  DataType: NodePath
+              - Name: ns=2;SourceDisplayName
+                Id: g=81f61b5b748aebb01edabfadbc6b0141
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=56cc2c839c7995d502f7b04dd8510e81
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../../..@DisplayName"
+        - Name: Subtitle
+          Id: g=743061aae94397f822d167ea458fdfa8
+          Type: Label
+          Children:
+          - Name: Style
+            Id: g=49e0b962b8ecd8f1bb195ad0f0c53e5e
+            Type: BaseDataVariableType
+            DataType: String
+            ModellingRule: Optional
+            Value: "H4"
+          - Name: Text
+            Id: g=577921486067754112be3fecbbb5ff8b
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: StringFormatter1
+              Id: g=4ac24e5a1b3a02902daebfc496da7283
+              Type: StringFormatter
+              Children:
+              - Name: Format
+                Id: g=4ac9fd365e9433cb34ed396c53f0c174
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: {"LocaleId":"en-US","Text":"{#Description:u}"}
+              - Name: ns=2;SourceDescription
+                Id: g=893841494212686024173440dd37ad7f
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=6b15d0040c9d0eade6dc3cdaaf26eb90
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../../..@Description"
+        - Name: HorizontalAlignment
+          Id: g=c61e96e691aa5bda71c0b4583db85384
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalGap
+          Id: g=095feec052e2b76770cddea362ec4a9f
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 8.0
+      - Name: HorizontalAlignment
+        Id: g=3727ce0755f780cbcf7d8de1fd21997f
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Id: g=6327ebdbc3dcb0ab18bfa6b62be8be65
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: LeftMargin
+        Id: g=a9116a11e2a84561dbc113bd91fa674f
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: TopMargin
+        Id: g=2245e0e1085fb76621a8418bd5f2f2ab
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: RightMargin
+        Id: g=1523905bf27f11ead6f8bd5b0cbea033
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: BottomMargin
+        Id: g=525871a801ca5673256c2e694171ad5c
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: VerticalGap
+        Id: g=ae16a2c941ca31612c554f8f68a2e3ea
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: Body
+        Id: g=ac162b85a7230beb5351aefc983ef52b
+        Type: ScrollView
+        Children:
+        - Name: ContentWidth
+          Id: g=c55a0927db665a9703b71f1c5ed70d5b
+          Type: BaseDataVariableType
+          DataType: Size
+          AccessLevel: Read
+        - Name: ContentHeight
+          Id: g=55f06dd9e5f95f7e29a0c13954c47e63
+          Type: BaseDataVariableType
+          DataType: Size
+          AccessLevel: Read
+        - Name: ViewWidth
+          Id: g=800e92a88dc1e9ab09fc548f7a03ac10
+          Type: BaseDataVariableType
+          DataType: Size
+          AccessLevel: Read
+        - Name: ViewHeight
+          Id: g=e1bb882e1e8c439fe7e4c8e134bf4cc7
+          Type: BaseDataVariableType
+          DataType: Size
+          AccessLevel: Read
+        - Name: ContentX
+          Id: g=31e757fb6c14a193454e3d3d9a15762f
+          Type: BaseDataVariableType
+          DataType: Size
+        - Name: ContentY
+          Id: g=e1141d7758647093f73238f870f6a67e
+          Type: BaseDataVariableType
+          DataType: Size
+        - Class: Reference
+          Target: ns=3;i=1394
+          Direction: Forward
+        - Name: HorizontalAlignment
+          Id: g=df682cce2cb477db390eb7f099850295
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Id: g=7ea6ffddc5d9e006d7d6ed01283ab643
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: Content
+          Id: g=cee79933029fecf3f228a1f780725e03
+          Type: ColumnLayout
+          Children:
+          - Name: HorizontalAlignment
+            Id: g=af47da17587a3caa9accae556f8a4fab
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 3
+          - Name: VerticalGap
+            Id: g=531eb1e84ff090d8f4104d9291ca1c3e
+            Type: BaseDataVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 16.0
+          - Name: StatusSection
+            Id: g=78b66c6ab9ef4b9abed93ff99b4304eb
+            Type: ColumnLayout
+            Children:
+            - Name: HorizontalAlignment
+              Id: g=a7cd60739cb6b9c74775b531e13028c0
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: VerticalGap
+              Id: g=377e227668b88a560496ecab4df81672
+              Type: BaseDataVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 16.0
+            - Name: Title
+              Id: g=8ac07db492fa4d7c825142b7d7dc9ea9
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=64979bbe09a6ab6cdc298314d9e814da
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ModellingRule: Optional
+                Value: {"NamespaceIndex":7,"TextId":"Status"}
+              - Name: Style
+                Id: g=6841ea66035b914470397463ed0b99c7
+                Type: BaseDataVariableType
+                DataType: String
+                ModellingRule: Optional
+                Value: "H3"
+            - Name: State
+              Id: g=07a6232ef9be4e41a425a50bea93cbb2
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=d64f3fc0ba89ced418b447fb938cfec7
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=708dedbdd4eb781807e61b3f7fb892a0
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=c6b4dc46d7054fcfa08548f270dddaf2
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=7523aff171c575b3869c2157ea98e49c
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=4143512309d819bddb363b8239a60c91
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=15666ee45bf9e5bd487f540906630362
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"State"}
+              - Name: Value
+                Id: g=8598a55f44984105a3f9a99b38516f2b
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=6c6ad75d29796a2e07d148a0c1d2b2d6
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=7f5dfd6d00881f7a98cd080aa0d55116
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=5ca1e94e24493fa4bd32a7aba398ed14
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=271b2abc9edce198e13155982aa5cca9
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=415136332fd24b16b241362eb836ce03
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/StateText"
+            - Name: Connection
+              Id: g=0d5b00c730294fb9943c5c841217ce8d
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=0486fb84a3a02683380337623da5d412
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=142b67124eef973c5d34776cae5dd761
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=39562b4f13e340b4a7218ab61739b9bc
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=120826edd0615096e717ee02c967e6ad
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=cceac4d027cf46b1e810df6d596df96d
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=4c43a9397fae0b87a3955719025e9938
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Connection"}
+              - Name: Value
+                Id: g=203c5323d43a439d9fc6dbcf1a6e35dc
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=a8ba43f423841e18eb2ae8640be5361c
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=bed351e0681b3b3ed6e4f3236d99982e
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=503c1092cb6c40b41f0b25d61b36f512
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=27e6cee06abb8512a72e7f85dce51ec8
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=3a9d1f4df9ef4e2da33f50c8d9d44e77
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/ConnectionText"
+            - Name: Temperature
+              Id: g=db99840d8af748a5a0c4e5bbf26ec373
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=1c03e02ab506f60c74a59058c27eafe3
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=b44f064620149f91a641ae2d0a53f25f
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=ea1cb3a2de564185bedeaa180932acb6
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=be5a1a8c6bc41357c04d84e39d9d0056
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=6f640f8ffae19595517f22d64da27bfe
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=48c39849274ba9e54b467dd42dcbacc9
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Temperature / setpoint"}
+              - Name: Value
+                Id: g=2e372813e9fb4afd89f2e68aa76e14f2
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=deb27fd979f1be22e3a37380249db9c1
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=fb30e165fe4b5906d98862adf20cbd99
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=0ad74b2aa6edcc50a6b136165f61d0bc
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=92fabac30efff8457b2d8a2d0be1dcaa
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=1c25ffdd77c347b8ba5d21ad2a404d2b
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/TemperatureText"
+            - Name: Phase
+              Id: g=08cc599a4207443c8a289c2347e066da
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=c029472ef862ee8cc6a916a6aec5654f
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=fa68a36ae77c874bfea0e4410e322d08
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=3116d19387c342069c16991367281e63
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=ec80d86ea93804cb2d56a1f69af27c0c
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=9d92373af32d312e732c44025555e88f
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=990064f0435820f6ec145fa9a3f7ab96
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Phase"}
+              - Name: Value
+                Id: g=fafb12e0fc554336bfdbd575576bff58
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=e6ec662dc119caf13b2b3eef9e6e9fed
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=9120e528d23b7a4f5a4bb10a7ca9395e
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=7d0125eb472fa64862b8a0af2744d29e
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=9de141d59a4ed99198e1f5f7c715ab91
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=e4b356f651d94767ab7516b7ee48a5e1
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/PhaseText"
+            - Name: Batch
+              Id: g=32a447f633cb4474932829795ec8ff13
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=62b3c0e64151de70c902c401c88f80d0
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=8488dbb6612e0df8752aef2f198b67f4
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=bdd6fa81128647d993c0b59e2536e622
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=48397a9b3b71a285c7994e55fa238e1e
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=d33808b56dd1fd00c99cdcb900d35f13
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=1ee5f9306e04f3f699c7e61b540bf57f
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Batch"}
+              - Name: Value
+                Id: g=360f7057a15647c69e25d1d86ef1c349
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=1d68d6912e8f8731d5a210c375b61229
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=c6d0e7d8d5c62ee6f09bf391cdcfc718
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=aa72ee12b3e9af783eb16af07664f29d
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=53a6a81f16dc102bf85fe9e24af8c4db
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=4f58a0165beb40a98ae17a5b0a205655
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/BatchText"
+            - Name: Recipe
+              Id: g=8043af0ce74a4992a1826b23e99940c8
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=77933143b1c2080636c9b70d0150032b
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=6d86acfad0c3b78665825671d064c0e3
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=188395466c2043b6bd40a1c8dc47c712
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=4f2e8bd1a3744727c2f5b5ad4a9ea44f
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=33a7ed39bfdbc215133e39360fbd8195
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=b4ce7558774fb00d9c1502f4ef08a341
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Applied recipe"}
+              - Name: Value
+                Id: g=14cceea466204959a1970cdadbe8a06d
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=d6a44baa85ea6102a2b35d462d11af18
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=1f9fd370e6310c7dbbee1056bd1cfb0d
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=cd5b0766f0c0478dababe34f6b7f1ef5
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=f133d446475116955d41361b0692caad
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=475cc5a4ab774f45ab52ab14de314158
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/RecipeText"
+            - Name: Alarms
+              Id: g=4446f5c116db49b6a04d36b676dcbdbc
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=60fd6b302b454db9042edba88bafd8b7
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=a156461327ba5e7e06aab05528f57933
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=47a475a0857b42139b332a832eba3e6b
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=c02de499e8602457a620bbfd8b3a08d1
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=e6887fe98d72a968cc6b501e516e180f
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=035dc91b59caa87fddafbc69d3d2dc48
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Alarms"}
+              - Name: Value
+                Id: g=743bf923aee54bd1987190d2c7bb03ef
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=6e4261ed6f62f21e48d29d50ed1f8667
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=615a5a723bab246602569712a78448b6
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=3b12ae31691de3c19348ec7472ed0704
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=4e154b8bff74a8987a43523b15eea1a0
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=e61a3691fc5b4322a486984fde1a7d69
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/AlarmText"
+          - Name: ProductionSection
+            Id: g=11f3b0c5e2c74e458dc402b9c81c0710
+            Type: ColumnLayout
+            Children:
+            - Name: HorizontalAlignment
+              Id: g=85db2453303ad88ee9e6f124f1ad7099
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: VerticalGap
+              Id: g=4c0e678977a896aa4d030e7a07cac3f6
+              Type: BaseDataVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 16.0
+            - Name: Title
+              Id: g=a4e1337fd91e47b188d97f85843f8b94
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=a279e5a602c300ed2c2a977872087632
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ModellingRule: Optional
+                Value: {"NamespaceIndex":7,"TextId":"Production and energy"}
+              - Name: Style
+                Id: g=a48834f5b642ef83659605089afa92f4
+                Type: BaseDataVariableType
+                DataType: String
+                ModellingRule: Optional
+                Value: "H3"
+            - Name: Power
+              Id: g=a49605e943a445fd93aefa9118a840cd
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=43327195b62b51d771cb61aade0ce546
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=5c60aab6dd24d565e9ed83eac0aa08a2
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=b0084f9f0a26471b95150e0002f11c1b
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=7661d622e0a7c33b77c7999deec49a25
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=f908b988cf328b89e5bac6d098206b07
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=b0963a9b8f6cbc99a025c579a6c163e2
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Power"}
+              - Name: Value
+                Id: g=2a9fa7d6172a44df9b493a674fb20c53
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=0a89248dc1ae2416a9a8e49588ccfdd5
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=c1cc0bda8fcb7ed0435a934b7b999b31
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=4fe14298257b98094a6411d908c10c86
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=bd2019b64f67c6ecc566472ab8fdba72
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=a657ac634f2140b3af8d946591441b44
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/PowerText"
+            - Name: EnergyToday
+              Id: g=1db433693d1249ef9da25970c77e4d44
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=54fe8527ce341c59691262d36092cf4e
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=a10fe2e968ba0c6f16ec6cc1323c75a4
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=89d227fc592e492b823f56ffe4159cff
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=ebfb16b01640abe79dea7cd7babf1d0d
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=20831f59c31daab755226d438f2fb24c
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=c6389a61bcd25a78823d52cbb4085646
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Energy today"}
+              - Name: Value
+                Id: g=808bcfaf329747e099d72de4153f62be
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=ba93ca2577a5cdff2723321a81f5ebc6
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=3142d0421d39ef3c58cd57ba535166fc
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=268106461c7eb31672a4f734233c1a2b
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=340315e494f7081237f82b5bffe695e9
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=0a1053780d6c4fe5ba2f57dc443af08a
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/EnergyTodayText"
+            - Name: CyclesToday
+              Id: g=5ce35e06578843ae956a7be9141693f0
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=5a24ee9ad1462eb715134adddeaaef70
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=f5706c295738cf8cb5e1ce28ce1c587a
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=bf1254f2e35447a3b287d76c19656564
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=3bd100fbab11123c8cf4780ae631ca88
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=8cb26a783806c1e70c4d920518d67a57
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=86fa9ad0c41204cb7661f562a31a90f2
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Cycles today"}
+              - Name: Value
+                Id: g=649d7132202c4edf80c36277509ae79b
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=dd2d597f0ac8ddd2493a6bbd9b344df9
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=e6a8cc728fbe33888721ab0c0dd3e435
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=d6a49e72275f9cefc24705d8d230ae6a
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=ff662ac4a91e3ccb3e76e5cf3055b17c
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=34173cc2f3854d4d89a168e9af170de2
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/CyclesTodayText"
+            - Name: Totals
+              Id: g=40cc7f4bfc8144ca9f6d58e487c2ae74
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=666288a7d7137b3d34905ee4671f6c84
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=dc6f52b16d1407511557a759e3160df6
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=0311c2034bc94a1886b2fc47fb0b0fa0
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=885aed529e61ac5ace851b6e23dd41b8
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=4f90ba418ce9db8597fd335edbf86149
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=34024b7d7ba74ac92cc291e862181f9e
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Totals"}
+              - Name: Value
+                Id: g=7e66d096a4634f1db008063cf402457e
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=d34eaf3e560a0f36b41cbba958cad59c
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=6cb856f586c6fe282a896d56ab05c809
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=986f6fb9c3fb679200f46e454222f967
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=b1b252fc92d83b03175f2c7cad89c600
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=a433b9801a5d433ea5edc01092d4e236
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/TotalsText"
+            - Name: RunTime
+              Id: g=28a72f3f75874205a3b35304f511672c
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=1b650a4e9409355d10dbb7bfc9308041
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=0c1b5737e86a4365f97dd64a5ce7bbb5
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=2537598d8a48449aa3556b7175ede70a
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=436587797ca0dea6c49ff3eeaea3413f
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=c22a8bcfec2ea9216532256ac61451fa
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=ba89a10863833405ef1f1f43fb4082cc
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Run time"}
+              - Name: Value
+                Id: g=d2ab126e8ae14e7897d1a4c42a102cfb
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=b74caa013a6aefae3fb53c3fb41a7db5
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=0114ff355778f99bce3e946e2c15daea
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=0cb94eb302bb97312c53175af0228e86
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=c8cd4260c771ccad77c4382ba656febc
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=7cd7956895f2474a9a01f8bd4f9a59a4
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/RunTimeText"
+            - Name: Uptime
+              Id: g=ae146855cfaa4848974bbaa93ab60a79
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=41c1de7b8a9ce445d36a87727d1e4ada
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=f37608ed8967edecab4b8cc584368b9d
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=dc2e6f4b2656467495e518f163960e74
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=8cd4e62bdb50b2cac043ef5ca26219d1
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=ba8963d2e882aae3591f0b86c39f5413
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=5fd489251f80e3edb036c08ac27a7c99
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Uptime"}
+              - Name: Value
+                Id: g=0120877314f14d87a450636423ef7051
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=d949816f182eb7fccb241f93940625b9
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=c288cb6be7972d6515327b8a0fc37225
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=153df705c638ac6a66b2600150069183
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=b8600aa02c79ddf5f538d426e21b52d5
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=ebbec6cadb314888bb9d7523bc0c415b
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/UptimeText"
+            - Name: LastUpdate
+              Id: g=22db09782d48412eac1b0d5000290652
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=ee6b61fd6781942a5560c31498cf2428
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=dd62683aba5ce41d0590e830ed6edc21
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=82599fce8203486e974851a03887620a
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=646b2ce742c102e6a4c04b7f53502605
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=91d697bfb2353bc9d9f40a3d258877a3
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=63b38024bff89ac1440f98159a491f98
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Last update"}
+              - Name: Value
+                Id: g=8637d7633bd047f3a3738ab505a144fc
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=948891689368fff2dc53a2c9d685b5c6
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=bf932a8f291503279f4f088245d1bde9
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=fa2f7a1334e227bf229f88f601d4279d
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=0a697bb6d112f990aaa261eb949b81c5
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=9891481013c9450a91796ae9c5349457
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/Details/LastUpdateText"
+          - Name: CycleSection
+            Id: g=ff83688fe61a4a6aa028f62236864a1a
+            Type: ColumnLayout
+            Children:
+            - Name: HorizontalAlignment
+              Id: g=9096214914a40ce31e7b2704a51fbe75
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: VerticalGap
+              Id: g=21ffff9f241348062e6c2d122863c566
+              Type: BaseDataVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 16.0
+            - Name: Title
+              Id: g=05337f981de34631b7cd9a9448d1dca8
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=2bdb50e2e9e1fde2361947fb2e89c7a9
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ModellingRule: Optional
+                Value: {"NamespaceIndex":7,"TextId":"Cycle"}
+              - Name: Style
+                Id: g=716118771610af419f2ff4508254ebd2
+                Type: BaseDataVariableType
+                DataType: String
+                ModellingRule: Optional
+                Value: "H3"
+            - Name: CycleChart
+              Id: g=08cab0f809fb4ba3898531d15aa3134d
+              Type: Panel
+              Children:
+              - Name: Height
+                Id: g=26bf5293ec104e530a4b4d1a24b07618
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 300.0
+              - Name: HorizontalAlignment
+                Id: g=cf6e1937018456d5ac2f920f796a4a5e
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Chart
+                Id: g=80e58c37e3564981858254c8971cac76
+                Type: WebBrowser
+                Children:
+                - Name: URL
+                  Id: g=c54665abdf107c5a20a0e1be62135b69
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                - Class: Reference
+                  Target: ns=3;i=354
+                  Direction: Forward
+                - Class: Reference
+                  Target: ns=3;i=356
+                  Direction: Forward
+                - Class: Reference
+                  Target: ns=3;i=358
+                  Direction: Forward
+                - Name: HorizontalAlignment
+                  Id: g=2d430f8364c721e69b00b878c02878e0
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: VerticalAlignment
+                  Id: g=72a04815d32ed69e55ee68034cb2a4c8
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+              - Name: Oven
+                Id: g=f452065d60e14bf09e245aa773f628ff
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Children:
+                - Name: DynamicLink
+                  Id: g=bda0b2727608419baeffd56af91bb5d1
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{OvenDetailsAlias}@NodeId"
+              - Name: OvenCycleChartLogic
+                Id: g=5ce9829160204e52bcf42c1e8c65ed73
+                Type: NetLogic
+          - Name: LocalSection
+            Id: g=5b06271290344fa69a28c9e85e99cc67
+            Type: ColumnLayout
+            Children:
+            - Name: HorizontalAlignment
+              Id: g=5863b50d26b8965fc6290c3712b71968
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: VerticalGap
+              Id: g=0b9d01d78f953d12a414697cde0924db
+              Type: BaseDataVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 16.0
+            - Name: Title
+              Id: g=7519f17960314e8f976e1c352d40d84c
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=b7e9362984458322018508c82b60847a
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ModellingRule: Optional
+                Value: {"NamespaceIndex":7,"TextId":"Local simulation"}
+              - Name: Style
+                Id: g=2dea06862d33c13a95eeff04266ee97b
+                Type: BaseDataVariableType
+                DataType: String
+                ModellingRule: Optional
+                Value: "H3"
+            - Name: Visible
+              Id: g=ad59644d76950be7120f31a19dcc137d
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+              Children:
+              - Name: DynamicLink
+                Id: g=e8b5947414344ee19113e77ec1d42324
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{OvenDetailsAlias}/Details/IsLocal"
+            - Name: Recipe
+              Id: g=7e4173769c6c4cef920f2eca5b6461f6
+              Type: ComboBox
+              Children:
+              - Name: Text
+                Id: g=978f9e5d017934b4bd5bb4fdcd95b6e2
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+              - Name: Model
+                Id: g=a9901825c346bb8d28474ced507bf923
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/LocalRecipeChoices"
+                Children:
+                - Name: ItemKind
+                  Id: g=d4b2045149ca097893124d05a0d3aac8
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: Kind
+                  Id: g=d3c53ee64ee134c86ecd27956a932527
+                  Type: PropertyType
+                  DataType: NodeId
+              - Name: SelectedValue
+                Id: g=5aed307340deaccc9807e096a2367740
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+              - Name: SelectedItem
+                Id: g=1aa67df5c634eec921371f26bc6221d4
+                Type: NodePointer
+                DataType: NodeId
+                Children:
+                - Name: Kind
+                  Id: g=53ca2476d150f80c3864235c2639d23d
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: DynamicLink
+                  Id: g=c3c72bfb878f45a7bf59a68d4147ce5e
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{OvenDetailsAlias}/LocalSimulation/SelectedRecipe"
+                  Children:
+                  - Name: Mode
+                    Id: g=0b269a20b821497383196eb8283e8747
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    Value: 2
+              - Name: UISelectedItem
+                Id: g=291566b853995777e85a436691b6f658
+                Type: BaseDataVariableType
+                DataType: NodeId
+                AccessLevel: Read
+              - Name: UISelectedValue
+                Id: g=8393d6a6ccc934b18df7c1049fb39271
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                AccessLevel: Read
+              - Class: Reference
+                Target: ns=3;i=480
+                Direction: Forward
+              - Name: Height
+                Id: g=263762d8ef0b3ad8f1b737f51c417b6d
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 32.0
+              - Name: HorizontalAlignment
+                Id: g=406d5576ae18620ad56cc68d21035678
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: DisplayValuePath
+                Id: g=5ccfc741408ebe87103bdad43161f2ae
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Children:
+                - Name: DynamicLink
+                  Id: g=5153cc1045704e589debe17c03ca6aa9
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Item}/Caption"
+              - Name: LocalRecipeComboLogic
+                Id: g=c6bd3e3b3010478a849783a19155bbe9
+                Type: NetLogic
+              - Name: Oven
+                Id: g=0cfb0eb52ed845c6a044311c6077aef3
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Children:
+                - Name: DynamicLink
+                  Id: g=211336dc423f4506ae280cc7b6710bc9
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{OvenDetailsAlias}@NodeId"
+              - Name: Item
+                Id: g=9d0a3d7dc78757cd89e6fa30c36f0051
+                Type: Alias
+                DataType: NodeId
+                ModellingRule: None
+                Children:
+                - Name: Kind
+                  Id: g=9d7550ada66c04ddd53e312b33920a22
+                  Type: PropertyType
+                  DataType: NodeId
+                  ModellingRule: None
+            - Name: Actions
+              Id: g=e486c8ca46304f9b8d7d54133d1f9503
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=aff2f2a8fc467f9f7ec6b383914b0029
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 8.0
+              - Name: HorizontalAlignment
+                Id: g=e89eb538adabcc9e661d247d1c8add51
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: ApplyButton
+                Id: g=7753cfbf6040fd368563037e079607e4
+                Type: BaseButton
+                DisplayName: {"NamespaceIndex":7,"TextId":"Apply"}
+                Children:
+                - Name: Background
+                  Id: g=1c5099e1029bcfa70268d7d568962fce
+                  Type: Rectangle
+                - Name: ActionButton
+                  Id: g=92a756a37136c9874f1543f7afb4a7ea
+                  Type: Button
+                  Children:
+                  - Name: Visible
+                    Id: g=52384b8d946adfa50d62cb4b38805bb0
+                    Type: BaseDataVariableType
+                    DataType: Boolean
+                    ModellingRule: Optional
+                - Name: Apply
+                  Id: g=b31b7c1c34da4f33aa360d68c0d14a3e
+                  Type: ToggleButton
+                  Children:
+                  - Name: Active
+                    Id: g=20695bfce98bc5450e679dc2bcf27f8b
+                    Type: BaseDataVariableType
+                    DataType: Boolean
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=8249af8e62eb47bba2d102a72cad6fe3
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{OvenDetailsAlias}/LocalSimulation/ApplyCommand"
+                      Children:
+                      - Name: Mode
+                        Id: g=de09fe48f03a4f58aee7148247984752
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        Value: 2
+                  - Name: Style
+                    Id: g=7170ceaf7a1e61a8a6507ed465ef79d6
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: Optional
+                    Value: "Transparent"
+                  - Name: HorizontalAlignment
+                    Id: g=104d9fc02e55dfdd29ae345ee42f1f43
+                    Type: BaseVariableType
+                    DataType: HorizontalAlignment
+                    ModellingRule: Optional
+                    Value: 3
+                  - Name: VerticalAlignment
+                    Id: g=81e0e7cd1de93db78da7004b6255fa25
+                    Type: BaseVariableType
+                    DataType: VerticalAlignment
+                    ModellingRule: Optional
+                    Value: 3
+                - Name: Content
+                  Id: g=dff381cd656a70ba37176fdadf538e34
+                  Type: RowLayout
+                  Children:
+                  - Name: ButtonText
+                    Id: g=71701686b50b13eb40ba693e6f1841a3
+                    Type: Label
+                    Children:
+                    - Name: Text
+                      Id: g=2344ab27bf7191751d9d5edf13445942
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=a142853cd335257135fb0b8d04a134e5
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../..@DisplayName"
+                    - Name: Style
+                      Id: g=9ce23af1eef073d5610339c1600e92e6
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: "Default"
+                - Name: Visible
+                  Id: g=d8cf7f236284343dfe3dc496ee2fb84a
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: true
+              - Name: StartButton
+                Id: g=a7be2110a9eb00c77ec72f9f28553b99
+                Type: BaseButton
+                DisplayName: {"NamespaceIndex":7,"TextId":"Start"}
+                Children:
+                - Name: Background
+                  Id: g=3b5c197db9d316528cd413dbcfd1100e
+                  Type: Rectangle
+                - Name: ActionButton
+                  Id: g=09a7c382e5d015d50ad73b480eac024e
+                  Type: Button
+                  Children:
+                  - Name: Visible
+                    Id: g=a4bd1ef720cc8595985cb1306f890129
+                    Type: BaseDataVariableType
+                    DataType: Boolean
+                    ModellingRule: Optional
+                - Name: Start
+                  Id: g=84318fdfd0c34f819167596f33546862
+                  Type: ToggleButton
+                  Children:
+                  - Name: Active
+                    Id: g=202d411fcc285e79102c8f84732e6f5e
+                    Type: BaseDataVariableType
+                    DataType: Boolean
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=bb1e1169ace9447db09e38295f274762
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{OvenDetailsAlias}/LocalSimulation/StartCommand"
+                      Children:
+                      - Name: Mode
+                        Id: g=71be2d63d93a4cb09c0bcf1ffa1d0bab
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        Value: 2
+                  - Name: HorizontalAlignment
+                    Id: g=fb810e20bb4051ab76e7949b9ca84615
+                    Type: BaseVariableType
+                    DataType: HorizontalAlignment
+                    ModellingRule: Optional
+                    Value: 3
+                  - Name: VerticalAlignment
+                    Id: g=a6d4a64397b74aef51d038c549a2430a
+                    Type: BaseVariableType
+                    DataType: VerticalAlignment
+                    ModellingRule: Optional
+                    Value: 3
+                  - Name: Style
+                    Id: g=25f098a592463b7620c8a1aa3c78d02a
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: Optional
+                    Value: "Transparent"
+                - Name: Content
+                  Id: g=ac42d3aa294932b42dec1600580eb000
+                  Type: RowLayout
+                  Children:
+                  - Name: ButtonText
+                    Id: g=8e1a92aeed71efa067214a433a5a1846
+                    Type: Label
+                    Children:
+                    - Name: Text
+                      Id: g=47099dc1db1ea5f48b31427423e14eed
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=96e51f05fd67f95f6bbfb3b49f0acbf3
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../..@DisplayName"
+                    - Name: Style
+                      Id: g=5defde8e9bf14308ea1910c09dd0551d
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: "Default"
+                - Name: Visible
+                  Id: g=287350d149ffa5bec878e05eac1deb2b
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: true
+              - Name: StopButton
+                Id: g=460b489d4defbea019acd0606b008adf
+                Type: BaseButton
+                DisplayName: {"NamespaceIndex":7,"TextId":"Stop"}
+                Children:
+                - Name: Background
+                  Id: g=1255e4ef0cf7b5ca6fc8f341572feb6b
+                  Type: Rectangle
+                - Name: ActionButton
+                  Id: g=a791721b0544b58a9ee7e87727c38ca9
+                  Type: Button
+                  Children:
+                  - Name: Visible
+                    Id: g=e959a8a9b21e88c1ea43d1ecd782770e
+                    Type: BaseDataVariableType
+                    DataType: Boolean
+                    ModellingRule: Optional
+                - Name: Stop
+                  Id: g=d784d8981b664cfdaf7b52e8116cf27c
+                  Type: ToggleButton
+                  Children:
+                  - Name: Active
+                    Id: g=fcd853e356891fb07f8bf95d43f6c978
+                    Type: BaseDataVariableType
+                    DataType: Boolean
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=75697d0cb73a41519f9b8b52b125f7a9
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{OvenDetailsAlias}/LocalSimulation/StopCommand"
+                      Children:
+                      - Name: Mode
+                        Id: g=0b4be21f68554bca88565e882cbc4593
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        Value: 2
+                  - Name: HorizontalAlignment
+                    Id: g=b35b449c58fd59563f3410fec3959402
+                    Type: BaseVariableType
+                    DataType: HorizontalAlignment
+                    ModellingRule: Optional
+                    Value: 3
+                  - Name: VerticalAlignment
+                    Id: g=07f8a6b8380e36d8a20910b734676495
+                    Type: BaseVariableType
+                    DataType: VerticalAlignment
+                    ModellingRule: Optional
+                    Value: 3
+                  - Name: Style
+                    Id: g=c64613b8fa834f850d2b86f56aa67ab4
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: Optional
+                    Value: "Transparent"
+                - Name: Content
+                  Id: g=a55c3048d5237facd617bf4a098fabdc
+                  Type: RowLayout
+                  Children:
+                  - Name: ButtonText
+                    Id: g=0023040a4dd498505681afb04a64f5e7
+                    Type: Label
+                    Children:
+                    - Name: Text
+                      Id: g=cbe88093c266bf46a6be72db2b1de581
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=6e47f2d24fa1ba29ffcfeafb47d02f0f
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../..@DisplayName"
+                    - Name: Style
+                      Id: g=11abe9b039a300a569bcbe49d9918eec
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: "Default"
+                - Name: Visible
+                  Id: g=f667f764852b08d7ce08bbc7599611a7
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: true
+            - Name: Automation
+              Id: g=bca8b1b469214ca493157fc004307d60
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=a087f07977c1b1f6c4f7ecfa66f259dc
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 8.0
+              - Name: HorizontalAlignment
+                Id: g=6cb3e5d4335ceb99f7c655121c230f9f
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: AutoCycle
+                Id: g=2acccf8d17e845e1b9c78996c3ee39d4
+                Type: CheckBox
+                Children:
+                - Name: Checked
+                  Id: g=9af98b6f375fe78610f5b61e060f63c9
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=1c81a32148514c8a8f38fe1e3f215c8e
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/LocalSimulation/AutoCycle"
+                    Children:
+                    - Name: Mode
+                      Id: g=98562d5d923f4e5d96e38805d6a1796c
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      Value: 2
+                - Name: Text
+                  Id: g=31b1174478baeb07bdd17b58d5e96287
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Auto cycle"}
+                - Name: Width
+                  Id: g=20e2f11d393a1e94854bbcc413dc0621
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 160.0
+                - Name: Height
+                  Id: g=122643ee24ab8ed6c11019eb7de270b1
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 28.0
+              - Name: RejectNextCycle
+                Id: g=ac7c8d7ee6c74b26b526f8aafa9c253b
+                Type: CheckBox
+                Children:
+                - Name: Checked
+                  Id: g=2ac84dc3709334a98ba7124ee1c40d4d
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=4c35a69c68ea4fdcb9f0528bcb812d10
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/LocalSimulation/RejectNextCycle"
+                    Children:
+                    - Name: Mode
+                      Id: g=834101e37c504e999120a935b16c9972
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      Value: 2
+                - Name: Text
+                  Id: g=5ca1d9ed8448dc522d099589fabd06f2
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Reject next cycle"}
+                - Name: Width
+                  Id: g=bd8252108cfa507945373ad5105b5bb0
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 160.0
+                - Name: Height
+                  Id: g=86c7c06501cdc2ae3fcc8a91f7b874af
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 28.0
+            - Name: Faults
+              Id: g=f8b30f9e875e43f2a5fd3e9480ed65b4
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=4fa0c353ff92dcd16ab8ac8707017de0
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 8.0
+              - Name: HorizontalAlignment
+                Id: g=d02b2af492e250b62c9e98eab93c36d6
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: SimulateFault
+                Id: g=34387de1d22d4f4b9ecf8b3402305880
+                Type: CheckBox
+                Children:
+                - Name: Checked
+                  Id: g=ae7dfceac9b0fddbac5626762a828d24
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=0f67b9e8c84a4961bc6809d845037708
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/LocalSimulation/SimulateFault"
+                    Children:
+                    - Name: Mode
+                      Id: g=d18215c74d724e4980219d38bc98edf1
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      Value: 2
+                - Name: Text
+                  Id: g=accf2272b067cac8d8c51fb2868e393a
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Process fault"}
+                - Name: Width
+                  Id: g=7313ad4e333edc1f6f1d5daaecc0dcbe
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 160.0
+                - Name: Height
+                  Id: g=eab19fd8bc0ebee7f87debeaa88793b0
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 28.0
+              - Name: PauseTelemetry
+                Id: g=76bd7ee0283842a88a610fb49741b2d2
+                Type: CheckBox
+                Children:
+                - Name: Checked
+                  Id: g=24dcf4782e89e89c7ed55a7830355ccf
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=d73b47d4f07d40aca4941355706fd9e7
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/LocalSimulation/PauseTelemetry"
+                    Children:
+                    - Name: Mode
+                      Id: g=5dc6f03b4cec4036ab7043b77dcdc8ef
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      Value: 2
+                - Name: Text
+                  Id: g=f0d08dca37b65cc6fad20b8a897c6d69
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Pause telemetry"}
+                - Name: Width
+                  Id: g=400b04a4b10b326351ffb2b74bef2857
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 160.0
+                - Name: Height
+                  Id: g=18cfc18fca9ad3fcb20de7414c01b290
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 28.0
+            - Name: Pending
+              Id: g=7f55910c1b384818b837f1751f05f237
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=a63d356efcb50a18c563a273cb7a39c9
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=7468e3a00404c04f127391c96af8603b
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=532ff286f62b45638c1c7ffc34b82aa5
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=6c9e499b7a38d38140696fb6616ebf0b
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=cb3c0db20dbfad5f81b555ac8e059bf4
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=5a64fad37b9f8bf103ffc1ba29224982
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Pending recipe"}
+              - Name: Value
+                Id: g=cc8bef2ae2454832b64911927e15ad17
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=502b0b45968e5699ff479a0c43339e87
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=a68a20e920d6625869adf0407cf2dae4
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=e22bdac6e41fd1c8b65dfffa880fa513
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=8860b250106dc2434901b13c78fd2ca8
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=628f36a0820948809b587907d0ef0b2c
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/LocalSimulation/PendingRecipe"
+            - Name: Result
+              Id: g=5b76dcfd29c142bdbe9bc50f25852745
+              Type: RowLayout
+              Children:
+              - Name: HorizontalGap
+                Id: g=78a90734fb719982d013297058338c4b
+                Type: BaseDataVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 16.0
+              - Name: HorizontalAlignment
+                Id: g=b2fc92c687362feea9f80aa44ffa8376
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: Caption
+                Id: g=f3b3e0e98475470db459b91a9de44514
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=dc9d32dcf9a670f294df7dc46b027307
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 180.0
+                - Name: VerticalAlignment
+                  Id: g=882d06f5807c19be7c6a6efc9719ca62
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: Text
+                  Id: g=4f214007079348628c25400e74f64fcf
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ModellingRule: Optional
+                  Value: {"NamespaceIndex":7,"TextId":"Last result"}
+              - Name: Value
+                Id: g=f97035989bf04a02818ff26b853b6b2d
+                Type: Label
+                Children:
+                - Name: Width
+                  Id: g=fcfec1d0c28caabd4b7b12c6570f7b75
+                  Type: BaseVariableType
+                  DataType: Size
+                  ModellingRule: Optional
+                  Value: 360.0
+                - Name: VerticalAlignment
+                  Id: g=2f5b8caaba6fbdcb6217b02409beb2ff
+                  Type: BaseVariableType
+                  DataType: VerticalAlignment
+                  ModellingRule: Optional
+                  Value: 2
+                - Name: HorizontalAlignment
+                  Id: g=2733261166d7e6c48ba027e3a9f6893f
+                  Type: BaseVariableType
+                  DataType: HorizontalAlignment
+                  ModellingRule: Optional
+                  Value: 3
+                - Name: Text
+                  Id: g=23a667f37ee5881ac5bb9fab0dc12f40
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=aa372cea34fb40888a033ed4801c5652
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{OvenDetailsAlias}/LocalSimulation/LastResult"
+      - Name: Footer
+        Id: g=5c607deff9792282a5fd1fc486e37710
+        Type: RowLayout
+        Children:
+        - Name: HorizontalAlignment
+          Id: g=4dae921a0ad01e6afbc4a689a094529c
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: CloseDialogButton
+          Id: g=8891300ac61861f681132fa17f7b2762
+          Type: BaseButton
+          DisplayName: {"NamespaceIndex":7,"TextId":"Close"}
+          Children:
+          - Name: Background
+            Id: g=d3011fdb501dba6b39b3f53bc13d4091
+            Type: Rectangle
+          - Name: ActionButton
+            Id: g=8c93584be58f02f3152809e747326015
+            Type: Button
+            Children:
+            - Name: MouseClickEventHandler1
+              Id: g=b6f9fb47dc950468678783e004e16407
+              Type: EventHandler
+              Children:
+              - Name: ListenEventType
+                Id: g=125c85103b9e65db7880095645e2ac34
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+              - Name: MethodsToCall
+                Id: g=9b8e92f3c5ddcd935aac4b2bd96e10fd
+                Type: BaseObjectType
+                Children:
+                - Name: MethodContainer1
+                  Id: g=bff12aa837cf6590635e052c2900c0d2
+                  Type: BaseObjectType
+                  Children:
+                  - Name: ns=2;ObjectPointer
+                    Id: g=0c9b9f978238a94dc425bce0d6cbe9b8
+                    Type: NodePointer
+                    DataType: NodeId
+                    Children:
+                    - Name: Kind
+                      Id: g=7c62acf13c108b4d583c7132dc344665
+                      Type: PropertyType
+                      DataType: NodeId
+                      Value: "/Types/ObjectTypes/BaseObjectType"
+                    - Name: DynamicLink
+                      Id: g=eae10c0e21cdb74719a1272f4e16bb4a
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../../../../..@NodeId"
+                      Children:
+                      - Name: Mode
+                        Id: g=6cf0863e185d167b21bbcf0f5cf5b84e
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
+                  - Name: ns=2;Method
+                    Id: g=4077836d4908cee07e117b9dc8c54ed1
+                    Type: BaseDataVariableType
+                    DataType: String
+                    Value: "Close"
+              - Name: EventArguments
+                Id: g=7e6687e1ba59b01df22b7aa06dd85445
+                Type: MouseClickEvent
+                Children:
+                - Name: EventId
+                  Id: g=46ba2ccfddfb0e65e92632caab74adb8
+                  Type: PropertyType
+                  DataType: ByteString
+                - Name: EventType
+                  Id: g=53e3a5598520315e2ee25912ebd0e8c0
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceNode
+                  Id: g=c919593318c8ff440dd8f3c3ecd0d010
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceName
+                  Id: g=0cc306465e825fb643e48355707835e9
+                  Type: PropertyType
+                  DataType: String
+                - Name: Time
+                  Id: g=a41be78b7c7faaa25a4b7bca8ce04855
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: ReceiveTime
+                  Id: g=af1e6499a841b76fc7378d21a4311ad5
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: Message
+                  Id: g=ff04214182d91562298021e5ccfbf100
+                  Type: PropertyType
+                  DataType: LocalizedText
+                - Name: Severity
+                  Id: g=30d7e8090a8ec026b74d54286490ea1e
+                  Type: PropertyType
+                  DataType: UInt16
+          - Name: Content
+            Id: g=ddef9d2c93bae88b9a82dd8856179091
+            Type: RowLayout
+            Children:
+            - Name: ButtonText
+              Id: g=91d39010888a7edafd173f9ad3bd734e
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=5afe522a0b6df347920d4cef2698a864
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Children:
+                - Name: DynamicLink
+                  Id: g=dcbb1aa705c7d8fdab3926000f86649b
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../..@DisplayName"
+              - Name: Style
+                Id: g=cb8f237678fd30f5cbd74c3780e5d2f4
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Default"
+          - Name: Visible
+            Id: g=f0b52e1f28e70a2376e9d2cb3a3fc23c
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: HorizontalAlignment
+            Id: g=9f076a2fe4563fcf0a030cc4f4f6fedc
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: VerticalAlignment
+            Id: g=d11ddd57c7ed6df91d055eea8d727049
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: Width
+            Id: g=4cdf72bad1bd40c460bf70763d23cbe1
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 96.0
+          - Name: TopMargin
+            Id: g=111bed8e87f9def7ad37a0ba3b675fa8
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 16.0
+    - Name: HorizontalAlignment
+      Id: g=03f388522b2d62ad7461b5e0896eb56c
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: VerticalAlignment
+      Id: g=4c2ffa8b45a04e0854998e398bb9d43d
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: HitTestVisible
+      Id: g=260466e015998aee3b88a57dbfb5025c
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+  - Name: OvenDetailsAlias
+    Id: g=e9a1bd229a98e9eabb5ce9b04f868389
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=12a44f493138bebe779ddb0c2d97e8a3
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Types/OvenEdgeManager"

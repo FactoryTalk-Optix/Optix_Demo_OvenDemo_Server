@@ -1,39 +1,50 @@
 Name: DesignTime
+Id: g=32d2d9a6641398d604de94cf1d7a8ed9
 Type: FolderType
 Children:
 - Name: ImportAndExportTranslations
+  Id: g=fc94f84caa63844b39b6a42b889fd420
   Type: NetLogic
   WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
   Children:
   - Name: BehaviourStartPriority
+    Id: g=4ad3680d9033921317fe2768c7766168
     Type: BehaviourStartPriorityVariableType
     DataType: Byte
     Value: 180
   - Name: CSVPath
+    Id: g=4fda3410c00cf8774869589a15d2aa2a
     Type: BaseDataVariableType
     DataType: ResourceUri
     Value: "ns=7;%PROJECTDIR%/translations.csv"
   - Class: Method
     Name: ExportTranslations
+    Id: g=c488202a893eea4ffbab8ab28cded331
   - Class: Method
     Name: ImportTranslations
+    Id: g=62e7006e1ec6cff00165bcc9043c2fc5
   - Name: CharacterSeparator
+    Id: g=be74ca7139f4235ab188cc85c6efeccf
     Type: BaseDataVariableType
     DataType: String
     Value: ";"
   - Name: WrapFields
+    Id: g=55560138e8b87a03fc476e4b2ec8b65e
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: LocalizationDictionary
+    Id: g=9b1daed75755bf4007cd0a0d3d7ad46f
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/Optix_Demo_OvenDemo_Server/Translations/LocalizationDictionary1"
     Children:
     - Name: Kind
+      Id: g=77e461b36d293bc324d28770b385ade2
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/VariableTypes/BaseVariableType/LocalizationDictionary"
   - Name: ns=4;LibraryReference
+    Id: g=a690cae1de17730a401e49f0245e1047
     Type: ObjectLibraryReference
     DataType: ObjectLibraryReferenceDataType
     Value: 
@@ -49,3 +60,121 @@ Children:
        "highestIgnoredVersion": 0
       }
      }
+- Name: ImportExportModelCSV
+  Id: g=e9ba4f6b74b3aee37cb3197cc23b819d
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=5bb4c860cab6f3ed4c6cb5bbd42e377b
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: CSVFilePath
+    Id: g=e4d61745460e2fbbfbbfcb2ffb91f23c
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=7;%PROJECTDIR%/variables.csv"
+  - Name: ModelNodeToExport
+    Id: g=f56db20dca792bb1003a3ff8d22682da
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Types"
+    Children:
+    - Name: Kind
+      Id: g=cbb7d86826292b88b1a2001bdc9682a4
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+  - Name: VariablesNodeToBuildCSV
+    Id: g=6f8323dfaf1ebbd060830207ed8973e2
+    Type: NodePointer
+    DataType: NodeId
+    Description: {"NamespaceIndex":7,"TextId":"ImportExportModelVariablesStartingNodeDescription"}
+    Children:
+    - Name: Kind
+      Id: g=850cf29621244988d84ce8422565d247
+      Type: PropertyType
+      DataType: NodeId
+  - Name: CharacterSeparator
+    Id: g=9d51a570dc6870474317ce775e041a39
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Class: Method
+    Name: BuildVariablesCSVFile
+    Id: g=2f4e48259950ff07a77894748c4edb9c
+  - Class: Method
+    Name: ExportModel
+    Id: g=79238ea0270f2acfce0022c1d77aca63
+  - Class: Method
+    Name: ImportModel
+    Id: g=79c663008b24a6c5816661b880501825
+  - Name: ns=4;LibraryReference
+    Id: g=04b24e19e4930b3d83099a0dad726706
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+       "objectGuid": "c6d188f2628314975bdfb95cd0b311e2",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
+- Name: DesignTimeNetLogic1
+  Id: g=660d1df73608e1f1661d747147225b04
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=50608ed95789e5b829bb9a0fe736fba4
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: BuildAnalyticsPage
+    Id: g=6983cb10b85975e9b4a1813286f54344
+  - Class: Method
+    Name: BuildOvenDetails
+    Id: g=45482d706461fe5ff35ce16092ae8a53
+  - Class: Method
+    Name: BuildSettings
+    Id: g=803f7e0f5dbfa388622dab96f2a82d5a
+  - Class: Method
+    Name: ApplyTranslations
+    Id: g=554ad0ce0d39be6e78380069fe0f761d
+  - Class: Method
+    Name: LocalizeNavigationTexts
+    Id: g=139aaaadc80675ac1ba25400bfbcfb8a
+  - Class: Method
+    Name: ApplySoftDarkPalette
+    Id: g=d8cea3ec65dea33fbeb98781f978bc4e
+  - Class: Method
+    Name: FixThemeOverrides
+    Id: g=f2a3b591dfaed5e4cc8bf8883cefbda9
+  - Class: Method
+    Name: ThemeAnalyticsChart
+    Id: g=a9e615187e2f8031cad3b7e0523a069a
+  - Class: Method
+    Name: StandardizeLabelFonts
+    Id: g=00f720f38342decbcde7f11c1ccdb245
+  - Class: Method
+    Name: BuildAlarmRowActions
+    Id: g=6e18fd005490f7ed60cb2e8e7dbde5d8
+  - Class: Method
+    Name: FixConnectionAlarmInput
+    Id: g=6bdf460e72c414bb510d9318e5aeda3b
+  - Class: Method
+    Name: BuildFleetOverviewPanel
+    Id: g=a562b2c9e44c252d972507c2a962eda8
+  - Class: Method
+    Name: FixAlarmMessageConverters
+    Id: g=bb04c8baec9d73209da435b4ad1661ee
+  - Class: Method
+    Name: BuildChatNotifications
+    Id: g=ce9fef2ac72d0d9dbf58a68cc5aded44

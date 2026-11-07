@@ -3,6 +3,9 @@ using System;
 using FTOptix.HMIProject;
 using UAManagedCore;
 using FTOptix.NetLogic;
+using FTOptix.HighAvailability;
+using FTOptix.Retentivity;
+using FTOptix.OPCUAClient;
 #endregion
 
 public class ClockLogic : BaseNetLogic

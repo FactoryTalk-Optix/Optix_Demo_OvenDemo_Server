@@ -9,6 +9,10 @@
 !DesignTimeNodes/
 !LICENSE
 !README.md
+!TODO.md
+!tools/
+tools/*
+!tools/Test-LocalOvens.ps1
 ProjectFiles/NetSolution/*.vs
 ProjectFiles/NetSolution/bin
 ProjectFiles/NetSolution/obj

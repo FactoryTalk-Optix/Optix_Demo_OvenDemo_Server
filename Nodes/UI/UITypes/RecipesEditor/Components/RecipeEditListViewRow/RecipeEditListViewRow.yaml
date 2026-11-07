@@ -1,0 +1,195 @@
+Name: RecipeEditListViewRow
+Id: g=13f74f8e52341b307c73da3a39739afe
+Type: FolderType
+Children:
+- Name: ListViewRow1
+  Id: g=65ed10a2414d2f52c6e547c973f3174d
+  Supertype: ListViewRow
+  ReferenceType: HasComponent
+  Children:
+  - Name: RowItem
+    Id: g=878dcedcdbd7434e8da4f5c9d79b2fb1
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=84210ca31e612fff61c8f395fc2627bc
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/BaseDataVariableType"
+  - Name: Content
+    Id: g=4241b98a1df7d012d8e11761113c5422
+    Type: ColumnLayout
+    Children:
+    - Name: HorizontalAlignment
+      Id: g=dcbb22983308aa63f8d026211f9de6b6
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: Height
+      Id: g=942a3c5fde9e92f3028ce3dc4423560a
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: -1.0
+    - Name: VerticalAlignment
+      Id: g=2fd2d9ac0a89db2c9731553c33604b1b
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalGap
+      Id: g=41890be60838cfa0cd10b630e338813e
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 16.0
+    - Name: Metadata
+      Id: g=f8e720c7148a442c23d2eed915493e51
+      Type: GridLayout
+      Children:
+      - Name: Rows
+        Id: g=6164c09053144c0b7135ea23ed1f3538
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: ["Auto"]
+      - Name: Columns
+        Id: g=9b320b202bb642d7d9fcbf0d8f9cfad4
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: ["Auto","Auto"]
+      - Name: HorizontalAlignment
+        Id: g=1cc41884c73de4163f3232d007904b1f
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: ApprovalState
+        Id: g=1d675338a2aa793627ce71030e5637a5
+        Type: ColumnLayout
+        Children:
+        - Name: Name
+          Id: g=6483cc39735c2543da7ee8f85fb3d668
+          Type: Label
+          Children:
+          - Name: Text
+            Id: g=5d439c7cd8a97297206bc8b0d5717b92
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"NamespaceIndex":7,"TextId":"ApprovalState"}
+          - Name: Style
+            Id: g=fcaa8de364583d2dd7568d1e36799117
+            Type: BaseDataVariableType
+            DataType: String
+            ModellingRule: Optional
+            Value: "H4"
+        - Name: Value
+          Id: g=2a831ec9ef478bef382f31ba8ad0a91c
+          Type: Label
+          Children:
+          - Name: Text
+            Id: g=df78754fa655b7941ffdeb48e5c0e917
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"NamespaceIndex":7,"TextId":"Draft"}
+        - Name: VerticalGap
+          Id: g=6637603a1ac8c42cc6cb7fbe2db18641
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 8.0
+      - Name: CreatedAt
+        Id: g=f486e1ba392457773913e668f0c36658
+        Type: ColumnLayout
+        Children:
+        - Name: Name
+          Id: g=727b3674ab362e9153c37f025ef041bf
+          Type: Label
+          Children:
+          - Name: Text
+            Id: g=169276655973f8800801f61a911ec561
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"NamespaceIndex":7,"TextId":"Created at"}
+          - Name: Style
+            Id: g=b8af271b8922b09b3a77561b5a3a3ac9
+            Type: BaseDataVariableType
+            DataType: String
+            ModellingRule: Optional
+            Value: "H4"
+        - Name: Value
+          Id: g=6f5a2ad929f07e57b0b133b34526de81
+          Type: Label
+        - Name: VerticalGap
+          Id: g=4ca29d56d089f616810ff47ea0a4fcc4
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 8.0
+      - Name: ApprovedAt
+        Id: g=cfbbcac630bef605ace6f949bda37c32
+        Type: ColumnLayout
+        Children:
+        - Name: Name
+          Id: g=4a66424bcbc51dbc4159fc2c85553207
+          Type: Label
+          Children:
+          - Name: Text
+            Id: g=1735d432e7222cecbb89bdec75d99587
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"NamespaceIndex":7,"TextId":"Approved at"}
+          - Name: Style
+            Id: g=17db7f5b8cada86118bc8ac5f85736a8
+            Type: BaseDataVariableType
+            DataType: String
+            ModellingRule: Optional
+            Value: "H4"
+        - Name: Value
+          Id: g=88c916c7939e5b96af62b4ed2c54a2a0
+          Type: Label
+        - Name: VerticalGap
+          Id: g=1fd7d2222673027c2adeaa0d589c60fa
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 8.0
+      - Name: HorizontalGap
+        Id: g=d3628d060b81d5069b1769866a7a3e09
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+      - Name: VerticalGap
+        Id: g=ff664f524bdbf5343e54ff4455c50903
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
+  - Name: HorizontalAlignment
+    Id: g=f3efe8f903e9cc57d8d672c0b62bb8c6
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: Width
+    Id: g=73197ef0b2bfaeefcaea5f946cfb7685
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 320.0
+  - Name: Height
+    Id: g=98f16b045980f964963d8ae6eb66d094
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 196.0

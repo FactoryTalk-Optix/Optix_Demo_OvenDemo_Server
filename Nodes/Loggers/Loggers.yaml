@@ -1,1021 +1,369 @@
 Name: Loggers
+Id: g=6a323abe5a5540a05383c01b18143d03
 Type: LoggersCategoryFolder
 Children:
-- Name: OvensStatisticsLogger
-  Id: g=8c6f18649790e61b0a9cf854a1334f3c
-  Type: DataLogger
-  Children:
-  - Name: SamplingMode
-    Type: PropertyType
-    DataType: ns=21;SamplingModeEnum
-    Value: 1
-  - Name: Store
-    Type: NodePointer
-    DataType: NodeId
-    Value: "/Objects/Optix_Demo_OvenDemo_Server/DataStores/EmbeddedDatabase"
-    Children:
-    - Name: Kind
-      Type: PropertyType
-      DataType: NodeId
-      Value: "/Types/ObjectTypes/BaseObjectType/Store"
-  - Name: VariablesToLog
-    Type: BaseObjectType
-    Children:
-    - Name: PowerConsumption1
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven1/PowerConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: GasConsumption1
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven1/GasConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentPhase1
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven1/CurrentPhase"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentTemperature1
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven1/CurrentTemperature"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: PowerConsumption2
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven2/PowerConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: GasConsumption2
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven2/GasConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentPhase2
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven2/CurrentPhase"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentTemperature2
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven2/CurrentTemperature"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: PowerConsumption3
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven3/PowerConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: GasConsumption3
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven3/GasConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentPhase3
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven3/CurrentPhase"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentTemperature3
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven3/CurrentTemperature"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: PowerConsumption4
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven4/PowerConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: GasConsumption4
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven4/GasConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentPhase4
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven4/CurrentPhase"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentTemperature4
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven4/CurrentTemperature"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: PowerConsumption5
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven5/PowerConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: GasConsumption5
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven5/GasConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentPhase5
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven5/CurrentPhase"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentTemperature5
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven5/CurrentTemperature"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: PowerConsumption6
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven6/PowerConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: GasConsumption6
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven6/GasConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentPhase6
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven6/CurrentPhase"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentTemperature6
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven6/CurrentTemperature"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: PowerConsumption7
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven7/PowerConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: GasConsumption7
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven7/GasConsumption"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentPhase7
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven7/CurrentPhase"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-    - Name: CurrentTemperature7
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../Model/Ovens/OptixOven7/CurrentTemperature"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          Value: 2
-  - Class: Reference
-    Target: ns=21;i=21
-    Direction: Forward
-  - Name: LogLocalTime
-    Type: PropertyType
-    DataType: Boolean
-    Value: true
 - Name: AlarmsEventLogger
+  Id: g=630a22f22add5b4c1cc3f56c9b2b97cc
   Type: EventLogger
   WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
   Children:
   - Name: Enabled
+    Id: g=47216651a54d46c75ed0a75159c4687d
     Type: PropertyType
     DataType: Boolean
     Value: true
   - Name: Store
+    Id: g=d08b6a800492eb947bd8a47091f32e71
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/Optix_Demo_OvenDemo_Server/DataStores/EmbeddedDatabase"
     Children:
     - Name: Kind
+      Id: g=2fdab3c591be44665b196fc82030acea
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/Store"
     - Name: NodeClass
+      Id: g=50868ba732664f43f7841c7048ce8086
       Type: PropertyType
       DataType: NodePointerNodeClass
   - Name: EventFieldPaths
+    Id: g=6916fe59e008718384c8a56747e2df4f
     Type: BaseObjectType
     Children:
     - Name: ActiveState_Id
+      Id: g=48e4a05d45e24d555b6c98f1e680a3e6
       Type: EventFieldPath
       DataType: NodePath
       Value: "0:ActiveState/0:Id"
     - Name: AckedState_Id
+      Id: g=9e1e48e854505cbabb09e740211aeb95
       Type: EventFieldPath
       DataType: NodePath
       Value: "0:AckedState/0:Id"
     - Name: ConfirmedState_Id
+      Id: g=48aa42ac85e897883f47726cb7c872c8
       Type: EventFieldPath
       DataType: NodePath
       Value: "0:ConfirmedState/0:Id"
     - Name: ConditionName
+      Id: g=915153324bb59ee87e8acb113b5ce12f
       Type: EventFieldPath
       DataType: NodePath
       Value: "0:ConditionName"
     - Name: EnabledState_Id
+      Id: g=0e485ee5ee69e3dc10d7d1c331e0b28b
       Type: EventFieldPath
       DataType: NodePath
       Value: "0:EnabledState/0:Id"
     - Name: SourceName
+      Id: g=ebc14e7a58f86d29143300b02e25df90
       Type: EventFieldPath
       DataType: NodePath
       Value: "0:SourceName"
     - Name: Time
+      Id: g=16cebb5e5b87ce4db42c61c99b393e87
       Type: EventFieldPath
       DataType: NodePath
       Value: "0:Time"
     - Name: Message
+      Id: g=325e1f4792f3c892343976933903a760
       Type: EventFieldPath
       DataType: NodePath
       Value: "0:Message"
     - Name: Severity
+      Id: g=b51e7272890785bdc9a8db4cf673b0be
       Type: EventFieldPath
       DataType: NodePath
       Value: "0:Severity"
     - Name: LocalTime
+      Id: g=3f1d33bd6f77ec84d9c17631e5e556cd
       Type: EventFieldPath
       DataType: NodePath
       Value: "0:LocalTime"
     - Name: OvenName
+      Id: g=60ffe55ea16efbee11b894f5cdb30932
       Type: EventFieldPath
       DataType: NodePath
       Value: "/7:OvenName"
   - Name: EventConfigurations
+    Id: g=2fd7d102ebd175fb01aec632a35ce48c
     Type: BaseObjectType
     Children:
     - Name: EventConfiguration
+      Id: g=8a582400c5492586e95e7e3c422b261a
       Type: EventConfiguration
       Children:
       - Name: MonitorSubtree
+        Id: g=21d16852264dfd321f49144e3db011a1
         Type: PropertyType
         DataType: Boolean
       - Name: EventType
+        Id: g=0b1eadb5fa125e31d9c5c5b139c9995c
         Type: NodePointer
         DataType: NodeId
         ReferenceType: HasProperty
         Value: "/Types/EventTypes/BaseEventType/ConditionType/AcknowledgeableConditionType/AlarmConditionType"
         Children:
         - Name: Kind
+          Id: g=dcba18ebb25542cb5413d034629fd576
           Type: PropertyType
           DataType: NodeId
           Value: "/Types/EventTypes/BaseEventType"
         - Name: NodeClass
+          Id: g=d16ee38f8c94d810a9287e0403947200
           Type: PropertyType
           DataType: NodePointerNodeClass
           Value: 1
   - Name: EventArguments
+    Id: g=419ca80851c3049d484b1849bfee2ae0
     Type: BaseObjectType
     Children:
     - Name: ActiveState_Id
+      Id: g=a730c40a335adce33e4b219b7cbb267e
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: AckedState_Id
+      Id: g=96da9f19bea68bf7dd2fbd8532fc3b0c
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: ConfirmedState_Id
+      Id: g=bcfd2decfce8c65d87ba292e153f3e66
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: ConditionName
+      Id: g=78a6cc665d7c2b8f88a3c430d146430c
       Type: BaseDataVariableType
       DataType: String
     - Name: EnabledState_Id
+      Id: g=341ab3c318dc830272ab17c233a561f9
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: SourceName
+      Id: g=65e1158566614897d9b58054db2cf2ef
       Type: BaseDataVariableType
       DataType: String
     - Name: Time
+      Id: g=3689171d63fda2f23e7cf4ae3d51e4a8
       Type: BaseDataVariableType
       DataType: UtcTime
     - Name: Message
+      Id: g=9e5baaa96dc9592b521584a1b2b65ab8
       Type: BaseDataVariableType
       DataType: LocalizedText
     - Name: Severity
+      Id: g=84dd42ca47854020c7dd79deb195565f
       Type: BaseDataVariableType
       DataType: UInt16
     - Name: EventTypeId
+      Id: g=069333f3c3128d3623c8358fd1c402d2
       Type: BaseDataVariableType
       DataType: NodeId
     - Name: LocalTime
+      Id: g=2cfc811346450456eabf743fdcc65d54
       Type: BaseDataVariableType
       DataType: TimeZoneDataType
     - Name: OvenName
+      Id: g=447fde9298174e22baaff8c035d3b6f1
       Type: BaseDataVariableType
       DataType: String
   - Name: EventFieldsToLog
+    Id: g=6b29d3b3ace97db650d3248135faa620
     Type: BaseObjectType
     Children:
     - Name: ActiveState_Id
+      Id: g=06a5ee489ae9218f71aa4fa86f11b6b9
       Type: EventFieldToLog
       DataType: Boolean
       Children:
       - Name: DynamicLink
+        Id: g=1435896c8c075474ac4788924a86bc3f
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/ActiveState_Id"
         Children:
         - Name: Mode
+          Id: g=29f4f923ace69bae2b074ca9162f87cf
           Type: BaseVariableType
           DataType: DynamicLinkMode
           Value: 2
     - Name: AckedState_Id
+      Id: g=e0a241c70709738139a1eec8e71fca84
       Type: EventFieldToLog
       DataType: Boolean
       Children:
       - Name: DynamicLink
+        Id: g=366d19bd0fa6371d8f756dfc607b7c4e
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/AckedState_Id"
         Children:
         - Name: Mode
+          Id: g=7828f6df44238b3d938f78959507ae6b
           Type: BaseVariableType
           DataType: DynamicLinkMode
           Value: 2
     - Name: ConfirmedState_Id
+      Id: g=ba118f496b7b09fae7c40d246277fdb3
       Type: EventFieldToLog
       DataType: Boolean
       Children:
       - Name: DynamicLink
+        Id: g=ef0c61850e21c54ddc013ac42e217b74
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/ConfirmedState_Id"
         Children:
         - Name: Mode
+          Id: g=ae42035cb4fd479c1bfab2ea3a23f1da
           Type: BaseVariableType
           DataType: DynamicLinkMode
           Value: 2
     - Name: ConditionName
+      Id: g=508f689a61f9e2da17b4daff15a707a9
       Type: EventFieldToLog
       DataType: String
       Children:
       - Name: DynamicLink
+        Id: g=1d9b50ada6063a615c7171b7e96207f8
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/ConditionName"
         Children:
         - Name: Mode
+          Id: g=4f084fc8a8e84ed6e0bc1849fe79e25e
           Type: BaseVariableType
           DataType: DynamicLinkMode
           Value: 2
     - Name: EnabledState_Id
+      Id: g=9a05e1110cfcbdc1b8690287890ed8f7
       Type: EventFieldToLog
       DataType: Boolean
       Children:
       - Name: DynamicLink
+        Id: g=219c2cac4ff575e3ef44f63b479e676c
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/EnabledState_Id"
         Children:
         - Name: Mode
+          Id: g=03a7f806285cd920c6b00b9d22a2bd1e
           Type: BaseVariableType
           DataType: DynamicLinkMode
           Value: 2
     - Name: SourceName
+      Id: g=00f9a27f217d9da3ac60abd059773081
       Type: EventFieldToLog
       DataType: String
       Children:
       - Name: DynamicLink
+        Id: g=3e17037084cdde502b8d6f85773062f2
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/SourceName"
         Children:
         - Name: Mode
+          Id: g=6c6857fb0d5586ff148cef12f47a820b
           Type: BaseVariableType
           DataType: DynamicLinkMode
           Value: 2
     - Name: Time
+      Id: g=c0d6ff0b2dc80ad15fa224bd55433716
       Type: EventFieldToLog
       DataType: UtcTime
       Children:
       - Name: DynamicLink
+        Id: g=ddb5b9122e02183407575139560954a6
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/Time"
         Children:
         - Name: Mode
+          Id: g=dce2e3c21872e5c4320bd3144b4c914b
           Type: BaseVariableType
           DataType: DynamicLinkMode
           Value: 2
     - Name: Message
+      Id: g=84b40583330101685a7be240a4edf361
       Type: EventFieldToLog
       DataType: LocalizedText
       Children:
       - Name: DynamicLink
+        Id: g=ae0789d04e55ae635478b3450c9465cd
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/Message"
         Children:
         - Name: Mode
+          Id: g=020ae55316767ea2e640181922f39bbc
           Type: BaseVariableType
           DataType: DynamicLinkMode
           Value: 2
     - Name: Severity
+      Id: g=18be991aa4d718d3fa204e667c404c7f
       Type: EventFieldToLog
       DataType: UInt16
       Children:
       - Name: DynamicLink
+        Id: g=ddac4582a49b2c1c846673acb6a9a1b5
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/Severity"
         Children:
         - Name: Mode
+          Id: g=3db4d0735a6406fd941ceccc8d71a56c
           Type: BaseVariableType
           DataType: DynamicLinkMode
           Value: 2
     - Name: LocalTime
+      Id: g=735673786d094b77393d32b9b1f56001
       Type: EventFieldToLog
       DataType: DateTime
       Children:
       - Name: ExpressionEvaluator1
+        Id: g=344131973c4133b3e7b13ad02f9d3f2f
         Type: ExpressionEvaluator
         Children:
         - Name: Expression
+          Id: g=293ec323d682fbe375e32ebf8e9346bd
           Type: BaseDataVariableType
           DataType: String
           ReferenceType: HasParameter
           Value: "{0} + {1}"
         - Name: ns=2;Source0
+          Id: g=8003487eac768ef033a60592c20d9611
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
+            Id: g=61ddbdf5d0d2e1e6017552866ba6afe3
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../../EventArguments/Time"
         - Name: ns=2;Source1
+          Id: g=07e0ced9a4d664f13db42286603af868
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
+            Id: g=1e92a9259a5873dc371631dc9d95311a
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../../EventArguments/LocalTime"
     - Name: OvenName
+      Id: g=6e318ce5223880d803f3f2a73ffac179
       Type: EventFieldToLog
       DataType: String
       Children:
       - Name: DynamicLink
+        Id: g=1b15a157b33c6a55d03833351f9fe435
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/OvenName"
   - Name: ns=4;LibraryReference
+    Id: g=63d5dd74d1e871b3f813b0585e84912f
     Type: ObjectLibraryReference
     DataType: ObjectLibraryReferenceDataType
     Value: 
@@ -1032,111 +380,140 @@ Children:
       }
      }
 - Name: RuntimeOutputLogger
+  Id: g=e54da930b47b3407fea6784b6599bb0a
   Type: EventLogger
   WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
   Children:
   - Name: Enabled
+    Id: g=c7068d9d543c2ff4acf5abd394e64267
     Type: PropertyType
     DataType: Boolean
     Value: true
   - Name: Store
+    Id: g=3e52aa4a520d97983957721c19a148e3
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/Optix_Demo_OvenDemo_Server/DataStores/EmbeddedDatabase"
     Children:
     - Name: Kind
+      Id: g=eb8fc52b1de930d738e1b4feacdc5ba7
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/Store"
   - Name: EventConfigurations
+    Id: g=d88b12a048aeb8548a3078b5193155cd
     Type: BaseObjectType
     Children:
     - Name: EventConfiguration1
+      Id: g=1aeaa654cfd5621af4026d041f78370d
       Type: EventConfiguration
       Children:
       - Name: EventType
+        Id: g=dbcbd31f84103bdd163fd35ac925568e
         Type: NodePointer
         DataType: NodeId
         ReferenceType: HasProperty
         Value: "/Types/EventTypes/BaseEventType/LogEvent"
         Children:
         - Name: Kind
+          Id: g=a90fbcbef95deb7d9abdfc172d6788ee
           Type: PropertyType
           DataType: NodeId
           Value: "/Types/EventTypes/BaseEventType"
   - Name: EventFieldPaths
+    Id: g=e117f2d65dad34aaf1fbcc5c959cd1b8
     Type: BaseObjectType
     Children:
     - Name: Message
+      Id: g=d163b744ffd63d2980a72ff34854a6fa
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:Message"
     - Name: ModuleName
+      Id: g=28aee2c090e01feaba9de3cd112436c4
       Type: EventFieldPath
       DataType: NodePath
       Value: "/1:ModuleName"
     - Name: Time
+      Id: g=a32cc56322d1ed90b7b095e8d2700d6c
       Type: EventFieldPath
       DataType: NodePath
       Value: "/0:Time"
     - Name: Level
+      Id: g=df68e541328421dadb8aed2f929c85ea
       Type: EventFieldPath
       DataType: NodePath
       Value: "/1:Level"
   - Name: EventArguments
+    Id: g=4b31d448299aa4cf8dad28e600fe08f8
     Type: BaseObjectType
     Children:
     - Name: EventTypeId
+      Id: g=cd1fee8e5a1c15dc1b0eeb2ab8d6a093
       Type: BaseDataVariableType
       DataType: NodeId
     - Name: Message
+      Id: g=04df358e71d21f1cec4984cb2ef4153f
       Type: BaseDataVariableType
       DataType: LocalizedText
     - Name: ModuleName
+      Id: g=4d8542f4e9d778483fdb03d179176077
       Type: BaseDataVariableType
       DataType: String
     - Name: Time
+      Id: g=b33ea53f0571218a44b958225cbaeddb
       Type: BaseDataVariableType
       DataType: UtcTime
     - Name: Level
+      Id: g=2125573d19d15261cb062817003d0124
       Type: BaseDataVariableType
       DataType: LogLevel
   - Name: EventFieldsToLog
+    Id: g=8b1e5a458eaba7b3b8e6db69a4b1f998
     Type: BaseObjectType
     Children:
     - Name: Message
+      Id: g=36f4330dc9e92d6f532c308146183517
       Type: EventFieldToLog
       DataType: LocalizedText
       Children:
       - Name: DynamicLink
+        Id: g=a9201b55b92f39beede125493c85d9b5
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/Message"
     - Name: ModuleName
+      Id: g=3527f83f4144d7eb1044337dbc2dee4d
       Type: EventFieldToLog
       DataType: String
       Children:
       - Name: DynamicLink
+        Id: g=66b81454d80ca6dee70e19ccdbf978ad
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/ModuleName"
     - Name: Time
+      Id: g=94939eb6cb55ab563953de19d83435a5
       Type: EventFieldToLog
       DataType: UtcTime
       Children:
       - Name: DynamicLink
+        Id: g=91eb3a827660263424de8ed401da375b
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/Time"
     - Name: Level
+      Id: g=ba8f20f36c08bbe7d035a18ecc9b2882
       Type: EventFieldToLog
       DataType: LogLevel
       Children:
       - Name: DynamicLink
+        Id: g=900781d0e8c7059b997ecdd8bb0cff2c
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/Level"
   - Name: ns=4;LibraryReference
+    Id: g=8b82175a3c96e2932edd89d1267b8770
     Type: ObjectLibraryReference
     DataType: ObjectLibraryReferenceDataType
     Value: 

@@ -1,0 +1,126 @@
+Name: Onboarding
+Id: g=f842a5548105f4ce54169ea346d8ea62
+Type: FolderType
+Children:
+- File: DataType/DataType.yaml
+- Name: OnboardingRequestPayload
+  Id: g=7029ef043b6c11ac9c249e9a848faac8
+  Type: BaseDataVariableType
+  DataType: String
+  Description: {"NamespaceIndex":7,"TextId":"This variable is the target for the MQTT Onboarding subscriber. It will contain the payload in JSON format"}
+- Name: PendingRequestAvailable
+  Id: g=693eaa66f4ee1f730475d74ca9313caf
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: PendingRequestCount
+  Id: g=8d0e07e66e57c25f5c05ce6e166f3622
+  Type: BaseDataVariableType
+  DataType: Int32
+- File: PendingRequests/PendingRequests.yaml
+- Name: OnboardRequestPayloadChanged
+  Id: g=bb0a76d92aefb39798ef602a75c46076
+  Type: VariableChangedEventDispatcher
+  Children:
+  - Name: VariableNodePath
+    Id: g=b007357e92176f448da2ed3579580913
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../OnboardingRequestPayload"
+  - Name: VariableValueChangedEventHandler1
+    Id: g=7b2a3d8a52ebfe7d75ce1b963c4dfcf9
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Id: g=e1e3e742288980b490e000506aa6f5b7
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
+    - Name: MethodsToCall
+      Id: g=c9382f1f9ff066f4f4180ed33f1d3119
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer1
+        Id: g=10f3765e1a28c436eda5c6b81709a784
+        Type: BaseObjectType
+        Children:
+        - Name: ns=2;ObjectPointer
+          Id: g=1b3d0cf9c5bbc1d6deb3dd0f36829ed8
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: Kind
+            Id: g=30490d41b28e8df4663d8e6f598d000a
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: DynamicLink
+            Id: g=5a67efeca7a84d74f3acf504cbcac6cd
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../OnboardingLogic@NodeId"
+            Children:
+            - Name: Mode
+              Id: g=f124b9c8664a82090c20ee9c4da5f511
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+        - Name: ns=2;Method
+          Id: g=50fcebea1dd966eaba06d8beb8e364ca
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PendingRequestHandler"
+    - Name: EventArguments
+      Id: g=388e72a12bf0d6516a4ae60e5575772e
+      Type: VariableValueChangedEvent
+      Children:
+      - Name: VariableNodeId
+        Id: g=22a44ef22a7ad014dac69f44884c85a0
+        Type: BaseVariableType
+        DataType: NodeId
+      - Name: NewValue
+        Id: g=41eefc5674b685881c1a914134f14692
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: OldValue
+        Id: g=1955e1c35eeb71142041a8b07e6b0f5e
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: EventId
+        Id: g=a8f84f1c0c04610fd77d47204e0965a3
+        Type: PropertyType
+        DataType: ByteString
+      - Name: EventType
+        Id: g=dbb21dd4ecaaf8b6b21fdb31893c6e58
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceNode
+        Id: g=f0545794524cdc4ea0050561215b59c0
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceName
+        Id: g=e9c7abb47d7a364fabaf05a4b140a1fa
+        Type: PropertyType
+        DataType: String
+      - Name: Time
+        Id: g=a02ba5657c6fb8d901eaad8813bc2868
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: ReceiveTime
+        Id: g=bbf66406f815ea415627acf35c4cc650
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: Message
+        Id: g=5d518d2b4f1b093f1175f776542c6257
+        Type: PropertyType
+        DataType: LocalizedText
+      - Name: Severity
+        Id: g=c9ae3d2ec3bf4de43b5355198646409a
+        Type: PropertyType
+        DataType: UInt16
+- Name: OnboardingLogic
+  Id: g=96c4b284c7245b81f75d9d58b8262405
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: PendingRequestHandler
+    Id: g=9313527dc6d1890152c2f388eedca862

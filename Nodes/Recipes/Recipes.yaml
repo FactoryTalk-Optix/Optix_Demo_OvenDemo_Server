@@ -1,45 +1,60 @@
 Name: Recipes
+Id: g=f4810ed6209c7c054be90cf3f2c91b37
 Type: RecipesCategoryFolder
 Children:
 - Name: RecipeSchema
-  Id: g=8c3f531b03a7988b1ff65d705d8e3988
+  Id: g=ba6adff905cf79351a562b6a7942ec70
   Type: RecipeSchema
   Children:
   - Name: TargetNode
+    Id: g=cb89e112b5154fd4e34ee6dfdc4c8d2d
     Type: NodePointer
     DataType: NodeId
-    Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/RecipeTarget/OptixOvenRecipeTarget"
+    Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/RecipeTarget/OvenRecipeTarget"
     Children:
     - Name: Kind
+      Id: g=d551cd54b7fbd1f3239c6483b12db835
       Type: PropertyType
       DataType: NodeId
   - Name: Store
+    Id: g=a953988728fe959b2633599424287efe
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/Optix_Demo_OvenDemo_Server/DataStores/EmbeddedDatabase"
     Children:
     - Name: Kind
+      Id: g=f9ae293352c2152565fa4622a2bfc83f
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/Store"
   - Name: Status
+    Id: g=a8d9eca3ac43c2d754f81d71f9e99771
     Type: BaseDataVariableType
     DataType: RecipeSchemaStatus
     AccessLevel: Read
   - Name: Metadata
+    Id: g=b0d6c1dfd11101a89e5aa3386eee08e1
     Type: BaseObjectType
     Children:
-    - Name: Approved
+    - Name: Status
+      Id: g=eba138474d0079d5b0d615d3131b405f
       Type: Metadata
-      DataType: Boolean
+      DataType: UInt32
       ReferenceType: HasOrderedComponent
     - Name: Used
+      Id: g=d331e27476ce7e9091a63b009a90fa4d
       Type: Metadata
       DataType: Boolean
       ReferenceType: HasOrderedComponent
-    - Name: Deprecated
+    - Name: Author
+      Id: g=dc62780a63df28a4d390d3656f886b77
       Type: Metadata
-      DataType: Boolean
+      DataType: String
+      ReferenceType: HasOrderedComponent
+    - Name: Description
+      Id: g=621975b3cdb5e342f0e1a0f3883c2bc1
+      Type: Metadata
+      DataType: String
       ReferenceType: HasOrderedComponent
   - Class: Reference
     Target: ns=27;i=16
