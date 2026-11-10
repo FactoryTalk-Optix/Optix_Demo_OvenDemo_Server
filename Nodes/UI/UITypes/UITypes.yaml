@@ -869,7 +869,7 @@ Children:
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
-  - Name: AlarmCount
+  - Name: Counter
     Id: g=40e3c724c6e8478d698e6d87fb90139b
     Type: Label
     Children:

@@ -471,6 +471,56 @@ Children:
         DataType: ContentVerticalAlignment
         ModellingRule: Optional
         Value: 1
+    - Name: UnreadBadge
+      Id: g=036345ee73634b28be27f3ea3a48081e
+      Type: Notification
+      Children:
+      - Name: Background
+        Id: g=79af937aff9b38ecb50cd6e00e99623a
+        Type: Ellipse
+        Children:
+        - Name: FillColor
+          Id: g=fa5b89de102f621a7a6fc61c09f55e73
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#c9363b"
+      - Name: Counter
+        Id: g=0989b54561300ef569ca35eb65919c2b
+        Type: Label
+        Children:
+        - Name: Text
+          Id: g=f76f797999c74d962aaf7b5d9360f3e3
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+      - Name: Visible
+        Id: g=3aefee74fd6bfe4dc0168738efbcc801
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=732eab9d00c04227ab8bb5e86524cfb3
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=378213a215295575b78d470b0e677f30
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0} > 0"
+          - Name: Source0
+            Id: g=448ecb13794749a0bb4c85d07f07c371
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=acf8671ae64941c2b6f68b4515c40a75
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{RowItem}/Chat/UnreadCount"
   - Name: HorizontalAlignment
     Id: g=bf673b653ec18ca60cefa51bedef3a04
     Type: BaseVariableType

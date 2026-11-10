@@ -19,3 +19,11 @@ Children:
     Type: BaseVariableType
     DataType: NodePath
     Value: "../Revision"
+- Name: UnreadCount
+  Id: g=cddef3f9ae6141e1939e19a066250348
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: UnreadAvailable
+  Id: g=280b3fbb264947e9b856a52558cfd92f
+  Type: BaseDataVariableType
+  DataType: Boolean

@@ -310,7 +310,7 @@ Children:
         Id: g=6980fbbe6d89fc1e2c70df3ab36fe785
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#b3b3b3"
+        Value: "#235d9f"
     - Name: Pair2
       Id: g=570b3a01af55a703faa781ecc3be9666
       Type: ValueMapPair
@@ -324,7 +324,7 @@ Children:
         Id: g=35333603ff3d65269ff53344b000c2cd
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#b3b3b3"
+        Value: "#3aa76d"
     - Name: Pair3
       Id: g=c291730f552abbdfe18c6f551bb32104
       Type: ValueMapPair
@@ -776,4 +776,4 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: None
-        Value: "#35c46a"
+        Value: "#3aa76d"

@@ -390,7 +390,7 @@ Children:
                 Id: g=a89b838b20c6de4427e1bbab3025e3c8
                 Type: BaseDataVariableType
                 DataType: Color
-                Value: "#b3b3b3"
+                Value: "#235d9f"
             - Name: Pair2
               Id: g=feec64a4b9ad0331560e48c87e3ef9db
               Type: ValueMapPair
@@ -404,7 +404,7 @@ Children:
                 Id: g=2aa7d35ba336583f288ecec293cdb509
                 Type: BaseDataVariableType
                 DataType: Color
-                Value: "#b3b3b3"
+                Value: "#3aa76d"
             - Name: Pair3
               Id: g=3f44f99d1b82e8f5908cfe1e857958cd
               Type: ValueMapPair

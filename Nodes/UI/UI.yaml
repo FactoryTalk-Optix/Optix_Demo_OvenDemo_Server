@@ -2992,7 +2992,7 @@ Children:
                       Type: BaseDataVariableType
                       DataType: Size
                       ModellingRule: Optional
-                  - Name: AlarmCount
+                  - Name: Counter
                     Id: g=1bdbaaa27f042d69067d036cca5b2b83
                     Type: Label
                     Children:
@@ -3423,7 +3423,7 @@ Children:
                       Type: BaseDataVariableType
                       DataType: Size
                       ModellingRule: Optional
-                  - Name: AlarmCount
+                  - Name: Counter
                     Id: g=eb3e9f5c70f3e6e71ed87a3100c21d51
                     Type: Label
                     Children:
@@ -3821,7 +3821,7 @@ Children:
                       Type: BaseDataVariableType
                       DataType: Size
                       ModellingRule: Optional
-                  - Name: AlarmCount
+                  - Name: Counter
                     Id: g=a4817c2abc94a8c2436f0aa902bfbec5
                     Type: Label
                     Children:
@@ -3834,7 +3834,7 @@ Children:
                         Id: g=d1cc472a59b5c54ba7cda4a9cf8edb44
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Onboarding/PendingRequestCount"
+                        Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Chat/UnreadCount"
                     - Name: TextColor
                       Id: g=a21fc0a03301425902fd6174263c3c9f
                       Type: BaseDataVariableType
@@ -3851,160 +3851,12 @@ Children:
                     Id: g=848ff8fe7b8b67a066dcf8769bb75563
                     Type: BaseDataVariableType
                     DataType: Boolean
-                  - Name: VariableValueChangedEventHandler1
-                    Id: g=b3f1975cb56eb38ddc908af1cb80696f
-                    Type: EventHandler
                     Children:
-                    - Name: ListenEventType
-                      Id: g=5d7220816dd277f5c2d942e6042bbe26
-                      Type: PropertyType
-                      DataType: NodeId
-                      Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
-                    - Name: ListenObject
-                      Id: g=3c05103da08eef845cd0143f6227982b
-                      Type: NodePointer
-                      DataType: NodeId
-                      ReferenceType: HasProperty
-                      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Chat/RevisionChanged"
-                      Children:
-                      - Name: Kind
-                        Id: g=b829c068cf508a928f8b8ac4760515bb
-                        Type: PropertyType
-                        DataType: NodeId
-                        Value: "/Types/ObjectTypes/BaseObjectType"
-                      - Name: NodeClass
-                        Id: g=7a92dc49cfc878501ef32ea8051ea135
-                        Type: PropertyType
-                        DataType: NodePointerNodeClass
-                        ModellingRule: Optional
-                    - Name: MethodsToCall
-                      Id: g=91f2a051cb9452050bb44bc0977e68bd
-                      Type: BaseObjectType
-                      Children:
-                      - Name: MethodContainer1
-                        Id: g=11dfc1d224df07ba76737022ae2a4167
-                        Type: BaseObjectType
-                        Children:
-                        - Name: ns=2;ObjectPointer
-                          Id: g=aabc962abd4fb9e5cdac4ad545ce6671
-                          Type: NodePointer
-                          DataType: NodeId
-                          Value: "/Objects/Commands/VariableCommands"
-                          Children:
-                          - Name: Kind
-                            Id: g=751a47520ea648e27833bd743bdec4a6
-                            Type: PropertyType
-                            DataType: NodeId
-                            Value: "/Types/ObjectTypes/BaseObjectType"
-                        - Name: ns=2;Method
-                          Id: g=f8438d04f48d4958e799066ba14cb89e
-                          Type: BaseDataVariableType
-                          DataType: String
-                          Value: "Set"
-                        - Name: InputArguments
-                          Id: g=e1fc5f2747ec4219cafbe02d99d187a9
-                          Type: BaseObjectType
-                          Children:
-                          - Name: VariableToModify
-                            Id: g=cd7256f0aa762c8321bca364e4d14cc4
-                            Type: BaseDataVariableType
-                            DataType: VariablePointer
-                            Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
-                            Children:
-                            - Name: DynamicLink
-                              Id: g=969e1ceb314144591b92a8381f710ce0
-                              Type: DynamicLink
-                              DataType: NodePath
-                              Value: "../../../../../Visible@NodeId"
-                          - Name: Value
-                            Id: g=e49742871c8746f67a16d0c67551ad3a
-                            Type: BaseDataVariableType
-                            DataType: Boolean
-                            Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
-                            Value: true
-                          - Name: ArrayIndex
-                            Id: g=b6e0e30effa9a3dcae39f4bb3480cbdc
-                            Type: BaseDataVariableType
-                            DataType: UInt32
-                            Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
-                            ValueRank: ScalarOrOneDimension
-                    - Name: EventArguments
-                      Id: g=bdc9133d9d671e0fdf027a8dfb819431
-                      Type: VariableValueChangedEvent
-                      Children:
-                      - Name: VariableNodeId
-                        Id: g=4d7f168b444fc6e1dffad1f6c8ec71eb
-                        Type: BaseVariableType
-                        DataType: NodeId
-                      - Name: NewValue
-                        Id: g=ce8e825b1092492ec98c463937fcb13a
-                        Type: BaseVariableType
-                        DataType: BaseDataType
-                      - Name: OldValue
-                        Id: g=fb7520769f63fb8f91bbe3ffa964323f
-                        Type: BaseVariableType
-                        DataType: BaseDataType
-                      - Name: EventId
-                        Id: g=e6316cdcfdd09db4d46c0cd71f4bf4c0
-                        Type: PropertyType
-                        DataType: ByteString
-                      - Name: EventType
-                        Id: g=24cfc9e1d424bea57be14b7df90c717c
-                        Type: PropertyType
-                        DataType: NodeId
-                      - Name: SourceNode
-                        Id: g=31d7bf9bb75553cf7d24d1fce07f7861
-                        Type: PropertyType
-                        DataType: NodeId
-                      - Name: SourceName
-                        Id: g=758685ec3ec6f21cfd4fd97a6e8e5125
-                        Type: PropertyType
-                        DataType: String
-                      - Name: Time
-                        Id: g=808a0f6e1b66af1545075f0b15a6fee2
-                        Type: PropertyType
-                        DataType: UtcTime
-                      - Name: ReceiveTime
-                        Id: g=b7caf0e7e18dff466f8d866fd8ce3f3d
-                        Type: PropertyType
-                        DataType: UtcTime
-                      - Name: LocalTime
-                        Id: g=4e788846f81aa3cb663c6f63a5f390f9
-                        Type: PropertyType
-                        DataType: TimeZoneDataType
-                        ModellingRule: Optional
-                      - Name: Message
-                        Id: g=be0e4ad2cb942398a1581b13bd963f4d
-                        Type: PropertyType
-                        DataType: LocalizedText
-                      - Name: Severity
-                        Id: g=2099380c21d021e8ab3b6d635a266b6c
-                        Type: PropertyType
-                        DataType: UInt16
-                      - Name: ConditionClassId
-                        Id: g=b4b7670e4dac7030e73c9ded195c0096
-                        Type: PropertyType
-                        DataType: NodeId
-                        ModellingRule: Optional
-                      - Name: ConditionClassName
-                        Id: g=b116419ea516e607e62337cf928fd0ab
-                        Type: PropertyType
-                        DataType: LocalizedText
-                        ModellingRule: Optional
-                      - Name: ConditionSubClassId
-                        Id: g=7ef0ab6d7918281c8710c2280825ce73
-                        Type: PropertyType
-                        DataType: NodeId
-                        ModellingRule: Optional
-                        ValueRank: OneDimension
-                        ArrayDimensions: [0]
-                      - Name: ConditionSubClassName
-                        Id: g=ba0ff0b2a1d2af533f3396b64d82fa0b
-                        Type: PropertyType
-                        DataType: LocalizedText
-                        ModellingRule: Optional
-                        ValueRank: OneDimension
-                        ArrayDimensions: [0]
+                    - Name: DynamicLink
+                      Id: g=60c9a1779ed9407eb164610b9d86056d
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Chat/UnreadAvailable"
                 - Name: Icon
                   Id: g=946407e0fb1b25b6cca2400e76233480
                   Type: Image
