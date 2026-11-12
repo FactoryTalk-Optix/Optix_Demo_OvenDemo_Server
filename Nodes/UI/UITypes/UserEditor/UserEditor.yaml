@@ -1613,9 +1613,6 @@ Children:
               - Class: Reference
                 Target: ns=3;i=480
                 Direction: Forward
-              - Name: LocaleComboBoxLogic
-                Id: g=f67c1df6cf544798201f91c6ff50806d
-                Type: NetLogic
               - Name: Width
                 Id: g=637a0c9d0f327603f81d1cb43df79d5d
                 Type: BaseVariableType
@@ -1666,6 +1663,9 @@ Children:
                 Type: BaseVariableType
                 DataType: Size
                 ModellingRule: Optional
+              - Name: LocaleComboBoxLogic
+                Id: g=bb78c12fae4c878efaeb93af603e7f4b
+                Type: NetLogic
             - Name: TopMargin
               Id: g=d9fc01e972927188f1d16207f3ea7c0f
               Type: BaseVariableType
@@ -2590,9 +2590,6 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 190.0
-  - Name: LocaleComboBoxLogic
-    Id: g=1b5d796bfce0fdfcc303c9aa6d31a7d3
-    Type: NetLogic
   - Name: UISelectedItem
     Id: g=5a776bbe5160e8b1c56d21f4bdbc86e3
     Type: BaseDataVariableType
@@ -2603,6 +2600,9 @@ Children:
     Type: BaseDataVariableType
     DataType: BaseDataType
     AccessLevel: Read
+  - Name: LocaleComboBoxLogic
+    Id: g=f7f1ce927733396950123b2da8f62692
+    Type: NetLogic
 - Name: GroupLabel
   Id: g=afda0892d5c44afba23321f448ed20f5
   Supertype: Panel
@@ -3321,9 +3321,6 @@ Children:
               - Class: Reference
                 Target: ns=3;i=480
                 Direction: Forward
-              - Name: LocaleComboBoxLogic
-                Id: g=743c224695bf7931e40d4ec657760154
-                Type: NetLogic
               - Name: Width
                 Id: g=866b194e07466de2d169604e72e254ff
                 Type: BaseVariableType
@@ -3364,6 +3361,9 @@ Children:
                 DataType: Size
                 ModellingRule: Optional
                 Value: 70.0
+              - Name: LocaleComboBoxLogic
+                Id: g=076180b3db65d52fa529f3f7951c1bcc
+                Type: NetLogic
             - Name: TopMargin
               Id: g=8d56183fffa84c836febd5f95fd9486e
               Type: BaseVariableType

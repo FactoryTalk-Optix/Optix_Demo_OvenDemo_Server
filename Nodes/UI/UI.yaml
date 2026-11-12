@@ -374,173 +374,6 @@ Children:
     DataType: String
     ReferenceType: HasProperty
     AccessLevel: Read
-  - Name: Theme
-    Id: g=ef33c93f132dd6c7ec34a1b738eaa752
-    Type: BaseDataVariableType
-    DataType: Theme
-  - Name: ThemeChanged1
-    Id: g=1a932452c0ec8217003fc472a454fd0d
-    Type: VariableChangedEventDispatcher
-    Children:
-    - Name: VariableNodePath
-      Id: g=1abadee99717193f9f00630f675d63f3
-      Type: BaseVariableType
-      DataType: NodePath
-      Value: "../Theme"
-    - Name: VariableValueChangedEventHandler1
-      Id: g=75afeba02ffddcdeda145e4c81ef4eac
-      Type: EventHandler
-      Children:
-      - Name: ListenEventType
-        Id: g=49f963ee0b6d562daf9f07ba4833ea35
-        Type: PropertyType
-        DataType: NodeId
-        Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
-      - Name: MethodsToCall
-        Id: g=73ff067edf7850374676cecb7b92fa6e
-        Type: BaseObjectType
-        Children:
-        - Name: MethodContainer1
-          Id: g=64e06fb3a92ac0e93633a4a8ef78fd5b
-          Type: BaseObjectType
-          Children:
-          - Name: ns=2;ObjectPointer
-            Id: g=54ba4454d16f0f54a5f044e15331e54d
-            Type: NodePointer
-            DataType: NodeId
-            Value: "/Objects/Commands/VariableCommands"
-            Children:
-            - Name: Kind
-              Id: g=7fb90c8e80a41f4c71fa8ec2208bc0bf
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/ObjectTypes/BaseObjectType"
-          - Name: ns=2;Method
-            Id: g=c315f7b4199fb613d800df8dee1b9368
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "Set"
-          - Name: InputArguments
-            Id: g=206eda5a135ed6bf6f562d26d0c03c91
-            Type: BaseObjectType
-            Children:
-            - Name: VariableToModify
-              Id: g=f67d7f006fde9b77cf2752225b4ea786
-              Type: BaseDataVariableType
-              DataType: VariablePointer
-              Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
-              Children:
-              - Name: DynamicLink
-                Id: g=ebcb5d86340a09ae655261858943e610
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../../StyleSheet@Pointer@NodeId"
-            - Name: Value
-              Id: g=e01d689a6a1cfb849b2beae035f1a998
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
-              Children:
-              - Name: KeyValueConverter1
-                Id: g=4c0658c69a9ce3d70bc5d8943d4573b2
-                Type: ValueMapConverter
-                Children:
-                - Name: Source
-                  Id: g=38277ec399828d748c2cdfb702f6f7ee
-                  Type: BaseDataVariableType
-                  DataType: BaseDataType
-                  ReferenceType: HasSource
-                  Children:
-                  - Name: DynamicLink
-                    Id: g=19b5d9f7dda209a3866e49872b2abd71
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "../../../../../../../../Theme"
-                - Name: ns=2;Pairs
-                  Id: g=78149d4d82ac66a04ce6f26b2b97d962
-                  Type: BaseObjectType
-                  Children:
-                  - Name: Pair
-                    Id: g=19811b4651b221b131196942600ff9c8
-                    Type: ValueMapPair
-                    Children:
-                    - Name: Key
-                      Id: g=6ebd3e1aa08b51c3b8886a2fc4b5b416
-                      Type: BaseDataVariableType
-                      DataType: Theme
-                    - Name: Value
-                      Id: g=5f9dd90c143aed4cd1288ddf91ad1b78
-                      Type: BaseDataVariableType
-                      DataType: NodeId
-                      Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/StyleSheets/Light"
-                  - Name: Pair1
-                    Id: g=79c6d2960c64986c0cf9fc8c975b7b34
-                    Type: ValueMapPair
-                    Children:
-                    - Name: Key
-                      Id: g=996127b1e9340485611dce43f476e312
-                      Type: BaseDataVariableType
-                      DataType: Theme
-                      Value: 1
-                    - Name: Value
-                      Id: g=644bcf62536b66e65e1714329b366c67
-                      Type: BaseDataVariableType
-                      DataType: NodeId
-                      Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/StyleSheets/Dark"
-            - Name: ArrayIndex
-              Id: g=a7c202078710d047a76889b98e731ee4
-              Type: BaseDataVariableType
-              DataType: UInt32
-              Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
-              ValueRank: ScalarOrOneDimension
-      - Name: EventArguments
-        Id: g=536a742a7a606e6417f3b48c101d0028
-        Type: VariableValueChangedEvent
-        Children:
-        - Name: VariableNodeId
-          Id: g=d0a7b48be3265dece0edc0529b99cd0a
-          Type: BaseVariableType
-          DataType: NodeId
-        - Name: NewValue
-          Id: g=7e0136e84f73af9e8b8b7c913b29e5d0
-          Type: BaseVariableType
-          DataType: BaseDataType
-        - Name: OldValue
-          Id: g=4ea545498100eebc5838f8a43070135f
-          Type: BaseVariableType
-          DataType: BaseDataType
-        - Name: EventId
-          Id: g=3ddbdc836b428cd55c065a0938be94d3
-          Type: PropertyType
-          DataType: ByteString
-        - Name: EventType
-          Id: g=3862a897a6716a81243093877d408a8c
-          Type: PropertyType
-          DataType: NodeId
-        - Name: SourceNode
-          Id: g=85eb27e93fe734587b93ea10fcf2c9b8
-          Type: PropertyType
-          DataType: NodeId
-        - Name: SourceName
-          Id: g=cd545f2ceedf9f36685c1e1fb8b0cc55
-          Type: PropertyType
-          DataType: String
-        - Name: Time
-          Id: g=c70976ca4f594c1cb927748f0539f16f
-          Type: PropertyType
-          DataType: UtcTime
-        - Name: ReceiveTime
-          Id: g=50dba9a4bb93d12aa3cd457626d68e12
-          Type: PropertyType
-          DataType: UtcTime
-        - Name: Message
-          Id: g=a926fd91f8b897fa88df0019567da143
-          Type: PropertyType
-          DataType: LocalizedText
-        - Name: Severity
-          Id: g=812345482720383bca059c52b16c1823
-          Type: PropertyType
-          DataType: UInt16
   - Class: Reference
     Target: ns=3;i=1464
     Direction: Forward
@@ -553,6 +386,271 @@ Children:
   - Class: Reference
     Type: GeneratesEvent
     Target: ns=3;i=1468
+  - Name: LightDarkTheme
+    Id: g=b120c5d4c685693526d3053258d943d6
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: LightDarkThemeTransitioned1
+    Id: g=f012164b1331b6d330928fb009c8093e
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Id: g=0fc6a484678ea7974aa1f7b62c6d32dc
+      Type: BaseVariableType
+      DataType: Double
+    - Name: Transition
+      Id: g=b4c8c57e1c542c7a5ee06cc594f1196f
+      Type: BaseVariableType
+      DataType: VariableTransition
+    - Name: VariableNodePath
+      Id: g=d0831424c78b73a90ac78639ed4cd944
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../LightDarkTheme"
+    - Name: VariableTransitionEventHandler1
+      Id: g=4494ab28e89e03321289e2d59e3b6271
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=f387e344f80bac173fcf68a691e8da0a
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableTransitionEvent"
+      - Name: MethodsToCall
+        Id: g=85ee64bd13911cd236a479db0c72982e
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=75adc99176030627cd78b07cf81377d3
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Id: g=a2e8d8e5e00302167d75cac1f9204718
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Commands/VariableCommands"
+            Children:
+            - Name: Kind
+              Id: g=e7c3115a3227c1489485fe53a5100bbf
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=2;Method
+            Id: g=0597e37969d93671bbf910cd8a456a9b
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Set"
+          - Name: InputArguments
+            Id: g=c70babe595607c479d806fb4e4c56708
+            Type: BaseObjectType
+            Children:
+            - Name: VariableToModify
+              Id: g=2c7c2cb52ba5abbdfbf9397e6bbe3928
+              Type: BaseDataVariableType
+              DataType: VariablePointer
+              Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
+              Children:
+              - Name: DynamicLink
+                Id: g=fa926fcf006446e48fef4986956ad7ce
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Session}/StyleSheet@Pointer@NodeId"
+            - Name: Value
+              Id: g=51ad92a6061e24cde1332ba36a99f91c
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
+              Children:
+              - Name: DynamicLink
+                Id: g=bca1b9c77dece5bcf0239ebde4dbec4f
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/StyleSheets/Light"
+            - Name: ArrayIndex
+              Id: g=f5a67b31d31fdac7375c84549dabebb1
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
+              ValueRank: ScalarOrOneDimension
+      - Name: EventArguments
+        Id: g=64aee757fdae37b58f55802e415a976c
+        Type: VariableTransitionEvent
+        Children:
+        - Name: VariableNodeId
+          Id: g=2cec1432e86a10518d3317717d43690a
+          Type: BaseVariableType
+          DataType: NodeId
+        - Name: NewValue
+          Id: g=bf49c0cffb90f988bc774219fbb8039d
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: OldValue
+          Id: g=770bc823ee045b3cb2631c0ad76274de
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: EventId
+          Id: g=03b56e92203f6f25678423f2f1868848
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=1be9136f884bc75656d4ac5c889c3749
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=99d09442e0888df619c0bdbfe4ad8c3a
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=ad00df75e56b274d765c4054a913b5ca
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=f9a19f825f53e5a3bee5765ac59b3f3b
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=38c198ba9a0647e6b0b7ea7e05c5ee87
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=c90f157ca60e51c81d9a7b5fb6832b20
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=f1d73e5c0451db2b0e718a9fbc5cd931
+          Type: PropertyType
+          DataType: UInt16
+  - Name: LightDarkThemeTransitioned2
+    Id: g=b27ea3c950350bec1e6bce9bce3c6526
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Id: g=bc29104c79a717de2822407057349d09
+      Type: BaseVariableType
+      DataType: Double
+      Value: 1.0
+    - Name: Transition
+      Id: g=983b44d3d2fd550f4a7ff3631818b437
+      Type: BaseVariableType
+      DataType: VariableTransition
+    - Name: VariableNodePath
+      Id: g=4947913cc574279f17bf567c2ae7e306
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../LightDarkTheme"
+    - Name: VariableTransitionEventHandler1
+      Id: g=12bbd8457b5f6a347f91bbb2c9444fd9
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=e533702a4261852b01474e076d45e803
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableTransitionEvent"
+      - Name: MethodsToCall
+        Id: g=8126f23ea46ee8539c5f8cb15b80ddb2
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=49178c94eb640f0e987a16d8037966bd
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Id: g=0014e22393e0919f833fc063a2a29779
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Commands/VariableCommands"
+            Children:
+            - Name: Kind
+              Id: g=3da42612f9742f77fb47774c078ae679
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=2;Method
+            Id: g=f7b727df2fde1394c04bafa928434b84
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Set"
+          - Name: InputArguments
+            Id: g=ae61f99634361ac82b49a2f99334da9b
+            Type: BaseObjectType
+            Children:
+            - Name: VariableToModify
+              Id: g=5159b1c177215914d7f0ac1e80643f01
+              Type: BaseDataVariableType
+              DataType: VariablePointer
+              Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
+              Children:
+              - Name: DynamicLink
+                Id: g=c744ff863500871c7bfb978f0ed0d9d7
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Session}/StyleSheet@Pointer@NodeId"
+            - Name: Value
+              Id: g=313f67567438f7a65b9d4a6a40ebbc52
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
+              Children:
+              - Name: DynamicLink
+                Id: g=81f3d981ee838206af5aad8749a84f39
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/StyleSheets/Dark"
+            - Name: ArrayIndex
+              Id: g=9649e686ca7cccdf45c3fc043f8d6b4c
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
+              ValueRank: ScalarOrOneDimension
+      - Name: EventArguments
+        Id: g=f46bef697b13aa16e4ddef6ad9b826ab
+        Type: VariableTransitionEvent
+        Children:
+        - Name: VariableNodeId
+          Id: g=8ddbcfd6e20e6f2a8e84fb703122fc8e
+          Type: BaseVariableType
+          DataType: NodeId
+        - Name: NewValue
+          Id: g=39e934bf3cdf84985881a55707cc73f1
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: OldValue
+          Id: g=36fb49265244ffcc2e6bc1eda2971698
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: EventId
+          Id: g=4608a2ac792293659a6314b5ee22ea83
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=6b8d5bb617909a1f54cbcfbe6dc79283
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=a721c0f3466d17d4547122a191f1378b
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=39cb3c576ebeeb4a49f0e21fafa24894
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=ad0b5a52fa13d2d43a71409da2323c24
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=07b4e032239a771237601712fb17b467
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=7063c13830253918e6f90683fcb956ce
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=fde64d3f4ba65fa833fbfe04d9b1f4a3
+          Type: PropertyType
+          DataType: UInt16
 - Name: BaseStyleSheet
   Id: g=2af83056dfe0999482803875418b560c
   Supertype: StyleSheet
@@ -1863,11 +1961,6 @@ Children:
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Optix_Demo_OvenDemo_Server@BrowseName"
-  - Name: FullScreen
-    Id: g=6d8c9011168f39aab638d56b5fecf222
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
   - Name: div
     Id: g=17e88bcbb3d8138739fae3f0b1322903
     Type: RowLayout
@@ -6993,6 +7086,198 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 16.0
+          - Name: Theme
+            Id: g=62a54044aa19d011e3ecb6e6f515e59b
+            Type: BaseButtonImage
+            Children:
+            - Name: Background
+              Id: g=2e78a7b92f9eca0c2e6701742eea41c9
+              Type: Rectangle
+            - Name: ActionButton
+              Id: g=43e8a9a3cfeaac7c37c6361d9721b0a4
+              Type: Button
+              Children:
+              - Name: MouseClickEventHandler1
+                Id: g=47aade68c2ef4e0dd0c94609bd6607d7
+                Type: EventHandler
+                Children:
+                - Name: ListenEventType
+                  Id: g=ed8ef761ad5f53ea635303a629101e48
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+                - Name: MethodsToCall
+                  Id: g=a54230209e1c2f01dfb4a4eccb2bc7b2
+                  Type: BaseObjectType
+                  Children:
+                  - Name: MethodContainer1
+                    Id: g=e34680e5ca6f99a143e63820d1ccfd9a
+                    Type: BaseObjectType
+                    Children:
+                    - Name: ns=2;ObjectPointer
+                      Id: g=1d823a9a84e73611b5873f4a3d650b1c
+                      Type: NodePointer
+                      DataType: NodeId
+                      Value: "/Objects/Commands/VariableCommands"
+                      Children:
+                      - Name: Kind
+                        Id: g=c17eefcd209c760d898d5c87d2157593
+                        Type: PropertyType
+                        DataType: NodeId
+                        Value: "/Types/ObjectTypes/BaseObjectType"
+                    - Name: ns=2;Method
+                      Id: g=3874f36714e5237acee37a7583716f86
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: "Toggle"
+                    - Name: InputArguments
+                      Id: g=38ee1b763f41872933d32081c9ae6111
+                      Type: BaseObjectType
+                      Children:
+                      - Name: VariableToModify
+                        Id: g=b18b51b127b6218920f20d034f896bfd
+                        Type: BaseDataVariableType
+                        DataType: VariablePointer
+                        Description: {"NamespaceIndex":2,"TextId":"ToggleVariableToModifyDescription"}
+                        Children:
+                        - Name: DynamicLink
+                          Id: g=09d1d3d67360398dbef5dba636c0df6d
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{Session}/LightDarkTheme@NodeId"
+                      - Name: ArrayIndex
+                        Id: g=efef233eb6aa86241418b585fa1a6bdd
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                        Description: {"NamespaceIndex":2,"TextId":"ToggleArrayIndexDescription"}
+                        ValueRank: ScalarOrOneDimension
+                - Name: EventArguments
+                  Id: g=3df256eaa0ae8a0052218aecc902ced2
+                  Type: MouseClickEvent
+                  Children:
+                  - Name: EventId
+                    Id: g=575503ca615372f97b2ad0f10a06513c
+                    Type: PropertyType
+                    DataType: ByteString
+                  - Name: EventType
+                    Id: g=f362f19fbfee4883b9798ed1ba1ac161
+                    Type: PropertyType
+                    DataType: NodeId
+                  - Name: SourceNode
+                    Id: g=b8c90f8ed2fc29d9b371d065e320bf5c
+                    Type: PropertyType
+                    DataType: NodeId
+                  - Name: SourceName
+                    Id: g=55d26687a349314ef79879b16c2a1646
+                    Type: PropertyType
+                    DataType: String
+                  - Name: Time
+                    Id: g=17708f38502809796ffdb8edd15e1163
+                    Type: PropertyType
+                    DataType: UtcTime
+                  - Name: ReceiveTime
+                    Id: g=f8e4484be1c3c40a86b899145156bc20
+                    Type: PropertyType
+                    DataType: UtcTime
+                  - Name: Message
+                    Id: g=4c1f8d7e678cc58a22b565e990a7e6b0
+                    Type: PropertyType
+                    DataType: LocalizedText
+                  - Name: Severity
+                    Id: g=f39e05d0f2ee929ed1ade20a759ab0b7
+                    Type: PropertyType
+                    DataType: UInt16
+            - Name: Content
+              Id: g=082b1b974f9325a363f0ba23a53ae2d6
+              Type: RowLayout
+              Children:
+              - Name: Icon
+                Id: g=f4c388c0497692fae7d7e3cec2382c50
+                Type: Image
+                Children:
+                - Name: Path
+                  Id: g=9d2cd074f05a88cec74a33543b756256
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=7;%PROJECTDIR%/res/icons/image.svg"
+                  Children:
+                  - Name: ConditionalConverter1
+                    Id: g=badb3ac5cd213e8327ab4996e6baaa49
+                    Type: ConditionalConverter
+                    Children:
+                    - Name: Condition
+                      Id: g=7c651e36753562a953412b232e403349
+                      Type: BaseDataVariableType
+                      DataType: Boolean
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=5c2616f0f5017b7d8dea61ae88b2eeee
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "{Session}/LightDarkTheme"
+                    - Name: TrueValue
+                      Id: g=2b82bc8a461b2e37ea4633e20e6ff1a4
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      ReferenceType: HasParameter
+                      ModellingRule: Optional
+                      Value: "ns=7;%PROJECTDIR%/res/dark_mode.svg"
+                    - Name: FalseValue
+                      Id: g=a1c04c6cf346f03187b1fc76eb396303
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      ReferenceType: HasParameter
+                      ModellingRule: Optional
+                      Value: "ns=7;%PROJECTDIR%/res/light_mode.svg"
+                - Name: FillMode
+                  Id: g=2daf7969a0f9bc50e4bbffc20d345f9e
+                  Type: BaseDataVariableType
+                  DataType: ImageFillModeEnum
+                - Name: ColorizationMode
+                  Id: g=adc1f044e31c5053eb7f771ad97b465f
+                  Type: BaseDataVariableType
+                  DataType: ColorizationModeEnum
+                - Name: DynamicColor
+                  Id: g=6f08c86a3f3c96683f6f8db059e8cc8e
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#000000"
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=ad931fa8ebd7161e7e02abd3a0da22a7
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Session}/StyleSheet/Text"
+              - Name: ButtonText
+                Id: g=70a14297fd1a7fef290912d9f657c21b
+                Type: Label
+                Children:
+                - Name: Text
+                  Id: g=dcc808f39d1a9ed1055f4749be51cffb
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=7b76adbb22afa800c713b4ae9eee49d1
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../..@DisplayName"
+                - Name: Style
+                  Id: g=8cb9c89587e8c758dc62d021d1fb7c1d
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "Default"
+                - Name: Visible
+                  Id: g=48945327fff656548774ab9255846e58
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  ModellingRule: Optional
+            - Name: Visible
+              Id: g=84b3dc3f7cd0a6ec267ff7db87332e95
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
           - Name: DateTime
             Id: g=87d8c1e70bda8b9573991646bfc8f9d4
             Type: Panel
@@ -7104,6 +7389,12 @@ Children:
               DataType: VerticalAlignment
               ModellingRule: Optional
               Value: 2
+          - Name: HorizontalGap
+            Id: g=102e39750f87002a007c181338bb6a4a
+            Type: BaseDataVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 16.0
       - Name: BodyLoader
         Id: g=ba74fb1a7979d25866aa719ea3715e1a
         Type: PanelLoader

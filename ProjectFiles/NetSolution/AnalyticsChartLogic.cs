@@ -14,7 +14,6 @@ using FTOptix.Core;
 public class AnalyticsChartLogic : BaseNetLogic
 {
     private const string LogCategory = "AnalyticsChartLogic";
-    private const int Dark = 1;
     private static readonly string[] Locales = { "en-US", "es-ES", "it-IT", "fr-FR", "de-DE", "zh-CN" };
 
     private WebBrowser browser;
@@ -26,10 +25,10 @@ public class AnalyticsChartLogic : BaseNetLogic
     public override void Start()
     {
         browser = Owner as WebBrowser;
-        theme = Session?.GetVariable("Theme");
+        theme = Session?.GetVariable("LightDarkTheme");
         if (browser == null || theme == null)
         {
-            Log.Warning(LogCategory, $"WebBrowser or session Theme not found for '{Owner.BrowseName}'.");
+            Log.Warning(LogCategory, $"WebBrowser or session LightDarkTheme not found for '{Owner.BrowseName}'.");
             return;
         }
 
@@ -54,7 +53,7 @@ public class AnalyticsChartLogic : BaseNetLogic
 
     private void Apply()
     {
-        var dark = Convert.ToInt32(theme.Value.Value) == Dark;
+        var dark = theme.Value.Value is bool value && value;
         string path;
         if (string.IsNullOrEmpty(localizedPage))
         {

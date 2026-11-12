@@ -28,7 +28,7 @@ public class OvenCycleChartLogic : BaseNetLogic
     {
         browser = Owner.Get<WebBrowser>("Chart");
         oven = Owner.GetVariable("Oven");
-        theme = Session?.GetVariable("Theme");
+        theme = Session?.GetVariable("LightDarkTheme");
         if (browser == null || oven == null)
         {
             Log.Warning(LogCategory, $"'Chart' or 'Oven' not found under '{Owner.BrowseName}'.");
@@ -54,7 +54,7 @@ public class OvenCycleChartLogic : BaseNetLogic
         if (manager == null || !manager.BrowseName.StartsWith(OvenEdgeManagerBehavior.NamePrefix, StringComparison.Ordinal)) return;
 
         var deviceId = OvenEdgeManagerBehavior.GetDeviceId(manager.BrowseName);
-        var dark = theme != null && Convert.ToInt32(theme.Value.Value) == 1;
+        var dark = theme?.Value.Value is bool value && value;
         var path = $"eCharts/cycle/{deviceId}-{(dark ? "dark" : "light")}.html";
         if (path == current) return;
 
