@@ -139,14 +139,14 @@ Project:
    Module: FTOptix.OPCUAClient.Net
    Version: 1.2
  Statistics:
-  TotalNodeCount: 10007
-  Objects: 2315
-  ObjectTypes: 89
-  Variables: 7557
+  TotalNodeCount: 10114
+  Objects: 2344
+  ObjectTypes: 90
+  Variables: 7651
   VariableTypes: 0
   DataTypes: 2
-  Methods: 44
-  References: 209
+  Methods: 27
+  References: 213
   ReferenceTypes: 0
   Files: 58
  Nodes:

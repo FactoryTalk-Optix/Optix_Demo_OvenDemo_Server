@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oven Demo - Supervisor</title>
+<script src="overview-theme.js"></script>
+<link rel="stylesheet" href="overview.css">
+</head>
+<body>
+<main>
+<h1 id="oven-demo-supervisor-server">Oven Demo - Supervisor (Server)</h1>
+<p><strong>FactoryTalk Optix 1.8 | MQTT | RecipeX | SQLite | ECharts | OPC UA | 6 languages | Light/Dark theme</strong></p>
+<p>A fleet supervisor for a distributed pizza-oven plant. One Optix application monitors every connected oven in real time,
+manages the recipe lifecycle from draft to release, pushes recipes to the ovens, computes OEE, collects alarms and chats
+with the operators on the machines.</p>
+<p>It is the &quot;head office&quot; half of the OvenDemo NextGen pair. The &quot;oven&quot; half is the
+<strong>Optix_Demo_OvenDemo_Client</strong> project (see its <code>OvenDemo_Client_Overview.md</code>), a simulated oven with its own HMI.</p>
+<hr />
+<h2 id="what-the-demo-wants-to-show">1. What the demo wants to show</h2>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>How the demo proves it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One Optix application can supervise a whole fleet, not only one machine.</td>
+<td>Ovens appear, disconnect and reconnect live in the fleet overview, grid, alarms and OEE pages.</td>
+</tr>
+<tr>
+<td>Adding a machine takes minutes and no engineering.</td>
+<td>The oven asks to join, an operator clicks <strong>Accept</strong>, telemetry starts flowing. No project edit, no restart.</td>
+</tr>
+<tr>
+<td>IT/OT convergence with open protocols.</td>
+<td>MQTT for telemetry, recipes, chat and onboarding; OPC UA available per oven; one embedded broker, no external infrastructure.</td>
+</tr>
+<tr>
+<td>Recipes are governed, not copied around.</td>
+<td>Draft -&gt; In review -&gt; Approved -&gt; Deprecated workflow, then one-click distribution with a delivery matrix per oven.</td>
+</tr>
+<tr>
+<td>The same project serves a kiosk, a tablet and a browser.</td>
+<td>Native engine plus WebUI (https, port 8443), responsive layout, 6 languages, Light/Dark.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="demo-walkthrough-about-5-7-minutes">2. Demo walkthrough (about 5-7 minutes)</h2>
+<ol>
+<li><strong>Fleet Overview</strong> - KPI cards (online ovens, alarms, power, daily production), fleet state counters and a live activity feed
+(connected, cycle started/completed/rejected, fault, recipe applied...). Below, the grid of monitored ovens.</li>
+<li><strong>Oven details</strong> (click an oven) - status, production counters, live cycle chart (temperature vs. setpoint per phase).
+For locally simulated ovens the dialog also contains the controls to apply a recipe, start/stop cycles, inject a fault,
+pause telemetry or force a rejected cycle.</li>
+<li><strong>Onboarding</strong> - start a client, press <strong>Request onboarding</strong> on it. A badge appears on <strong>Device registry</strong>; accept the
+request and the oven shows up in the fleet within seconds.</li>
+<li><strong>Recipe orchestration</strong> - create or open a recipe, move it to Approved, send it to the fleet. The deployment matrix shows
+Queued / Sent / Delivered / Applied per oven. The oven decides when to apply it.</li>
+<li><strong>Chat</strong> - pick an oven, send a message, watch it become <em>delivered</em> when the operator's screen acknowledges it. Unread
+badges appear on both sides.</li>
+<li><strong>Alarms</strong> - stop a client (or inject a fault on a simulated oven): a connection or process alarm is raised, can be
+acknowledged and confirmed, and stays in the history.</li>
+<li><strong>OEE</strong> - Availability x Performance x Quality per oven and for the fleet, with daily history and charts.</li>
+<li><strong>Settings</strong> - switch language, theme, units and planned production hours on the fly.</li>
+</ol>
+<hr />
+<h2 id="features">3. Features</h2>
+<h3 id="operations">Operations</h3>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fleet Overview</strong></td>
+<td>KPI cards, fleet state counters (running, idle, offline, fault), recent-activity feed (events are localized), grid of monitored ovens.</td>
+</tr>
+<tr>
+<td><strong>Fleet Operations</strong></td>
+<td>All ovens as cards (Grid) or rows (List), with search by site or device; entry point to the oven details dialog.</td>
+</tr>
+<tr>
+<td><strong>Fleet alarm events</strong></td>
+<td>Active alarms (acknowledge / confirm actions) and alarm history from the event logger.</td>
+</tr>
+<tr>
+<td><strong>Device registry</strong></td>
+<td>Pending onboarding requests (accept / discard), registered ovens with connection state, offboarding, registry log.</td>
+</tr>
+<tr>
+<td><strong>Chat</strong></td>
+<td>One conversation per oven, persistent history, delivery status, unread badges.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="process">Process</h3>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Recipe orchestration</strong></td>
+<td>RecipeX recipe library with a per-session editor (PreHeat / Bake / Cooldown phases), workflow status, send to fleet, delivery matrix.</td>
+</tr>
+<tr>
+<td><strong>OEE</strong></td>
+<td>Fleet and per-oven Availability, Performance, Quality and OEE (energy, cycles, good / rejected, run time); daily history stored in SQLite; ECharts page that follows the theme.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="it-ot">IT / OT</h3>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Connectivity</strong></td>
+<td>Connectivity health: MQTT broker parameters, configured subscriptions and the topics they map to, database size, session type and screen resolution, runtime output log.</td>
+</tr>
+<tr>
+<td><strong>HMI Settings</strong></td>
+<td>Language, dark theme, measurement units, fleet view (grid / list), planned production hours per day.</td>
+</tr>
+<tr>
+<td><strong>User management</strong></td>
+<td>Users and groups (standard Optix template).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="functions-in-detail">Functions in detail</h3>
+<ul>
+<li><strong>Live telemetry</strong> - every oven publishes an <code>OvenType</code> snapshot: state, phase, temperature and setpoint, batch id, applied
+recipe, door, power, energy, cycles, uptime and the counters used for OEE.</li>
+<li><strong>Connection supervision</strong> - a behavior per oven (<code>OvenEdgeManager</code>) watches the telemetry timestamp. No change for 10 s
+means <em>disconnected</em>; a connection alarm is raised and cleared automatically.</li>
+<li><strong>One-click onboarding</strong> - the oven sends its id and its OPC UA endpoint, the supervisor creates the oven's registry entry,
+a dedicated MQTT client (<code>Sup_&lt;DeviceId&gt;</code>) and an OPC UA client (enabled only while the oven is connected).
+Removing an oven deletes its MQTT and OPC UA clients, its registry entry and its chat history; a declined request is simply discarded and the oven is told.</li>
+<li><strong>Governed recipes</strong> - only <em>Approved</em> recipes (or <em>Deprecated</em> status updates) leave the supervisor. Each recipe carries a
+content hash (SHA-256, first 16 hex chars) so the supervisor and the oven agree on what was delivered. An oven that
+reconnects announces its catalog (<code>recipe.hello</code>) and receives what it is missing. The supervisor never forces a recipe
+on a machine: the oven applies it (at the next cycle boundary if a cycle is running) and reports back for information.</li>
+<li><strong>Reliable chat</strong> - messages are queued while the oven is offline and flushed on reconnect. Status: queued -&gt; sent -&gt; delivered
+(acknowledged by the other side). Duplicates are discarded, history is capped at 500 messages per conversation.</li>
+<li><strong>Alarms</strong> - per oven <em>ConnectionError</em> and <em>ProcessError</em> alarms, active list with acknowledge / confirm, history in SQLite.
+The history does not duplicate events after a supervisor restart.</li>
+<li><strong>OEE</strong> - computed from the cumulative counters sent by the ovens, with counter-epoch handling so an oven restart does not
+corrupt the day. Planned production hours are configurable.</li>
+<li><strong>Local simulation</strong> - ovens that are not registered through onboarding are simulated by the supervisor itself. The project
+ships with two sample ovens, so the demo is alive even with no client running.</li>
+<li><strong>Localization and themes</strong> - English, Spanish, Italian, French, German and Chinese; Light and Dark palettes, also applied to
+the ECharts pages.</li>
+</ul>
+<hr />
+<h2 id="how-it-works">4. How it works</h2>
+<pre><code class="language-text">                          +--------------------------------------------+
+                          |          OvenDemo Supervisor (this)         |
+                          |--------------------------------------------|
+                          |  UI: Native + WebUI (https :8443)           |
+                          |  Embedded MQTT broker        :8883          |
+                          |  OPC UA server               :59100         |
+                          |  RecipeX + SQLite (recipes, chat, OEE, logs)|
+                          |  NetLogic: onboarding, recipes, chat, OEE   |
+                          +----------------------+---------------------+
+                                                 |
+                   MQTT (one Sup_&lt;DeviceId&gt; client per oven)  +  OPC UA
+                                                 |
+              +----------------------+-----------+-----------+----------------------+
+              |                      |                       |                      |
+        OvenDemo Client 1      OvenDemo Client 2       OvenDemo Client N      local simulated ovens
+</code></pre>
+<h3 id="mqtt-topics">MQTT topics</h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Direction</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OnboardingRequest</code></td>
+<td>oven -&gt; supervisor</td>
+<td><code>{Sender, Content (OPC UA endpoint), Timestamp}</code></td>
+</tr>
+<tr>
+<td><code>OnboardingResult</code></td>
+<td>supervisor -&gt; oven</td>
+<td>Status: 0 none, 1 pending, 2 onboarded, 3 declined, 4 timeout</td>
+</tr>
+<tr>
+<td><code>&lt;DeviceId&gt;</code></td>
+<td>oven -&gt; supervisor</td>
+<td>Telemetry (Optix Default JSON of <code>OvenType</code>)</td>
+</tr>
+<tr>
+<td><code>chat/&lt;DeviceId&gt;/to-edge</code>, <code>chat/&lt;DeviceId&gt;/to-supervisor</code></td>
+<td>both</td>
+<td>Chat message / acknowledgement (QoS 1)</td>
+</tr>
+<tr>
+<td><code>recipes/&lt;DeviceId&gt;/to-edge</code>, <code>recipes/&lt;DeviceId&gt;/to-supervisor</code></td>
+<td>both</td>
+<td>Recipe delivery, hello/catalog, apply result</td>
+</tr>
+</tbody>
+</table>
+<h3 id="technology">Technology</h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform</td>
+<td>FactoryTalk Optix Studio 1.8.0.555, .NET NetLogic (C#)</td>
+</tr>
+<tr>
+<td>UI</td>
+<td>Native + WebUI engines, responsive layout, StyleSheets Light/Dark, 6 languages</td>
+</tr>
+<tr>
+<td>Messaging</td>
+<td>Embedded <code>MQTTBroker</code>, <code>MQTTClient</code> / <code>MQTTSubscriber</code> created at runtime per oven</td>
+</tr>
+<tr>
+<td>Recipes</td>
+<td><code>RecipeX</code> with a custom <code>RecipeSchema</code>, per-session edit buffer, workflow metadata</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td><code>SQLiteStore</code> (recipes, delivery journal, chat, OEE history, event logger), retentive model for fleet, managers, MQTT/OPC UA clients</td>
+</tr>
+<tr>
+<td>Alarms</td>
+<td><code>Alarm</code> module (<code>OffNormalAlarmController</code>, <code>DigitalAlarm</code>), <code>EventLogger</code></td>
+</tr>
+<tr>
+<td>Charts</td>
+<td>Apache ECharts in <code>WebBrowser</code> widgets (fleet overview, OEE, oven cycle) fed by runtime-generated data files</td>
+</tr>
+<tr>
+<td>Interop</td>
+<td><code>OPCUAServer</code> and <code>OPCUAClient</code> (one client per onboarded oven)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="where-to-look-in-the-code">Where to look in the code</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ProjectFiles/NetSolution/OnboardingLogic.cs</code>, <code>PendingRequestRowLogic.cs</code>, <code>DeviceRegistryRowLogic.cs</code></td>
+<td>Onboarding handshake, per-oven MQTT client helper, offboarding</td>
+</tr>
+<tr>
+<td><code>OvenEdgeManagerBehavior.cs</code></td>
+<td>Connection supervision and connection alarm</td>
+</tr>
+<tr>
+<td><code>RecipeOrchestratorLogic.cs</code>, <code>OvensRecipesLogic.cs</code>, <code>RecipeListLogic.cs</code></td>
+<td>Recipe editor, workflow, distribution and delivery matrix</td>
+</tr>
+<tr>
+<td><code>ChatLogic.cs</code></td>
+<td>Chat history, queue, acknowledgements</td>
+</tr>
+<tr>
+<td><code>ProjectLogic.cs</code></td>
+<td>Local oven simulation, OEE collector, fleet overview feed</td>
+</tr>
+<tr>
+<td><code>FleetGridLogic.cs</code>, <code>OvenCycleChartLogic.cs</code>, <code>AnalyticsChartLogic.cs</code></td>
+<td>Oven details texts, cycle and analytics charts</td>
+</tr>
+<tr>
+<td><code>OpcUaClientRuntimeHelper.cs</code></td>
+<td>OPC UA client per oven</td>
+</tr>
+<tr>
+<td><code>DesignTimeNetLogic1.cs</code></td>
+<td>Design-time builders and fixes, run from Studio (not part of the runtime)</td>
+</tr>
+<tr>
+<td><code>ProjectFiles/eCharts/</code></td>
+<td>ECharts pages, scripts and styles</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="run-it">5. Run it</h2>
+<p><strong>Prerequisites:</strong> FactoryTalk Optix Studio 1.8.0.555 or later. No external broker or database is needed.</p>
+<ol>
+<li>Open <code>Optix_Demo_OvenDemo_Server.optix</code> in Studio and start it (Emulator).</li>
+<li>The WebUI is available at <code>https://&lt;server-ip&gt;:8443</code>; the broker listens on port <code>8883</code>, the OPC UA server on <code>59100</code>.</li>
+<li>Start one or more <strong>Optix_Demo_OvenDemo_Client</strong> projects, set the supervisor
+IP in their settings and request onboarding.</li>
+<li>Accept the request in <strong>Device registry</strong>.</li>
+</ol>
+<p>Without any client the two sample ovens run in local simulation, so every page already shows data.</p>
+<hr />
+<h2 id="good-to-know">6. Good to know</h2>
+<ul>
+<li>The broker accepts at most 25 connections, one of which is used by onboarding, so the per-oven client design supports up to
+24 ovens.</li>
+<li>The demo broker is anonymous and not encrypted (it is meant for a trade-show LAN). Production use needs TLS, authentication
+and rights on the recipe actions.</li>
+<li>Texts generated by code at runtime (some detail texts, alarm messages) are English only; see <code>TODO.md</code>.</li>
+<li>The recipe edit lock is demo-grade (one session at a time per Draft).</li>
+</ul>
+
+</main>
+</body>
+</html>

@@ -1037,6 +1037,17 @@ Children:
     - Name: Default
       Id: g=f3bad2289fc239887145f579d2a03b40
       Type: LabelStyle
+      Children:
+      - Name: FontSize
+        Id: g=ca9d63a08f054f909cbfcf6de79dce99
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 16.0
+      - Name: FontWeight
+        Id: g=c055ecbdf43343c1be0847c1f068ed37
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 400
     - Name: Accent
       Id: g=113edcf9cbf7d8e784799f794ba6b5f9
       Type: LabelStyle
@@ -1066,6 +1077,11 @@ Children:
         DataType: FontWeightEnum
         ModellingRule: Optional
         Value: 700
+      - Name: FontSize
+        Id: g=77d61658ded549ac8b6f1d3f66a31bdd
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 32.0
     - Name: H2
       Id: g=865f10de6f8bd732ddaa2ad113f9f9ea
       Type: LabelStyle
@@ -1087,6 +1103,11 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Text"
+      - Name: FontSize
+        Id: g=2f3238fee4fb497a9fe16cb9e39869cd
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 24.0
     - Name: H3
       Id: g=3debd7b78b4f1bd9bd4fea1ac1ab2f00
       Type: LabelStyle
@@ -1188,7 +1209,7 @@ Children:
         Type: BaseDataVariableType
         DataType: FontWeightEnum
         ModellingRule: Optional
-        Value: 300
+        Value: 400
     - Name: H5
       Id: g=99dc8104769479cdfe7c50d4810c7f09
       Type: LabelStyle
@@ -7275,6 +7296,183 @@ Children:
                   ModellingRule: Optional
             - Name: Visible
               Id: g=84b3dc3f7cd0a6ec267ff7db87332e95
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+          - Name: Info
+            Id: g=1642cfe8c466acc899735869d500f0d7
+            Type: BaseButtonImage
+            Children:
+            - Name: Background
+              Id: g=47ac8497185cd75060f9ef875926487e
+              Type: Rectangle
+            - Name: ActionButton
+              Id: g=1cd84605bdbc820aa195c425378e4d37
+              Type: Button
+              Children:
+              - Name: MouseClickEventHandler1
+                Id: g=c1393d67f5818200d11ef52e23316a63
+                Type: EventHandler
+                Children:
+                - Name: ListenEventType
+                  Id: g=57fef23338a1ad8642d4e0efed6c89c8
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+                - Name: MethodsToCall
+                  Id: g=50d129fa65b2a3a7a3bac45adcbf0be5
+                  Type: BaseObjectType
+                  Children:
+                  - Name: MethodContainer1
+                    Id: g=8a0f31b2df9662a0adaaea14cd5bf2c7
+                    Type: BaseObjectType
+                    Children:
+                    - Name: ns=2;ObjectPointer
+                      Id: g=1744f765e819285e76842bc840bab143
+                      Type: NodePointer
+                      DataType: NodeId
+                      Value: "/Objects/Commands/UICommands"
+                      Children:
+                      - Name: Kind
+                        Id: g=be728498fe78c990daba2e9f07b0dd1a
+                        Type: PropertyType
+                        DataType: NodeId
+                        Value: "/Types/ObjectTypes/BaseObjectType"
+                    - Name: ns=2;Method
+                      Id: g=fad408ca33bb8e4d95e5b8a472a60623
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: "OpenDialog"
+                    - Name: InputArguments
+                      Id: g=add118759da391de8232359899ce80cf
+                      Type: BaseObjectType
+                      Children:
+                      - Name: Dialog
+                        Id: g=11816b812e8a8ea5e6b9b94caf30b2a3
+                        Type: BaseDataVariableType
+                        DataType: NodeId
+                        Description: {"NamespaceIndex":3,"TextId":"OpenDialogDialogDescription"}
+                        Value: "/Objects/Optix_Demo_OvenDemo_Server/UI/UITypes/Dialogs/ProjectInfo"
+                      - Name: AliasNode
+                        Id: g=8133087e399bb8962560df7c71564c89
+                        Type: BaseDataVariableType
+                        DataType: NodeId
+                        Description: {"NamespaceIndex":3,"TextId":"OpenDialogAliasNodeDescription"}
+                        ValueRank: ScalarOrOneDimension
+                      - Name: ParentItem
+                        Id: g=ecebd000cdd8ad6440a82ea5be9e170d
+                        Type: BaseDataVariableType
+                        DataType: NodeId
+                        Description: {"NamespaceIndex":3,"TextId":"OpenDialogParentItemDescription"}
+                        Children:
+                        - Name: DynamicLink
+                          Id: g=3c5242b0f77ad3b729d362b61f74248e
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "../../../../..@NodeId"
+                    - Name: OutputArguments
+                      Id: g=8853d6b47c768802e5311dd2e57b2065
+                      Type: BaseObjectType
+                      Children:
+                      - Name: DialogNodeId
+                        Id: g=189fb6c29aab02c4916d831d8b3ca536
+                        Type: BaseDataVariableType
+                        DataType: NodeId
+                        Description: {"NamespaceIndex":3,"TextId":"OpenDialogDialogNodeIdDescription"}
+                - Name: EventArguments
+                  Id: g=4c3e538efc0385e06e4f2915101d6919
+                  Type: MouseClickEvent
+                  Children:
+                  - Name: EventId
+                    Id: g=90a6069ec8cd1c9d8e3861e87265a5e4
+                    Type: PropertyType
+                    DataType: ByteString
+                  - Name: EventType
+                    Id: g=c7359763e09795e29872ed4267120fc0
+                    Type: PropertyType
+                    DataType: NodeId
+                  - Name: SourceNode
+                    Id: g=956786adc00a4f9de3d29982e4a0ceff
+                    Type: PropertyType
+                    DataType: NodeId
+                  - Name: SourceName
+                    Id: g=5e2cd1dbb2432fb55354828b2b39db82
+                    Type: PropertyType
+                    DataType: String
+                  - Name: Time
+                    Id: g=42a6c49d181e5d6b9890c62b42a36f9d
+                    Type: PropertyType
+                    DataType: UtcTime
+                  - Name: ReceiveTime
+                    Id: g=a6f2bda475943396193760dafe4ed8a0
+                    Type: PropertyType
+                    DataType: UtcTime
+                  - Name: Message
+                    Id: g=2750e96c97926c48b3403f10ad285fb9
+                    Type: PropertyType
+                    DataType: LocalizedText
+                  - Name: Severity
+                    Id: g=8f218db2e2ca43c07668f5e26e670d50
+                    Type: PropertyType
+                    DataType: UInt16
+            - Name: Content
+              Id: g=54a6613e3d55125ab2fc44661b49e78f
+              Type: RowLayout
+              Children:
+              - Name: Icon
+                Id: g=aab48a70f7ce5f21faf0491b96448ff5
+                Type: Image
+                Children:
+                - Name: Path
+                  Id: g=ea2bf3a56aa2cfead01497acbdbcbea8
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=7;%PROJECTDIR%/resources/icons/info.svg"
+                - Name: FillMode
+                  Id: g=97a69fe0bba60803d360bd95c1f55960
+                  Type: BaseDataVariableType
+                  DataType: ImageFillModeEnum
+                - Name: ColorizationMode
+                  Id: g=a17b52e1d2410561e60d0bdd96cf9ea2
+                  Type: BaseDataVariableType
+                  DataType: ColorizationModeEnum
+                - Name: DynamicColor
+                  Id: g=2ae43ce7541af09b81e935295530d02d
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#000000"
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=ab294ce40d2d06d466e26d9c43ef64e9
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Session}/StyleSheet/Text"
+              - Name: ButtonText
+                Id: g=69acb69c999b3f67d62e3efbc8fb08e4
+                Type: Label
+                Children:
+                - Name: Text
+                  Id: g=3f0c57e71a74c452ac2762915dabdbee
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=541beb10ef471f12de66d09eda2b1055
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../..@DisplayName"
+                - Name: Style
+                  Id: g=8bff4ae311ce27d4fe331248229f99a2
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "Default"
+                - Name: Visible
+                  Id: g=4e0d341f4130eb233fe33ceac220ed2b
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  ModellingRule: Optional
+            - Name: Visible
+              Id: g=27ecf2b53c797765162fe67c6cc2d895
               Type: BaseDataVariableType
               DataType: Boolean
               Value: true

@@ -332,6 +332,12 @@ Children:
               Type: BaseDataVariableType
               DataType: Color
               Value: "#000000"
+              Children:
+              - Name: DynamicLink
+                Id: g=e8aba84989a5487c990068962da31331
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Session}/StyleSheet/Text"
         - Name: Height
           Id: g=4ed16b3abda9e2e0a61c114e164fc279
           Type: BaseVariableType
@@ -4347,6 +4353,12 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../Text"
+          - Name: TextColor
+            Id: g=60d52067c2dc9c196dec666b1836e53e
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#ffffff"
         - Name: DataPointer
           Id: g=b8825738ff4787dff40b839e4f8e882b
           Type: NodePointer
@@ -4463,6 +4475,12 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../Text"
+          - Name: TextColor
+            Id: g=13c690dd491848e2b7b2c14efeab106f
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#ffffff"
         - Name: DataPointer
           Id: g=09e91c1315b3c275dd5b4bb5b0dbb3f5
           Type: NodePointer

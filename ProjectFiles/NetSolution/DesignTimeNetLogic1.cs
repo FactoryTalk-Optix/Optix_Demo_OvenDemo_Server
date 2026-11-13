@@ -456,6 +456,24 @@ public class DesignTimeNetLogic1 : BaseNetLogic
         Log.Info("DesignTimeNetLogic1", $"Theme overrides fixed: {removed} nodes changed, {recolored} status colors softened.");
     }
 
+    // Re-runnable: Dark gets the Light label scale and Text token (it used to inherit another one), and labels with a fixed black text follow the theme.
+    [ExportMethod]
+    public void FixDarkThemeFonts()
+    {
+        StandardizeLabelFonts();
+        var linked = 0;
+        foreach (var label in Descendants(Project.Current.Get("UI")).OfType<Label>().ToList())
+        {
+            var color = label.TextColorVariable;
+            if (color.Children.Any(child => child is DynamicLink || child is Converter) || ArgbOf(color) != 0xFF000000u) continue;
+            var link = InformationModel.MakeVariable<DynamicLink>("DynamicLink", FTOptix.Core.DataTypes.NodePath);
+            link.Value = "{Session}/StyleSheet/Text";
+            color.Add(link);
+            linked++;
+        }
+        Log.Info("DesignTimeNetLogic1", $"Dark fonts fixed: {linked} labels with fixed black text now follow the theme.");
+    }
+
     private static System.Collections.Generic.IEnumerable<IUANode> Descendants(IUANode root)
     {
         if (root == null) yield break;

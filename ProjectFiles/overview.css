@@ -1,0 +1,56 @@
+/* Palettes = project StyleSheet tokens; theme.js sets data-theme from ?theme= or #theme= (light|dark). */
+:root, html[data-theme="light"] { --bg: #eef2f4; --fg: #16304d; --muted: #5f7690; --line: #c7d0d5; --accent: #2c72c0; --head-bg: #dfe7ee; --code-bg: #f8fafb; }
+html[data-theme="dark"] { --bg: #2b3646; --fg: #f1f5f9; --muted: #c0cddc; --line: #4b5d73; --accent: #7fb6f5; --head-bg: #354357; --code-bg: #354357; }
+
+* { box-sizing: border-box; }
+
+/* The embedded browser paints its default scrollbar track cyan; restyle it so it follows the theme. */
+html { scrollbar-color: var(--muted) var(--head-bg); }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--head-bg); }
+::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 6px; border: 2px solid var(--head-bg); }
+
+body {
+  margin: 0;
+  padding: 24px 40px 48px;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+main { max-width: 1100px; margin: 0 auto; }
+
+h1 { font-size: 30px; margin: 0 0 8px; color: var(--accent); }
+h2 { font-size: 22px; margin: 36px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--line); }
+h3 { font-size: 17px; margin: 24px 0 8px; }
+
+p { margin: 8px 0; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
+
+table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border: 1px solid var(--line); }
+th { background: var(--head-bg); font-weight: 600; }
+
+code {
+  font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 0.92em;
+  background: var(--code-bg);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 12px 14px;
+  overflow-x: auto;
+}
+pre code { background: none; padding: 0; font-size: 12.5px; line-height: 1.35; }
+
+ol, ul { padding-left: 24px; }
+li { margin: 4px 0; }
+a { color: var(--accent); }
+

@@ -317,6 +317,12 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../Text"
+          - Name: TextColor
+            Id: g=dbb2f95b4240bbaee73b338c99b4a17b
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#ffffff"
         - Name: DataPointer
           Id: g=7c3eab9e647512a068c4211a16fd2768
           Type: NodePointer
@@ -417,6 +423,12 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../Text"
+          - Name: TextColor
+            Id: g=806a3f0e19153ebd36d07956edd81499
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#ffffff"
         - Name: DataPointer
           Id: g=7ad1a893c6380896a1100ca4b4632325
           Type: NodePointer

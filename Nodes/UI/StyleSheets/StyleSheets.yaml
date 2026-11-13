@@ -247,6 +247,22 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
+        Children:
+        - Name: DynamicLink
+          Id: g=62fb9470053a48249bceddbc4574c57f
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Text"
+      - Name: FontSize
+        Id: g=269bb18eb4d9489c9e83fcff5ee3866d
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 16.0
+      - Name: FontWeight
+        Id: g=59303caa61c046afa9857f6e274056df
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 400
     - Name: Accent
       Id: g=c092fe993608e7a0796c06079f097e23
       Type: LabelStyle
@@ -262,6 +278,17 @@ Children:
     - Name: H1
       Id: g=eb0f6fe40c5794a8f86d005a4fbb9a68
       Type: LabelStyle
+      Children:
+      - Name: FontSize
+        Id: g=7228c5d23da24b0ea60f82d1e38870db
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 32.0
+      - Name: FontWeight
+        Id: g=cb1b9ccc0edd4d6880fd01f723caf354
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
     - Name: H2
       Id: g=18ff50e42160e19919c108e37f280414
       Type: LabelStyle
@@ -277,6 +304,16 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Text"
+      - Name: FontSize
+        Id: g=82491a10fb1d497da725d50634a7ee0e
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 24.0
+      - Name: FontWeight
+        Id: g=49ae6fdb553448bbad4b85132db8b067
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 600
     - Name: H3
       Id: g=429cb4603a523373796508267669ff71
       Type: LabelStyle
@@ -292,6 +329,16 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Text"
+      - Name: FontSize
+        Id: g=8da0f0b0c5bf47dca28106295066e2bb
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
+      - Name: FontWeight
+        Id: g=bff2a822c2a84d1f91f42154b560eb09
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
     - Name: ChipErrText
       Id: g=7468804064058c90c36370cc42c71b5f
       Type: LabelStyle
@@ -355,6 +402,16 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../TextSoft"
+      - Name: FontSize
+        Id: g=7313a5e75d294de8a8b467741a8fb3d9
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
+      - Name: FontWeight
+        Id: g=e407347045f44a5cb4605def87d69cc6
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 400
     - Name: H5
       Id: g=8f05819d2c638d278d629a18dc98c9bd
       Type: LabelStyle
@@ -370,6 +427,16 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Text"
+      - Name: FontSize
+        Id: g=3f6f6acbe66449e694fb1b0d1fc7e110
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
+      - Name: FontWeight
+        Id: g=6c6f69458ddb4446959c6b2473c4c686
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
   - Name: RadioButtonStyles
     Id: g=7f870cb318fd9654908adb6afe1fabb3
     Type: BaseObjectType
@@ -1162,6 +1229,17 @@ Children:
     - Name: Default
       Id: g=ca3535f597a15673493fc60f889509b6
       Type: LabelStyle
+      Children:
+      - Name: FontSize
+        Id: g=1d8331e8417e4a8587650649661533c3
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 16.0
+      - Name: FontWeight
+        Id: g=2da14452f1bb40799c791ce844ba6c6f
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 400
     - Name: Accent
       Id: g=18b1ca57788e4a4bbc550506e5eb1a14
       Type: LabelStyle
@@ -1208,6 +1286,11 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         Value: 24.0
+      - Name: FontWeight
+        Id: g=a98d5736af414c5384a4d88b2b97ec1f
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 600
     - Name: H3
       Id: g=0229da6b4ff6fe6e5b1354049d36d49c
       Type: LabelStyle
@@ -1228,6 +1311,11 @@ Children:
         Type: BaseDataVariableType
         DataType: FontWeightEnum
         Value: 700
+      - Name: FontSize
+        Id: g=4f9f189de53e4848adf70bc0e62df42f
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
     - Name: ChipErrText
       Id: g=d4b3cb99c1c92d4f489480d5b9582e96
       Type: LabelStyle
@@ -1316,6 +1404,16 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Text"
+      - Name: FontSize
+        Id: g=92791861d52145f3877f89bfdf67fc5c
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
+      - Name: FontWeight
+        Id: g=357eee4d563e47a7ae7a1467d46f1c9a
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
   - Name: RadioButtonStyles
     Id: g=3715925dcad694c806922ddad99a8973
     Type: BaseObjectType

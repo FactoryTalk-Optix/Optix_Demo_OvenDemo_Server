@@ -3127,3 +3127,353 @@ Children:
       Type: PropertyType
       DataType: NodeId
       Value: "/Objects/Optix_Demo_OvenDemo_Server/Model/Types/OvenEdgeManager"
+- Name: ProjectInfo
+  Id: g=84932f95c6fca31fedf556603a8fa7a2
+  Supertype: Dialog
+  DisplayName: {"NamespaceIndex":7,"TextId":"Info"}
+  Description: {"LocaleId":"en-US","Text":"Description of the project"}
+  ReferenceType: HasComponent
+  Children:
+  - Class: Reference
+    Target: ns=3;i=519
+    Direction: Forward
+  - Name: Width
+    Id: g=2970903de410f409f0e6dd577f62bf5d
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1920.0
+  - Name: Height
+    Id: g=9f9f29e99fcfc2ee7a9a2703baae0a3c
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1080.0
+  - Name: HorizontalAlignment
+    Id: g=c982712f6eca1e0403fc7f280f4e75ac
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=8ef64f0936ddd481bc102dadcb5dac77
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: Background
+    Id: g=ac54391317d15aa9d3d9c32242565e17
+    Type: Background
+    Children:
+    - Name: BorderLeft
+      Id: g=512a8297ced3193e388dcd8fddbdd6d8
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=15a6315478a8d24b5fc9a732a6828d14
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: BorderRight
+      Id: g=65bbd7fa9725dc85eceaa459b8a46e54
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=cbf668a8105788ee86ed0c1df13b9e08
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: BorderTop
+      Id: g=a65ac4a7f9ab951bff16a21488e431a1
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=56af58020da2ce1894f0b4ecc80f2ffc
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: BorderBottom
+      Id: g=cb2532cc6f089be76884f13fb3b378a8
+      Type: Border
+      Children:
+      - Name: LineColor
+        Id: g=7d85878fdd9b421dd447d880a9205272
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#c7d0d5"
+    - Name: Style
+      Id: g=ec146043e041f67efed6a85bff9b1e51
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Overlay"
+  - Name: Action
+    Id: g=64d9bc29c67a75826d6ef6486b4ec929
+    Type: Button
+    Children:
+    - Name: Style
+      Id: g=27ec1e36450eaa04eec7a670cf0e15c3
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Transparent"
+    - Name: HorizontalAlignment
+      Id: g=a3cc6db514dbae912de06d2fa3adfd8e
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=64409a0aca880d052a68effb83073aa4
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: MouseClickEventHandler1
+      Id: g=0b9ce47ffc4110637fb1b682bdc98f5e
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Id: g=f585d527395041220ccd7fcc4d8d6fb1
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Id: g=80fbfc9527ff1ecb8eac35fdf9e7e103
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Id: g=4e07d64c4e8b966e8c7e02554244fd1e
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Id: g=771a6a6bbf5f90cf5b60e8803580e80c
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=194c094681f55ff969c64d56728a1ded
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Id: g=ff4b2a5bdab8cbf7c373d7a36bdb47de
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../..@NodeId"
+              Children:
+              - Name: Mode
+                Id: g=62457fefff0f0b4a97348c61b08311f9
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Id: g=a091ad3fdd30a02d5ecbadd59263eb74
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Close"
+      - Name: EventArguments
+        Id: g=1dfb6f9e8e7d33460b4aa7c37ecd4800
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Id: g=1cbee2f23d4be7ce79e3b1cd68ce7630
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Id: g=c438b051381f6d57ac1faab51f434e66
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Id: g=351792ab0d173b40b2f8621fbd5012be
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Id: g=fac6bc23d2034f706243eeb0d5c91854
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Id: g=6a6111afee09104983da630df0e951c6
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Id: g=80ee6a52e7489b465713ea6ce8deb096
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Id: g=75571f0bcc586f16881b4ef65272bc22
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Id: g=df7722a3984a48542c8855b093ef1240
+          Type: PropertyType
+          DataType: UInt16
+  - Name: InfoPanel
+    Id: g=4f7c9327e7651a0c0382f472215ed3e3
+    Type: Panel
+    Children:
+    - Name: Width
+      Id: g=cd3894dcbab4d384de82ba5232afe784
+      Type: BaseVariableType
+      DataType: Size
+      Value: 1216.0
+      Children:
+      - Name: ExpressionEvaluator1
+        Id: g=5895f36928975346c3cbc5ed9e43818e
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Id: g=88f6d9c10db7e6e150e1056dfcb66de0
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "({#WindowWidth}*70)/100"
+        - Name: ns=2;SourceWindowWidth
+          Id: g=a6bf757ecc3b8b7adc94c1d01639c817
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=e70e0f753ad1d376638ce694a3456f61
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Window}/Width"
+    - Name: Background
+      Id: g=5314a43850ff873449f4b36ee0a28d5f
+      Type: Background
+      Children:
+      - Name: BorderLeft
+        Id: g=e8f0e91238655208d92f3a08fa428b17
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=d44a3cf29ca513ced435d33302786370
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderRight
+        Id: g=1bd347cf46a31e0bbc6884ce2f75a2ca
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=55df358be557fd0eef994ad088fedd1d
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderTop
+        Id: g=52e92575b844577ceae694a4e37e3b1c
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=59e78ebfa69e5f7756a63c4a55d495a3
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderBottom
+        Id: g=fc918f4ad52fdeccc5a83363e9ce542c
+        Type: Border
+        Children:
+        - Name: LineColor
+          Id: g=87b20d0bc73db5022a5cd9cf7065420f
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#c7d0d5"
+      - Name: BorderThickness
+        Id: g=2c0b641d9950ee3506806312bd4384f8
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+    - Name: HorizontalAlignment
+      Id: g=e58aa253074e64a6787f37193a7e8e81
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=201276078d96ecc031e9cac669491649
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: HitTestVisible
+      Id: g=966dfeeae62fade78b916129f4f430ff
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+    - Name: WebBrowserObject
+      Id: g=26b801abbc83c932bc59d2e3b1ad5d88
+      Type: WebBrowser
+      Children:
+      - Name: URL
+        Id: g=d8ad05056f936a38292dfacc9db47fe5
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=7;%PROJECTDIR%/OvenDemo_Server_Overview.html"
+        Children:
+        - Name: ConditionalConverter1
+          Id: g=e151eb855bcb08387c54759c020231fb
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Id: g=617be50c0f895a4945177b4100d6cdda
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=3d628c4aca9822721d5fddd416c50a9b
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/LightDarkTheme"
+          - Name: TrueValue
+            Id: g=db269323f0aee0b55d3085661f24f8a5
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "ns=7;%PROJECTDIR%/OvenDemo_Server_Overview.html?theme=dark"
+          - Name: FalseValue
+            Id: g=c59b03f20896c136f8fc465b3781ff63
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "ns=7;%PROJECTDIR%/OvenDemo_Server_Overview.html?theme=light"
+      - Class: Reference
+        Target: ns=3;i=354
+        Direction: Forward
+      - Class: Reference
+        Target: ns=3;i=356
+        Direction: Forward
+      - Class: Reference
+        Target: ns=3;i=358
+        Direction: Forward
+      - Name: HorizontalAlignment
+        Id: g=02f1bbcb0e3f143cc6f600a48af0299d
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Id: g=98ed56ee27dfe557852b774c21915fb2
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+    - Name: TopMargin
+      Id: g=2c02e24ee4902d81cd6ce7d34ac4e36f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 64.0
+    - Name: BottomMargin
+      Id: g=066c9f27dbba749efe6c7383c5a0137c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 64.0
